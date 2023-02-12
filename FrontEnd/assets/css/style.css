@@ -56,3 +56,16 @@
 .navbar{
     font-weight: normal;
 }
+.textOutCon{
+    transform: translate(67px, 194px);
+    width: 395px;
+    width: 450px;
+}
+.textOutCon>h1{
+    font-size: 3.02rem;
+}
+.textOutCon>h3{
+    font-size: 1em;
+   color: #e74c0f;
+
+}
