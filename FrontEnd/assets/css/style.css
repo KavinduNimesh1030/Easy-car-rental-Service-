@@ -69,3 +69,34 @@
    color: #e74c0f;
 
 }
+.searchBar{
+    width: 812px;
+    height: 79px;
+    background-color: #d3d1d1ad;
+    position: absolute;
+    transform: translate(82px, 488px);
+    border-radius: 8px;
+    /* border: 1px solid; */
+    display: flex;
+
+}
+.searchBar>div:first-child{
+    width: 25%;
+    height: 100%;
+    background-color: black;
+}
+.searchBar>div:nth-child(2){
+    width: 25%;
+    height: 100%;
+    background-color: #5f0f0f;
+}
+.searchBar>div:nth-child(3){
+    width: 25%;
+    height: 100%;
+    background-color: black;
+}
+.searchBar>div:nth-child(4){
+    width: 25%;
+    height: 100%;
+    background-color: #5f0f0f;
+}
