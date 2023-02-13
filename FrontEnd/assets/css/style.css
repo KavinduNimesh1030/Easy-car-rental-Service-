@@ -144,15 +144,18 @@
 
 }
 .carCardCon{
-    border: 2px solid black;
     width: 80vw;
     height: 94vh;
     left: 0;
     right: 0;
     margin: auto;
-    display: flex;
+    /*display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 20px;*/
+    display: flex;
+  justify-content: space-between;
+    align-content: flex-end;
+    column-gap: 40px;
 }
 
 /*---------------Car image Card-----------------*/
@@ -199,13 +202,13 @@
     font-weight: bold;
     transform: translate(10px, 5px);
 }
-#dailyPrice{
+.dailyPrice{
     transform: translate(10px, 4px);
     font-size: 16px;
     font-weight: bold;
     color: #e74c0f;
 }
-#monthlyPrice{
+.monthlyPrice{
     transform: translate(10px, -2px);
     font-size: 13px;
     font-weight: 500;
@@ -232,7 +235,7 @@
     width: 20%;
     /*background-color: #5d00ff;*/
 }
-#rentNow{
+.rentNow{
     background-color: #5d00ff;
     color: white;
     border: none;
