@@ -116,3 +116,22 @@
     background-color: #5d00ff;
     color: white;
 }
+#btnSignIn{
+    width: 94px;
+    height: 43px;
+    border: 1px solid #7f01d9;
+    border-radius: 9px;
+    background-color: transparent;
+    color: #7f01d9;
+    margin-right: 8px;
+    font-size: small;
+}
+#btnSignUp{
+    border: none;
+    border-radius: 9px;
+    background-color: #7f01d9;
+    color: white;
+    width: 94px;
+    height: 43px;
+    font-size: small;
+}
