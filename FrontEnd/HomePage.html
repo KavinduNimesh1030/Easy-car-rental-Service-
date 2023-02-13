@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
-
+    
 </head>
 <body>
 <header>
@@ -51,22 +50,25 @@
 
 
 <section class="home">
+
+    <!--Main Text Section-->
     <div class="homeText">
         <div class="textOutCon">
             <h1>The car is waiting for you</h1>
             <h3>Make the right choice,Which will give you wings</h3>
         </div>
-
     </div>
+
+    <!--Main Image Section-->
     <div class="imgCon">
         <img src="assets/img/car.png" alt="car">
     </div>
+
+    <!--Quick Search Bar-->
     <div class="searchBar">
         <div>
             <label for="txtLocation" style="transform: translate(19px, 10px);">Location</label>
-           <!-- <i class="bi bi-geo-alt mt-5"></i>-->
                 <input type=""  class="form-control-sm border-1 col-10 mt-3 m-lg-3 bg-transparent" id="txtLocation" placeholder="Search Location">
-
         </div>
         <div>
             <label for="txtPickDate" style="transform: translate(19px, 10px);">Pick-Up Date</label>
@@ -83,6 +85,39 @@
             <button>search</button>
         </div>
     </div>
+</section>
+
+<!--2nd Section-->
+<section class="carSec">
+<div class="carCardCon">
+<div class="carCard1">
+<div class="carImg">
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" >
+                <img src=assets/img/BMW-I8-F.jpg class="d-block w-100" alt="fontView">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/BMW-I8-S.jpg " class="d-block w-100" alt="sideView">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/BMW-I8-B.jpg " class="d-block w-100" alt="BackView">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+    <div class="detailCon"></div>
+</div>
+</div>
 </section>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>

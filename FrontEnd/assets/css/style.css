@@ -135,3 +135,29 @@
     height: 43px;
     font-size: small;
 }
+
+/*Section 2*/
+
+.carSec{
+    width: 98.7vw;
+    height: 100vh;
+
+}
+.carCardCon{
+    border: 2px solid black;
+    width: 80vw;
+    height: 90vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.carCard1{
+    position: relative;
+    width: 22%;
+    height: 50%;
+    border: 2px solid red;
+}
+.carImg{
+    height: 50%;
+
+}
