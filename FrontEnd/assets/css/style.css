@@ -150,6 +150,9 @@
     left: 0;
     right: 0;
     margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 /*---------------Car image Card-----------------*/
@@ -157,12 +160,15 @@
     position: relative;
     width: 22%;
     height: 50%;
-    border: 2px solid red;
+ /*   border: 2px solid red;*/
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 .carImg{
     height: 45%;
     border-radius: 10px;
-    border: 2px solid black;
+  /*  border: 2px solid black;*/
 }
 #carouselExampleAutoplaying{
     border-radius: 10px;
@@ -177,15 +183,15 @@
 }
 .detailCon>div:first-child{
     height: 50%;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
 }
 .detailCon>div:nth-child(2){
     height: 25%;
-    border: 2px solid red;
+  /*  border: 2px solid red;*/
 }
 .detailCon>div:nth-child(3){
     height: 25%;
-    border: 2px solid gold;
+   /* border: 2px solid gold;*/
 }
 
 .detailCon>div:first-child>h1{
@@ -209,21 +215,22 @@
 
 .typeCon{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     column-gap: 35px;
+    margin-left: 22px;
 
 }
 .typeCon>div:first-child{
     width: 20%;
-    background-color: #5d00ff;
+
 }
 .typeCon>div:nth-child(2){
     width: 20%;
-    background-color: #5d00ff;
+ /*   background-color: #5d00ff;*/
 }
 .typeCon>div:nth-child(3){
     width: 20%;
-    background-color: #5d00ff;
+    /*background-color: #5d00ff;*/
 }
 #rentNow{
     background-color: #5d00ff;
@@ -232,5 +239,8 @@
     border-radius: 5px;
     width: 218px;
     height: 33px;
-    transform: translate(7px, 3px);
+    transform: translate(10px, 3px);
+}
+.typeCon>div>h1{
+    font-size: 8px;
 }
