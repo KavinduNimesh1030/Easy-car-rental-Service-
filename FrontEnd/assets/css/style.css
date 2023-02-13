@@ -136,7 +136,7 @@
     font-size: small;
 }
 
-/*Section 2*/
+/*-----------------Section 2--------------------------------*/
 
 .carSec{
     width: 98.7vw;
@@ -151,7 +151,8 @@
     right: 0;
     margin: auto;
 }
-/*-------------------------Car image Card---------------------------------------------*/
+
+/*---------------Car image Card-----------------*/
 .carCard1{
     position: relative;
     width: 22%;
@@ -166,6 +167,8 @@
 #carouselExampleAutoplaying{
     border-radius: 10px;
 }
+
+/*---------------detail Container---------------*/
 .detailCon{
     height: 55%;
     display: flex;
@@ -201,4 +204,33 @@
     font-size: 13px;
     font-weight: 500;
     color: #7f01d9;
+}
+/*-------------------type container 2------------------------------*/
+
+.typeCon{
+    display: flex;
+    justify-content: center;
+    column-gap: 35px;
+
+}
+.typeCon>div:first-child{
+    width: 20%;
+    background-color: #5d00ff;
+}
+.typeCon>div:nth-child(2){
+    width: 20%;
+    background-color: #5d00ff;
+}
+.typeCon>div:nth-child(3){
+    width: 20%;
+    background-color: #5d00ff;
+}
+#rentNow{
+    background-color: #5d00ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 218px;
+    height: 33px;
+    transform: translate(7px, 3px);
 }
