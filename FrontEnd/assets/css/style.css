@@ -269,7 +269,8 @@
     font-size: 10px;
     font-weight: bolder;
     border-radius: 5px;
-    border: 2px solid #e74c0f ;
+    border: 1px solid #e74c0f ;
+    background-color: white;
 }
 
 /*---------------------Service Section --------------------------------*/
@@ -318,24 +319,39 @@
 
 .serviceListCon{
     width: 369px;
-    height: 362px;
-    border: 2px solid black;
+    height: 296px;
     margin-top: 51px;
     margin-left: 10px;
 
 }
 .serviceListCon>div:first-child{
     height: 33.3%;
-    border: 2px solid black;
+
 }
 .serviceListCon>div:nth-child(2){
     height: 33.3%;
-    border: 2px solid black;
+
 }
 .serviceListCon>div:nth-child(3){
     height: 33.3%;
-    border: 2px solid black;
+
 }
 .serviceListCon>div>h1{
-    
+    font-size: 23px;
+    /* margin-right: -50px; */
+    margin-left: 59px;
+    margin-top: 14px;
+}
+.serviceListCon>div>h2{
+    font-size: 16px;
+    margin-left: 60px;
+    margin-top: -6px;
+    font-weight: 400;
+}
+.serviceListCon>div>img{
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 4px;
 }
