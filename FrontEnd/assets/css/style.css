@@ -315,3 +315,27 @@
     color: #e74c0f;
     font-size: 25px;
 }
+
+.serviceListCon{
+    width: 369px;
+    height: 362px;
+    border: 2px solid black;
+    margin-top: 51px;
+    margin-left: 10px;
+
+}
+.serviceListCon>div:first-child{
+    height: 33.3%;
+    border: 2px solid black;
+}
+.serviceListCon>div:nth-child(2){
+    height: 33.3%;
+    border: 2px solid black;
+}
+.serviceListCon>div:nth-child(3){
+    height: 33.3%;
+    border: 2px solid black;
+}
+.serviceListCon>div>h1{
+    
+}
