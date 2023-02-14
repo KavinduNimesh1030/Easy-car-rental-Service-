@@ -140,7 +140,7 @@
 
 .carSec{
     width: 98.7vw;
-    height: 85vh;
+    height: 95vh;
 
 }
 .carSecText{
@@ -281,7 +281,7 @@
    /* background-color: #5d00ff;*/
 }
 .serviceImgCon{
-     
+
     width: 55em;
     height: 85vh;
     /* margin-left: 677px; */
@@ -299,4 +299,19 @@
 .serviceDetailCon{
     width: 40em;
     height: 85vh;
+}
+
+.ServiceSecText{
+    transform: translate(-91px, 10px);
+}
+.ServiceSecText>h1{
+    text-align: center;
+    font-weight: 600;
+    color: #585454;
+    font-size: 30px;
+}
+.ServiceSecText>h2{
+    text-align: center;
+    color: #e74c0f;
+    font-size: 25px;
 }
