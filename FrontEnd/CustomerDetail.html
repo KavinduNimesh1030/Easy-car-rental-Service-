@@ -52,46 +52,64 @@
 <section class="detailsSec">
   <form class="row g-3">
     <div class="col-md-6">
+      <label for="txtCusName" class="form-label">Name</label>
+      <input type="text" class="form-control" id="txtCusName" placeholder="User Name">
+    </div>
+    <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
+      <input type="email" class="form-control" id="inputEmail4" placeholder="name@gmail.com">
     </div>
+
     <div class="col-md-6">
-      <label for="inputPassword4" class="form-label">Password</label>
-      <input type="password" class="form-control" id="inputPassword4">
+      <label for="txtPickUpLocation" class="form-label">pick Up Venue</label>
+      <input type="text" class="form-control" id="txtPickUpLocation" placeholder="1234 Main St">
     </div>
-    <div class="col-12">
-      <label for="inputAddress" class="form-label">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-    </div>
-    <div class="col-12">
-      <label for="inputAddress2" class="form-label">Address 2</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-    </div>
+
     <div class="col-md-6">
-      <label for="inputCity" class="form-label">City</label>
-      <input type="text" class="form-control" id="inputCity">
+      <label for="txtReturnLocation" class="form-label">Return Venue</label>
+      <input type="text" class="form-control" id="txtReturnLocation" placeholder="1234 Main St">
+    </div>
+
+    <div class="col-md-6">
+      <label for="DatPickDate" class="form-label">Pick Date</label>
+      <input type="date" class="form-control" id="DatPickDate" >
     </div>
     <div class="col-md-4">
-      <label for="inputState" class="form-label">State</label>
+      <label for="DatPickDate" class="form-label">Pick Time</label>
+      <input type="time" class="form-control" id="DatPickTime" >
+    </div>
+
+    <div class="col-md-6">
+      <label for="DatReturnDate" class="form-label">Pick Date</label>
+      <input type="date" class="form-control" id="DatReturnDate" >
+    </div>
+    <div class="col-md-4">
+      <label for="DatReturnTime" class="form-label">Pick Time</label>
+      <input type="time" class="form-control" id="DatReturnTime" >
+    </div>
+
+    <div class="col-md-6">
+      <label for="inputState" class="form-label">Service Option</label>
       <select id="inputState" class="form-select">
-        <option selected>Choose...</option>
-        <option>...</option>
+        <option selected>Please Choose</option>
+        <option>With Driver</option>
+        <option>With Out Driver</option>
       </select>
     </div>
-    <div class="col-md-2">
-      <label for="inputZip" class="form-label">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
+
+   <!-- <div class="col-md-3">
+      <label for="txtLowPrice" class="form-label">Low Price</label>
+      <input type="text" class="form-control" id="txtLowPrice" placeholder="2000.00">
     </div>
+
+
+    <div class="col-md-3">
+      <label for="txtMaxPrice" class="form-label">Max Price</label>
+      <input type="text" class="form-control" id="txtMaxPrice" placeholder="5000.00">
+    </div>-->
+
     <div class="col-12">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Check me out
-        </label>
-      </div>
-    </div>
-    <div class="col-12">
-      <button type="submit" class="btn btn-primary">Sign in</button>
+      <button type="button" class="btn btn-primary">Submit</button>
     </div>
   </form>
 </section>
