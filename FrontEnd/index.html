@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<main id="HomePage">
+    <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <img src="assets/img/logo.png" alt="logo" width="35" height="30">
+                <a class="navbar-brand fw-bolder" href="#">Easy Car</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <form class="container-fluid justify-content-end">
+                <!--<button class="btn btn-outline-success me-2" type="button">Sign Up</button>
+                <button class="btn  btn-outline-secondary" type="button">Sign In</button>-->
+                <button id="btnSignIn">Sign In</button>
+                <button id="btnSignUp" onclick=" window.open('CustomerRegistration.html','_blank')">Sign Up
+
+                </button>
+            </form>
+        </nav>
+
+
+        <!-- Modal -->
+        <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Customer Save</h5>
+                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                    </div>
+                    <div class="modal-body">
+                        <section>
+                            <form id="cusForm">
+                                <div class="mb-3">
+                                    <label class="form-label" for="cusId">Customer ID</label>
+                                    <input class="form-control" id="cusId" type="text" name="ID">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="cusName">Customer Name</label>
+                                    <input class="form-control" id="cusName" multiple type="text" name="Name">
+                                </div>
+                                <div aria-label="Basic mixed styles example" class="btn-group" role="group">
+                                    <button class="btn btn-success" id="saveCus" type="button">Add</button>
+                                    <button class="btn btn-danger" id="btnDelete" type="button" >Delete</button>
+                                    <button class="btn btn-warning" id="btnUpdate" type="button">Update</button>
+                                    <!--  <button class="btn btn-secondary"  id="btnGet" type="button">GetAll</button>
+                                      <button class="btn btn-warning"  id="btnClear" type="button">ClearAll</button>-->
+                                </div>
+
+                            </form>
+
+                        </section>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+                        <!--<button class="btn btn-primary" type="button">Save changes</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="home">
+
+        <!--Main Text Section-->
+        <div class="homeText">
+            <div class="textOutCon">
+                <h1>The car is waiting for you</h1>
+                <h3>Make the right choice,Which will give you wings</h3>
+            </div>
+        </div>
+
+        <!--Main Image Section-->
+        <div class="imgCon">
+            <img src="assets/img/car.png" alt="car">
+        </div>
+
+        <!--Quick Search Bar-->
+        <div class="searchBar">
+            <div>
+                <label for="txtLocation" style="transform: translate(19px, 10px);">Location</label>
+                <input type=""  class="form-control-sm border-1 col-10 mt-3 m-lg-3 bg-transparent" id="txtLocation" placeholder="Search Location">
+            </div>
+            <div>
+                <label for="txtPickDate" style="transform: translate(19px, 10px);">Pick-Up Date</label>
+                <input type="date" class="form-control-sm border-1 col-10 mt-3 m-lg-3  bg-transparent " id="txtPickDate" placeholder="pick-up date">
+
+
+            </div>
+            <div>
+                <label for="txtReturnDate" style="transform: translate(19px, 10px);">Return Date</label>
+                <input type="date" class="form-control-sm  col-10 mt-3 m-lg-3 bg-transparent " id="txtReturnDate" placeholder="pick-up date">
+
+            </div>
+            <div>
+                <button>search</button>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------2nd Section-------------->
+    <section class="carSec">
+        <div class="carSecText">
+            <h2>Catalogue</h2>
+            <h1>Explore Out Cars You Might Like</h1>
+        </div>
+        <!-----------Car Cards----------->
+        <div class="carCardCon">
+            <div class="carCard1">
+                <div class="carImg">
+
+                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" >
+                                <img src=assets/img/i8.png class="d-block w-100" alt="fontView">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/i8-b.png " class="d-block w-100" alt="sideView">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/i8-s.png" class="d-block w-100" alt="BackView">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/i8-i.png" class="d-block w-100" alt="BackView">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="detailCon">
+                    <div>
+                        <h1>Toyota Premio</h1>
+                        <h2 class="dailyPrice">10000LKR</h2>
+                        <h2 class="monthlyPrice">227,150.00LKR/month</h2>
+                    </div>
+                    <div class="typeCon">
+                        <div>
+                            <img src="assets/img/steering-wheel.png" alt="logo" width="20" height="20">
+                            <h1>Auto</h1>
+                        </div>
+                        <div>
+                            <img src="assets/img/car-seat.png" alt="logo" width="20" height="20">
+                            <h1>4 Seat</h1>
+                        </div>
+                        <div>
+                            <img src="assets/img/petrol-pump.png" alt="logo" width="20" height="20">
+                            <h1>petrol</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="rentNow">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carCard1">
+                <div class="carImg">
+
+                    <div  class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" >
+                                <img src=assets/img/Toyota-Corolla-s.jpg class="d-block w-100" alt="fontView">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/Toyota%20Corolla-bjpg.jpg" class="d-block w-100" alt="sideView">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/Toyota-Corolla-f.jpeg " class="d-block w-100" alt="BackView">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/Toyota-Collora-i.jpg" class="d-block w-100" alt="BackView">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="detailCon">
+                    <div>
+                        <h1>Toyota Premio</h1>
+                        <h2 class="dailyPrice">10000LKR</h2>
+                        <h2 class="monthlyPrice">227,150.00LKR/month</h2>
+                    </div>
+                    <div class="typeCon">
+                        <div>
+                            <img src="assets/img/steering-wheel.png" alt="logo" width="20" height="20">
+                            <h1>Auto</h1>
+                        </div>
+                        <div>
+                            <img src="assets/img/car-seat.png" alt="logo" width="20" height="20">
+                            <h1>4 Seat</h1>
+                        </div>
+                        <div>
+                            <img src="assets/img/petrol-pump.png" alt="logo" width="20" height="20">
+                            <h1>petrol</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="rentNow">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carCard1">
+                <div class="carImg">
+
+                    <div  class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" >
+                                <img src=assets/img/perodua-Bezza-f.png class="d-block w-100" alt="fontView">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/perodua-B-b.jpg" class="d-block w-100" alt="sideView">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/Perodua-Bezza-s.jpg" class="d-block w-100" alt="BackView">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/perodua-bezza-interior.png" class="d-block w-100" alt="BackView">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="detailCon">
+                    <div>
+                        <h1>Toyota Premio</h1>
+                        <h2 class="dailyPrice">10000LKR</h2>
+                        <h2 class="monthlyPrice">227,150.00LKR/month</h2>
+                    </div>
+                    <div class="typeCon">
+                        <div>
+                            <img src="assets/img/steering-wheel.png" alt="logo" width="20" height="20">
+                            <h1>Auto</h1>
+                        </div>
+                        <div>
+                            <img src="assets/img/car-seat.png" alt="logo" width="20" height="20">
+                            <h1>4 Seat</h1>
+                        </div>
+                        <div>
+                            <img src="assets/img/petrol-pump.png" alt="logo" width="20" height="20">
+                            <h1>petrol</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="rentNow">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carCard1">
+                <div class="carImg">
+
+                    <div  class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" >
+                                <img src=assets/img/Toyota-Prius-f.png class="d-block w-100" alt="fontView">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/Toyota-Prius-b.jpeg " class="d-block w-100" alt="sideView">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/Toyota-Prius-s.jpeg" class="d-block w-100" alt="BackView">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/Toyota-Collora-i.jpg" class="d-block w-100" alt="BackView">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="detailCon">
+                    <div>
+                        <h1>Toyota Premio</h1>
+                        <h2 class="dailyPrice">10000LKR</h2>
+                        <h2 class="monthlyPrice">227,150.00LKR/month</h2>
+                    </div>
+                    <div class="typeCon">
+                        <div>
+                            <img src="assets/img/steering-wheel.png" alt="logo" width="20" height="20">
+                            <h1>Auto</h1>
+                        </div>
+                        <div>
+                            <img src="assets/img/car-seat.png" alt="logo" width="20" height="20">
+                            <h1>4 Seat</h1>
+                        </div>
+                        <div>
+                            <img src="assets/img/petrol-pump.png" alt="logo" width="20" height="20">
+                            <h1>petrol</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="rentNow">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="viewMore">View More</button>
+    </section>
+    <!-----------------------Service Section-------------------------->
+    <section class="serviceCon">
+
+
+        <div class="serviceImgCon">
+            <img src="assets/img/lambogini.png" alt="service img">
+        </div>
+        <div class="serviceDetailCon">
+            <div class="ServiceSecText">
+                <h2>Contact Us</h2>
+                <h1>For Explore Our Top Deal</h1>
+            </div>
+
+            <div class="serviceListCon">
+                <div>
+                    <img src="assets/img/gear.png" alt="gear">
+                    <h1>Service 24/7</h1>
+                    <h2>We are now open 24/7,You can visit us anyday anytime</h2>
+                </div>
+                <div>
+                    <img src="assets/img/search1.png" alt="find">
+                    <h1>Best Deals</h1>
+                    <h2>find low price? Explore our Top Deals</h2>
+                </div>
+                <div>
+                    <img src="assets/img/contact1.png" alt="phone">
+                    <h1>Contact Us</h1>
+                    <h2>342282301/011223920</h2>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--<section class="modal-dialog" style="width: 100vw;height: 80vh;background-color: black"></section>-->
+
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+
+
+        $('#exampleModal').modal({
+            show: 'false'
+        });
+        $("#btnSignIn").click(function (){
+            $('#exampleModal').modal('show');
+        })
+    </script>
+    </body>
+</main>
+<main id="CustomerReg" style="display:none;">
+    <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="cusRegNav">
+            <div class="container-fluid">
+                <img src="assets/img/logo.png" alt="logo" width="35" height="30">
+                <a class="navbar-brand fw-bolder" href="#">Easy Car</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav1">
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--<form class="container-fluid justify-content-end">
+              &lt;!&ndash;<button class="btn btn-outline-success me-2" type="button">Sign Up</button>
+              <button class="btn  btn-outline-secondary" type="button">Sign In</button>&ndash;&gt;
+              <button id="btnSignIn">Sign In</button>
+              <button id="btnSignUp">Sign Up</button>
+            </form>-->
+        </nav>
+    </header>
+    <h1 class="title">REGISTRATION FORM</h1>
+    <hr style="width:90%;text-align:left;margin-left:64px">
+    <section class="detailsSec">
+
+        <form class="row g-3">
+
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="name@gmail.com">
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword4">
+            </div>
+
+            <div class="col-md-6">
+                <label for="txtAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="txtAddress" placeholder="1234 Main St">
+            </div>
+
+            <div class="col-md-6">
+                <label for="txtContactNo" class="form-label">Contact No</label>
+                <input type="text" class="form-control" id="txtContactNo" placeholder="+9477055332">
+            </div>
+
+            <div class="col-md-6">
+                <label for="txtNicNo" class="form-label">Nic Number</label>
+                <input type="text" class="form-control" id="txtNicNo" placeholder="200130401928">
+            </div>
+
+            <div class="col-md-6">
+                <label for="txtDrivingLNo" class="form-label">Driving License No</label>
+                <input type="text" class="form-control" id="txtDrivingLNo" placeholder="219040584738">
+            </div>
+
+            <div class="col-md-6">
+                <label for="formFileNic" class="form-label">Input Photo Of NIC</label>
+                <input class="form-control" type="file" id="formFileNic" multiple>
+            </div>
+            <div class="col-md-6">
+                <label for="formFileDL" class="form-label">Input Photo Of Driving License</label>
+                <input class="form-control" type="file" id="formFileDL" multiple>
+            </div>
+
+
+            <!-- <div class="col-md-3">
+               <label for="txtLowPrice" class="form-label">Low Price</label>
+               <input type="text" class="form-control" id="txtLowPrice" placeholder="2000.00">
+             </div>
+
+
+             <div class="col-md-3">
+               <label for="txtMaxPrice" class="form-label">Max Price</label>
+               <input type="text" class="form-control" id="txtMaxPrice" placeholder="5000.00">
+             </div>-->
+
+            <div class="col-12">
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </section>
+    </body>
+</main>
+<main id="cusDetail" style="display:none;">
+    <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="cusDetailNav">
+            <div class="container-fluid">
+                <img src="assets/img/logo.png" alt="logo" width="35" height="30">
+                <a class="navbar-brand fw-bolder" href="#">Easy Car</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav2">
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--<form class="container-fluid justify-content-end">
+              &lt;!&ndash;<button class="btn btn-outline-success me-2" type="button">Sign Up</button>
+              <button class="btn  btn-outline-secondary" type="button">Sign In</button>&ndash;&gt;
+              <button id="btnSignIn">Sign In</button>
+              <button id="btnSignUp">Sign Up</button>
+            </form>-->
+        </nav>
+    </header>
+
+    <h1 class="title">QUICK INQUIRY FORM</h1>
+    <hr style="width:90%;text-align:left;margin-left:64px">
+
+    <section class="detailsSec">
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="txtCusName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="txtCusName" placeholder="User Name">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="name@gmail.com">
+            </div>
+
+            <div class="col-md-6">
+                <label for="txtPickUpLocation" class="form-label">pick Up Venue</label>
+                <input type="text" class="form-control" id="txtPickUpLocation" placeholder="1234 Main St">
+            </div>
+
+            <div class="col-md-6">
+                <label for="txtReturnLocation" class="form-label">Return Venue</label>
+                <input type="text" class="form-control" id="txtReturnLocation" placeholder="1234 Main St">
+            </div>
+
+            <div class="col-md-6">
+                <label for="DatPickDate" class="form-label">Pick Date</label>
+                <input type="date" class="form-control" id="DatPickDate" >
+            </div>
+            <div class="col-md-4">
+                <label for="DatPickDate" class="form-label">Pick Time</label>
+                <input type="time" class="form-control" id="DatPickTime" >
+            </div>
+
+            <div class="col-md-6">
+                <label for="DatReturnDate" class="form-label">Pick Date</label>
+                <input type="date" class="form-control" id="DatReturnDate" >
+            </div>
+            <div class="col-md-4">
+                <label for="DatReturnTime" class="form-label">Pick Time</label>
+                <input type="time" class="form-control" id="DatReturnTime" >
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputState" class="form-label">Service Option</label>
+                <select id="inputState" class="form-select">
+                    <option selected>Please Choose</option>
+                    <option>With Driver</option>
+                    <option>With Out Driver</option>
+                </select>
+            </div>
+
+            <!-- <div class="col-md-3">
+               <label for="txtLowPrice" class="form-label">Low Price</label>
+               <input type="text" class="form-control" id="txtLowPrice" placeholder="2000.00">
+             </div>
+
+
+             <div class="col-md-3">
+               <label for="txtMaxPrice" class="form-label">Max Price</label>
+               <input type="text" class="form-control" id="txtMaxPrice" placeholder="5000.00">
+             </div>-->
+
+            <div class="col-12">
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </section>
+    </body>
+</main>
+</body>
+</html>
