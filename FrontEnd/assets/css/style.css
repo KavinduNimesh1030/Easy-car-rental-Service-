@@ -181,6 +181,7 @@
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
+
 .carImg{
     height: 45%;
     border-radius: 10px;
@@ -375,4 +376,5 @@
 #cusDetailNav{
     box-shadow: 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.2);
+
 }
