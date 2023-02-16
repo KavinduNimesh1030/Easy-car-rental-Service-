@@ -23,6 +23,8 @@ public class Customer {
     String contactNo;
     String nic;
     String dln;
+    String nicImgPath;
+    String dlnImgPath;
 
 
 }

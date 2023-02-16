@@ -396,17 +396,10 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script>
 
-
-        $('#exampleModal').modal({
-            show: 'false'
-        });
-        $("#btnSignIn").click(function (){
-            $('#exampleModal').modal('show');
-        })
     </script>
     </body>
 </main>
-<main id="CustomerReg" style="display:none;">
+<main id="CustomerReg"> <!--style="display:none;"-->>
     <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary" id="cusRegNav">
@@ -449,42 +442,47 @@
         <form class="row g-3" id="cusRegForm">
 
             <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="name@gmail.com">
+                <label for="cusRegId" class="form-label">Customer Id</label>
+                <input type="text" class="form-control" id="cusRegId" placeholder="name@gmail.com" name="id">
+            </div>
+
+            <div class="col-md-6">
+                <label for="cusEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="cusEmail" placeholder="name@gmail.com"name="email">
             </div>
 
             <div class="col-md-6">
                 <label for="inputPassword4" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword4">
+                <input type="password" class="form-control" id="inputPassword4" name="password">
             </div>
 
             <div class="col-md-6">
                 <label for="txtAddress" class="form-label">Address</label>
-                <input type="text" class="form-control" id="txtAddress" placeholder="1234 Main St">
+                <input type="text" class="form-control" id="txtAddress" placeholder="1234 Main St" name="address">
             </div>
 
             <div class="col-md-6">
                 <label for="txtContactNo" class="form-label">Contact No</label>
-                <input type="text" class="form-control" id="txtContactNo" placeholder="+9477055332">
+                <input type="text" class="form-control" id="txtContactNo" placeholder="+9477055332" name="contactNo">
             </div>
 
             <div class="col-md-6">
                 <label for="txtNicNo" class="form-label">Nic Number</label>
-                <input type="text" class="form-control" id="txtNicNo" placeholder="200130401928">
+                <input type="text" class="form-control" id="txtNicNo" placeholder="200130401928"name="nic">
             </div>
 
             <div class="col-md-6">
                 <label for="txtDrivingLNo" class="form-label">Driving License No</label>
-                <input type="text" class="form-control" id="txtDrivingLNo" placeholder="219040584738">
+                <input type="text" class="form-control" id="txtDrivingLNo" placeholder="219040584738" name="dln">
             </div>
 
             <div class="col-md-6">
                 <label for="formFileNic" class="form-label">Input Photo Of NIC</label>
-                <input class="form-control" type="file" id="formFileNic" multiple>
+                <input class="form-control" type="text" id="formFileNic" multiple name="nicImgPath">
             </div>
             <div class="col-md-6">
                 <label for="formFileDL" class="form-label">Input Photo Of Driving License</label>
-                <input class="form-control" type="file" id="formFileDL" multiple>
+                <input class="form-control" type="text" id="formFileDL" multiple name="dlnImgPath">
             </div>
 
 
@@ -553,8 +551,8 @@
                 <input type="text" class="form-control" id="txtCusName" placeholder="User Name">
             </div>
             <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="name@gmail.com">
+                <label for="cusRegEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="cusRegEmail" placeholder="name@gmail.com">
             </div>
 
             <div class="col-md-6">

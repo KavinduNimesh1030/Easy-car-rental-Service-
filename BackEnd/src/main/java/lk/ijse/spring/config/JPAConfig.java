@@ -1,5 +1,6 @@
 package lk.ijse.spring.config;
 
+import lk.ijse.spring.repo.CustomerRepo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -16,7 +17,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 @Configuration
-@EnableJpaRepositories(basePackageClasses = {})
+@EnableJpaRepositories(basePackageClasses = {CustomerRepo.class})
 @EnableTransactionManagement
 public class JPAConfig {
     @Bean
@@ -29,7 +30,6 @@ public class JPAConfig {
     }
     @Bean
     public DataSource dataSource(){
-        //we use this data source only for testing
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setUrl("jdbc:mysql://localhost:3306/CarRental?createDatabaseIfNotExist=true");
         ds.setDriverClassName("com.mysql.jdbc.Driver");

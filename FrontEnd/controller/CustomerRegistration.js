@@ -1,3 +1,4 @@
+let baseUrl = "http://localhost:8080/BackEnd_war/";
 $("#submitCusRegDetail").click(function (){
     var formData = $("#cusRegForm").serialize();
     console.log(formData);
