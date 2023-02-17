@@ -431,8 +431,15 @@
 }
 .loginFormOutCon{
     position: relative;
-    border: 2px solid black;
+
     width: 400px;
     transform: translate(65px, 126px);
 
+}
+#btnLogin{
+    width: 270px;
+    margin: auto;
+    transform: translateX(55px);
+    background: linear-gradient(160deg, #e7280f 50%, #ffb939);
+    border: none;
 }
