@@ -42,52 +42,11 @@
             <form class="container-fluid justify-content-end" id="HomeNavBarButton">
                 <!--<button class="btn btn-outline-success me-2" type="button">Sign Up</button>
                 <button class="btn  btn-outline-secondary" type="button">Sign In</button>-->
-                <button id="btnSignIn">Sign In</button>
-                <button id="btnSignUp" onclick=" window.open('CustomerRegistration.html','_blank')">Sign Up
-
-                </button>
+                <button id="btnSignIn" type="button">Sign In</button>
+                <button id="btnSignUp" type="button">Sign Up</button>
             </form>
         </nav>
 
-
-        <!-- Modal -->
-        <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Customer Save</h5>
-                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
-                    </div>
-                    <div class="modal-body">
-                        <section>
-                            <form id="cusForm">
-                                <div class="mb-3">
-                                    <label class="form-label" for="cusId">Customer ID</label>
-                                    <input class="form-control" id="cusId" type="text" name="ID">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="cusName">Customer Name</label>
-                                    <input class="form-control" id="cusName" multiple type="text" name="Name">
-                                </div>
-                                <div aria-label="Basic mixed styles example" class="btn-group" role="group">
-                                    <button class="btn btn-success" id="saveCus" type="button">Add</button>
-                                    <button class="btn btn-danger" id="btnDelete" type="button" >Delete</button>
-                                    <button class="btn btn-warning" id="btnUpdate" type="button">Update</button>
-                                    <!--  <button class="btn btn-secondary"  id="btnGet" type="button">GetAll</button>
-                                      <button class="btn btn-warning"  id="btnClear" type="button">ClearAll</button>-->
-                                </div>
-
-                            </form>
-
-                        </section>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
-                        <!--<button class="btn btn-primary" type="button">Save changes</button>-->
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
 
 
@@ -674,5 +633,18 @@
 </main>
 
 <script src="controller/CustomerRegistration.js"></script>
+<script>
+  /*  $("#loginPage").hide();
+    $("#CustomerReg").hide();
+    $("#cusDetail").hide();*/
+
+    $("#btnSignIn").click(function (){
+        $("#loginPage").show();
+        $("#CustomerReg").hide();
+        $("#cusDetail").hide();
+        $("#HomePage").hide();
+
+    });
+</script>
 </body>
 </html>
