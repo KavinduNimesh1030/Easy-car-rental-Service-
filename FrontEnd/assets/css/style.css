@@ -447,3 +447,24 @@
     font-size: 29px;
     margin-top: -24px;
 }
+
+/*-----------------------------------------------Show Car Section-----------------------------------*/
+
+.carOutSec{
+    position: relative;
+    width: 100vw;
+    display: grid;
+    border: 2px solid black;
+    height: 80vh;
+    top: 40px;
+
+}
+.carCardInRent{
+    position: relative;
+    width: 240px;
+    height: 318px;
+    /* border: 2px solid red; */
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
