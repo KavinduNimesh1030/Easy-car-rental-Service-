@@ -6,4 +6,6 @@ import org.springframework.stereotype.Component;
 
 
 public interface CustomerRepo extends JpaRepository<Customer,String> {
+
+    void findByeAndEmailAndPassword(String email,String password);
 }
