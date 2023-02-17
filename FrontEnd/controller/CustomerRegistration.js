@@ -3,6 +3,15 @@ $("#submitCusRegDetail").click(function (){
     var formData = $("#cusRegForm").serialize();
     console.log(formData);
 
+    let nicImgPath = $("#formFileNic")[0].files[0].name;
+    let dlnImgPath = $("#formFileDL")[0].files[0];
+
+    console.log(nicImgPath);
+
+
+    formData.append("nicImgPath",nicImgPath);
+    formData.append("dlnImgPath",dlnImgPath);
+
     $.ajax({
         url: baseUrl+"Customer",
         method :"post",
