@@ -402,10 +402,19 @@
 .LoginImageCon{
     width: 50%;
     height: 100%;
-    background-color: #e74c0f;
+    background: linear-gradient(160deg, #e7280f 50%, #ffb939);
 }
 .LoginDetailCon{
     width: 50%;
     height: 100%;
+    background-color: #eaeaea;
 
+}
+.LoginImageCon>img{
+    width: 712px;
+    height: 364px;
+    transform: translate(-60px, 215px);
+}
+.loginBody{
+    filter: blur(5px) brightness(0.5);
 }
