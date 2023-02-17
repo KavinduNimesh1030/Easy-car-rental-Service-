@@ -451,12 +451,19 @@
 /*-----------------------------------------------Show Car Section-----------------------------------*/
 
 .carOutSec{
-    position: relative;
-    width: 100vw;
-    display: grid;
+    width: 98.7vw;
+    /* display: grid; */
     border: 2px solid black;
     height: 80vh;
     top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    row-gap: 52px;
+    align-content: space-between;
+    justify-items: center;
+    column-gap: -45px;
+    margin-top: 115px;
 
 }
 .carCardInRent{
