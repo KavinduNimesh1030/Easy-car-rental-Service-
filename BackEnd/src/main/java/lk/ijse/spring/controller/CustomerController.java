@@ -7,11 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("/Customer")
 @CrossOrigin
 public class CustomerController {
     @Autowired
     CustomerService customerService;
+
+    @PostMapping
     public ResponseUtil saveCus(@ModelAttribute CustomerDTO customerDTO){
         customerService.saveCustomer(new CustomerDTO(customerDTO.getId(),customerDTO.getEmail(),customerDTO.getPassword(),customerDTO.getAddress(),customerDTO.getContactNo(),customerDTO.getNic(),customerDTO.getDln(),customerDTO.getNicImgPath(),customerDTO.getDlnImgPath()));
         return new ResponseUtil("200",customerDTO.toString()+" Saved",null);
