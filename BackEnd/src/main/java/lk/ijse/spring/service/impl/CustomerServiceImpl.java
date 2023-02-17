@@ -24,4 +24,9 @@ public class CustomerServiceImpl implements CustomerService {
         Customer entity = modelMapper.map(customerDTO, Customer.class);
         repo.save(entity);
     }
+
+    @Override
+    public void CheckCustomer(String email, String password) {
+        
+    }
 }

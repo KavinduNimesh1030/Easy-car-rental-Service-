@@ -20,7 +20,7 @@ public class CustomerController {
     }
     @GetMapping(params = "email,password")
     public ResponseUtil checkCustomer(String email,String password){
-        
+
         return new ResponseUtil("200","Login Success",null);
     }
 

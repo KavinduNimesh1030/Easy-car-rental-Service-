@@ -7,4 +7,5 @@ import org.springframework.stereotype.Component;
 @Component
 public interface CustomerService {
     void saveCustomer(CustomerDTO customerDTO);
+    void CheckCustomer(String email,String password);
 }
