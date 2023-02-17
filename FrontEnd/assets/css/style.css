@@ -453,7 +453,6 @@
 .carOutSec{
     width: 98.7vw;
     /* display: grid; */
-    border: 2px solid black;
     height: 80vh;
     top: 40px;
     display: grid;
@@ -463,7 +462,7 @@
     align-content: space-between;
     justify-items: center;
     column-gap: -45px;
-    margin-top: 115px;
+    margin-top: 12px;
 
 }
 .carCardInRent{
@@ -474,4 +473,11 @@
     box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+}
+.carDetailSec{
+    width: 91.7vw;
+    height: 163px;
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-left: 45px;
 }
