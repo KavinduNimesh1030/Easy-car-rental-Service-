@@ -52,12 +52,12 @@
     background: linear-gradient(160deg, #e7280f 50%, #ffb939);
 }
 .imgCon>img{
-    width: 728px;
+    width: 737px;
     position: absolute;
     /* left: -134px; */
     /* bottom: 169px; */
-    height: 443px;
-    transform: translate(-131px, 52px);
+    height: 395px;
+    transform: translate(-138px, 72px);
 }
 .navbar{
     font-weight: normal;
@@ -431,13 +431,13 @@
 }
 .loginFormOutCon{
     position: relative;
+    width: 351px;
 
-    width: 400px;
-    transform: translate(65px, 90px);
+    transform: translate(92px, 90px);
 
 }
 #btnLogin{
-    width: 270px;
+    width: 237px;
     margin: auto;
     transform: translateX(55px);
     background: linear-gradient(160deg, #e7280f 50%, #ffb939);
