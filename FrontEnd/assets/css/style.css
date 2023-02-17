@@ -433,7 +433,7 @@
     position: relative;
 
     width: 400px;
-    transform: translate(65px, 126px);
+    transform: translate(65px, 90px);
 
 }
 #btnLogin{
@@ -442,4 +442,8 @@
     transform: translateX(55px);
     background: linear-gradient(160deg, #e7280f 50%, #ffb939);
     border: none;
+}
+.loginTextInLoginForm{
+    font-size: 29px;
+    margin-top: -24px;
 }
