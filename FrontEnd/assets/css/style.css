@@ -404,12 +404,16 @@
 .LoginImageCon{
     width: 50%;
     height: 100%;
-    background: linear-gradient(160deg, #e7280f 50%, #ffb939);
+    background: linear-gradient(90deg, #e7280f 50%, #ffb939);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 .LoginDetailCon{
     width: 50%;
     height: 100%;
    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 
 }
 .LoginImageCon>img{
@@ -420,10 +424,15 @@
 }
 .loginMainSec{
     background: linear-gradient(160deg, #e7280f 50%, #ffb939);
-    opacity: 60%;
+    opacity: 50%;
     height: 100%; width:100%;
     filter: blur(50px);
     position: absolute;
-
+}
+.loginFormOutCon{
+    position: relative;
+    border: 2px solid black;
+    width: 400px;
+    transform: translate(65px, 126px);
 
 }
