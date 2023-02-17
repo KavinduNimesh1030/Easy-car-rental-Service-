@@ -393,10 +393,12 @@
     bottom: 0;
     left: 0;
     right: 0;
-
     transform: translateY(56px);
     display: flex;
     flex-direction: row;
+    z-index: 1;
+
+
 
 }
 .LoginImageCon{
@@ -407,14 +409,21 @@
 .LoginDetailCon{
     width: 50%;
     height: 100%;
-    background-color: #eaeaea;
+   background-color: white;
 
 }
 .LoginImageCon>img{
     width: 712px;
     height: 364px;
     transform: translate(-60px, 215px);
+
 }
-.loginBody{
-    filter: blur(5px) brightness(0.5);
+.loginMainSec{
+    background: linear-gradient(160deg, #e7280f 50%, #ffb939);
+    opacity: 60%;
+    height: 100%; width:100%;
+    filter: blur(50px);
+    position: absolute;
+
+
 }
