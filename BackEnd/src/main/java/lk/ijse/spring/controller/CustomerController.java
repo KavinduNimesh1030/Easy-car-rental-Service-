@@ -18,4 +18,10 @@ public class CustomerController {
         customerService.saveCustomer(new CustomerDTO(customerDTO.getId(),customerDTO.getEmail(),customerDTO.getPassword(),customerDTO.getAddress(),customerDTO.getContactNo(),customerDTO.getNic(),customerDTO.getDln(),customerDTO.getNicImgPath(),customerDTO.getDlnImgPath()));
         return new ResponseUtil("200",customerDTO.toString()+" Saved",null);
     }
+    @GetMapping(params = "email,password")
+    public ResponseUtil checkCustomer(String email,String password){
+        
+        return new ResponseUtil("200","Login Success",null);
+    }
+
 }
