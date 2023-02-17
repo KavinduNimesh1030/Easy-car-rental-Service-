@@ -26,7 +26,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void CheckCustomer(String email, String password) {
-        repo.findByeAndEmailAndPassword(email,password);
+    public CustomerDTO CheckCustomer(String email, String password) {
+        return modelMapper.map(repo.findByeAndEmailAndPassword(email,password),CustomerDTO.class);
     }
 }
