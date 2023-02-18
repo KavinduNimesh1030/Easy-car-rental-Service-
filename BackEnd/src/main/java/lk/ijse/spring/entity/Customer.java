@@ -17,6 +17,7 @@ import javax.persistence.Id;
 public class Customer {
     @Id
     String id;
+    String name;
     String email;
     String password;
     String address;

@@ -15,15 +15,15 @@ public class CustomerController {
 
     @PostMapping
     public ResponseUtil saveCus(@ModelAttribute CustomerDTO customerDTO){
-        customerService.saveCustomer(new CustomerDTO(customerDTO.getId(),customerDTO.getEmail(),customerDTO.getPassword(),customerDTO.getAddress(),customerDTO.getContactNo(),customerDTO.getNic(),customerDTO.getDln(),customerDTO.getNicImgPath(),customerDTO.getDlnImgPath()));
+        customerService.saveCustomer(customerDTO);
         return new ResponseUtil("200",customerDTO.toString()+" Saved",null);
     }
     @GetMapping(params = "email")
     public ResponseUtil checkCustomer(String email){
         System.out.println(email);
         CustomerDTO customerDTO = customerService.CheckCustomer(email);
-
-            return new ResponseUtil("200", "Login Success", customerDTO);
+        System.out.println(customerDTO);
+            return new ResponseUtil("200", "Login Success",customerDTO);
 
     }
 
