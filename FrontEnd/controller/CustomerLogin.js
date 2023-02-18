@@ -8,7 +8,7 @@ $("#btnLogin").click(function (){
         dataType:"json",
         success: function (resp) {
             console.log(resp);
-                if(resp.data == password) {
+                if(resp.data.password == password) {
                     console.log(resp.data);
                     alert(resp.message);
 
