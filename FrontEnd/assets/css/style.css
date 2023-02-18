@@ -524,5 +524,28 @@
     /* width: 239px; */
     transform: translate(447px, 4px);
 }
+.navUserNameCon{
+    margin-top: -6px;
+    width: 264px;
+    height: 46px;
+
+}
+.navUserNameCon>img{
+    width: 27px;
+    margin-top: 15px;
+
+}
+.navUserNameCon>h1{
+    font-size: 13px;
+
+    margin-left: 35px;
+    transform: translateY(-27px);
+}
+.navUserNameCon>h2{
+    font-size: 10px;
+    margin-left: 35px;
+
+    transform: translateY(-36px);
+}
 
 
