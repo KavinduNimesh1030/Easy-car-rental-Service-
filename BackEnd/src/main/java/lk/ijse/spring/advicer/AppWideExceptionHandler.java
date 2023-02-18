@@ -10,6 +10,7 @@ public class AppWideExceptionHandler {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler({RuntimeException.class})
     public ResponseUtil handlerException(RuntimeException e){
-        return new ResponseUtil("500",e.getMessage(),null);
+        return  new ResponseUtil("500",e.getMessage(),null);
     }
 }
+
