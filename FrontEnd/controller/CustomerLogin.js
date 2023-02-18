@@ -1,21 +1,13 @@
 
-let email= $("#txtCusLoginEmail").val();
-let password = $("#txtCusLoginPassword").val();
-
 $("#btnLogin").click(function (){
+    let email= $("#txtLoginEmail").val();
+    let password = $("#txtCusLoginPassword").val();
+    console.log("email"+email)
     $.ajax({
         url: baseUrl+"Customer?email="+email,
         method :"get",
         success: function (resp) {
-          
-            for (const r in resp.data) {
-                if(r.password == password){
-                    alert(resp.message);
-                    alert(r.password)
-                }
-            }
-
-
+            alert(resp.message);
         },
         error: function(error) {
             let prase = JSON.parse(error.responseText);

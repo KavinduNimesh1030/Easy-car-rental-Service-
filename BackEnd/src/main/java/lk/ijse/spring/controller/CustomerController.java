@@ -20,8 +20,11 @@ public class CustomerController {
     }
     @GetMapping(params = "email")
     public ResponseUtil checkCustomer(String email){
+        System.out.println(email);
         CustomerDTO customerDTO = customerService.CheckCustomer(email);
-        return new ResponseUtil("200","Login Success",customerDTO);
+
+            return new ResponseUtil("200", "Login Success", customerDTO);
+
     }
 
 }

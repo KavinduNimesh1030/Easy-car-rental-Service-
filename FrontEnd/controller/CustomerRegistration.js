@@ -38,6 +38,10 @@ $("#submitCusRegDetail").click(function (){
         success: function (resp) {
             console.log(resp);
             alert(resp.message);
+            $("#loginPage").hide();
+            $("#CustomerReg").hide();
+            $("#cusDetail").hide();
+            $("#HomePage").show();
 
         },
         error: function(error) {
@@ -46,6 +50,7 @@ $("#submitCusRegDetail").click(function (){
 
         }
     });
+
 
 
 
