@@ -476,9 +476,9 @@
 }
 .carDetailSec{
     width: 91.7vw;
-    height: 163px;
-    border: 2px solid black;
-    margin-top: 10px;
+    /* height: 37px; */
+    /* border: 2px solid black; */
+    margin-top: 217px;
     margin-left: 45px;
     display: flex;
     flex-direction: row;
@@ -489,4 +489,14 @@
     /* width: 33.33333333%; */
     margin-right: 20px;
 }
+.btnCategoriesFind{
+    height: 30px;
+    width: 108px;
+    border-radius: 4px;
+    color: white;
+    background-color: #5d00ff;
+    border: none;
+
+}
+
 
