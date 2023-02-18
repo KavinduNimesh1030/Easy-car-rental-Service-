@@ -37,10 +37,10 @@
                 </ul>
             </div>
         </div>
-        <div class="navUserNameCon">
+        <div class="navUserNameCon" id="userNameNav">
             <img src="assets/img/user.jpg" alt="user" style="width: 27px">
-            <h1 style="font-size: 13px">kavindu@gmail.com</h1>
-            <h2 style="font-size: 10px">kavindu Nimesh</h2>
+            <h1 style="font-size: 13px" id="lblNavEmail">user@gmail.com</h1>
+            <h2 style="font-size: 10px" id="lblNavUserName">user</h2>
         </div>
         <form class="container-fluid justify-content-end" id="HomeNavBarButton">
             <!--<button class="btn btn-outline-success me-2" type="button">Sign Up</button>
@@ -1130,8 +1130,10 @@
     $("#CustomerReg").hide();
     $("#cusDetail").hide();
     $("#rentCar").hide();
+    $("#userNameNav").hide();
 
     $("#btnSignIn").click(function (){
+        $("#userNameNav").show();
         $("#HomeNavBarButton").hide();
         $("#loginPage").show();
         $("#CustomerReg").hide();
@@ -1141,6 +1143,7 @@
     });
   $("#btnSignUp").click(function (){
       navSetting();
+      $("#userNameNav").show();
       $("#loginPage").hide();
       $("#CustomerReg").show();
       $("#cusDetail").hide();

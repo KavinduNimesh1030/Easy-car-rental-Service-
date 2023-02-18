@@ -533,11 +533,9 @@
 .navUserNameCon>img{
     width: 27px;
     margin-top: 15px;
-
 }
 .navUserNameCon>h1{
     font-size: 13px;
-
     margin-left: 35px;
     transform: translateY(-27px);
 }
