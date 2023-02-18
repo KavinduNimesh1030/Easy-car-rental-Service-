@@ -503,7 +503,9 @@
 }
 .rentCarImg{
     width: 1349px;
-    height: 106px;
+    height: 157px;
+    display: flex;
+    flex-direction: row;
 
 }
 .rentCarText{
@@ -518,6 +520,10 @@
 .rentCarText>h1{
 
     font-size: 30px;
+}
+.rentCarImg>img{
+    /* width: 239px; */
+    transform: translate(447px, 4px);
 }
 
 
