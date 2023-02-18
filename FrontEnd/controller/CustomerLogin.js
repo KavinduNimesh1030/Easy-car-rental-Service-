@@ -1,14 +1,20 @@
-let baseUrl = "http://localhost:8080/BackEnd_war/";
 
-let email= $("txtCusLoginEmail").val();
-let password = $("txtCusLoginPassword").val();
+let email= $("#txtCusLoginEmail").val();
+let password = $("#txtCusLoginPassword").val();
 
-$("#btnCusLogin").click(function (){
+$("#btnLogin").click(function (){
     $.ajax({
-        url: baseUrl+"Customer?email=?password=?"+email,password,
+        url: baseUrl+"Customer?email="+email,
         method :"get",
         success: function (resp) {
-            alert(resp.message);
+          
+            for (const r in resp.data) {
+                if(r.password == password){
+                    alert(resp.message);
+                    alert(r.password)
+                }
+            }
+
 
         },
         error: function(error) {
