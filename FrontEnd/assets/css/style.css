@@ -480,4 +480,12 @@
     border: 2px solid black;
     margin-top: 10px;
     margin-left: 45px;
+    display: flex;
+    flex-direction: row;
 }
+.col-md-4 {
+    flex: 0 0 auto;
+    /* width: 33.33333333%; */
+    margin-right: 20px;
+}
+
