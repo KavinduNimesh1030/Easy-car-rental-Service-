@@ -313,7 +313,7 @@
                 </div>
             </div>
         </div>
-        <button class="viewMore">View More</button>
+        <button class="viewMore" id="btnVewMoreCar">View More</button>
     </section>
     <!-----------------------Service Section-------------------------->
     <section class="serviceCon">
@@ -631,6 +631,486 @@
     </section>
     </body>
 </main>
+<main id="rentCar">
+    <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="RentCarNav">
+            <div class="container-fluid">
+                <img src="assets/img/logo.png" alt="logo" width="35" height="30">
+                <a class="navbar-brand fw-bolder" href="#">Easy Car</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="RentCarNavbarNav">
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--<form class="container-fluid justify-content-end">
+              &lt;!&ndash;<button class="btn btn-outline-success me-2" type="button">Sign Up</button>
+              <button class="btn  btn-outline-secondary" type="button">Sign In</button>&ndash;&gt;
+              <button id="btnSignIn">Sign In</button>
+              <button id="btnSignUp">Sign Up</button>
+            </form>-->
+        </nav>
+    </header>
+    <section class="rentCarImg">
+        <div class="rentCarText">
+            <h2>Catalogue</h2>
+            <h1>Explore Out Cars You Might Like</h1>
+        </div>
+        <img src="assets/img/rangeRover.png" alt="rangeRover">
+    </section>
+    <hr style="width:90%;text-align:left;margin-left:71px;margin-top: -1px;">
+    <section class="carDetailSec">
+        <div class="row-cols-md-1" id="rentCarDrop">
+            <select id="brand" class="form-select-sm">
+                <option selected>Brand</option>
+                <option>Suzuki</option>
+                <option>Perodua</option>
+                <option>Toyota</option>
+                <option>Mercedes</option>
+                <option>BMW</option>
+            </select>
+        </div>
+        <div class="row-cols-md-1">
+            <select id="fuelType" class="form-select-sm">
+                <option selected>Fuel Type</option>
+                <option>petrol</option>
+                <option>diesel</option>
+            </select>
+        </div>
+
+
+        <div class="row-cols-md-1">
+            <select id="noOfPassenger" class="form-select-sm">
+                <option selected>Passengers</option>
+                <option>2</option>
+                <option>4</option>
+                <option>6</option>
+
+            </select>
+        </div>
+
+        <div class="row-cols-md-1">
+            <select id="transitionType" class="form-select-sm">
+                <option selected>Transmission Type</option>
+                <option>Auto</option>
+                <option>Manual</option>
+            </select>
+        </div>
+
+        <div class="row-cols-md-1">
+            <select id="type" class="form-select-sm">
+                <option selected>Type</option>
+                <option>SUV</option>
+                <option>Mini</option>
+                <option>Hatchback</option>
+                <option>Sedan</option>
+            </select>
+        </div>
+
+        <input type="text" class="form-control-sm" id="txtLowPrice" placeholder="Low price" style="height: 10px;border: 1px solid #767575">
+        <input type="text" class="form-control-sm" id="txtMaxPrice" placeholder="Max Price" style="height: 10px;border: 1px solid #767575">
+        <button class="btnCategoriesFind">Search</button>
+
+    </section>
+    <section class="carOutSec">
+        <div class="carCardInRent">
+            <div class="carImg">
+
+                <div id="carouselExample5" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" >
+                            <img src=assets/img/i8.png class="d-block w-100" alt="fontView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-b.png " class="d-block w-100" alt="sideView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-s.png" class="d-block w-100" alt="BackView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-i.png" class="d-block w-100" alt="BackView">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="detailCon">
+                <div>
+                    <h1>Toyota Premio</h1>
+                    <h2 class="dailyPrice">10000LKR</h2>
+                    <h2 class="monthlyPrice">227,150.00LKR/month</h2>
+                </div>
+                <div class="typeCon">
+                    <div>
+                        <img src="assets/img/steering-wheel.png" alt="logo" width="20" height="20">
+                        <h1>Auto</h1>
+                    </div>
+                    <div>
+                        <img src="assets/img/car-seat.png" alt="logo" width="20" height="20">
+                        <h1>4 Seat</h1>
+                    </div>
+                    <div>
+                        <img src="assets/img/petrol-pump.png" alt="logo" width="20" height="20">
+                        <h1>petrol</h1>
+                    </div>
+                </div>
+                <div>
+                    <button class="rentNow">Rent Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="carCardInRent">
+            <div class="carImg">
+
+                <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" >
+                            <img src=assets/img/i8.png class="d-block w-100" alt="fontView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-b.png " class="d-block w-100" alt="sideView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-s.png" class="d-block w-100" alt="BackView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-i.png" class="d-block w-100" alt="BackView">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="detailCon">
+                <div>
+                    <h1>Toyota Premio</h1>
+                    <h2 class="dailyPrice">10000LKR</h2>
+                    <h2 class="monthlyPrice">227,150.00LKR/month</h2>
+                </div>
+                <div class="typeCon">
+                    <div>
+                        <img src="assets/img/steering-wheel.png" alt="logo" width="20" height="20">
+                        <h1>Auto</h1>
+                    </div>
+                    <div>
+                        <img src="assets/img/car-seat.png" alt="logo" width="20" height="20">
+                        <h1>4 Seat</h1>
+                    </div>
+                    <div>
+                        <img src="assets/img/petrol-pump.png" alt="logo" width="20" height="20">
+                        <h1>petrol</h1>
+                    </div>
+                </div>
+                <div>
+                    <button class="rentNow">Rent Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="carCardInRent">
+            <div class="carImg">
+
+                <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" >
+                            <img src=assets/img/i8.png class="d-block w-100" alt="fontView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-b.png " class="d-block w-100" alt="sideView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-s.png" class="d-block w-100" alt="BackView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-i.png" class="d-block w-100" alt="BackView">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="detailCon">
+                <div>
+                    <h1>Toyota Premio</h1>
+                    <h2 class="dailyPrice">10000LKR</h2>
+                    <h2 class="monthlyPrice">227,150.00LKR/month</h2>
+                </div>
+                <div class="typeCon">
+                    <div>
+                        <img src="assets/img/steering-wheel.png" alt="logo" width="20" height="20">
+                        <h1>Auto</h1>
+                    </div>
+                    <div>
+                        <img src="assets/img/car-seat.png" alt="logo" width="20" height="20">
+                        <h1>4 Seat</h1>
+                    </div>
+                    <div>
+                        <img src="assets/img/petrol-pump.png" alt="logo" width="20" height="20">
+                        <h1>petrol</h1>
+                    </div>
+                </div>
+                <div>
+                    <button class="rentNow">Rent Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="carCardInRent">
+            <div class="carImg">
+
+                <div  class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" >
+                            <img src=assets/img/i8.png class="d-block w-100" alt="fontView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-b.png " class="d-block w-100" alt="sideView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-s.png" class="d-block w-100" alt="BackView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-i.png" class="d-block w-100" alt="BackView">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="detailCon">
+                <div>
+                    <h1>Toyota Premio</h1>
+                    <h2 class="dailyPrice">10000LKR</h2>
+                    <h2 class="monthlyPrice">227,150.00LKR/month</h2>
+                </div>
+                <div class="typeCon">
+                    <div>
+                        <img src="assets/img/steering-wheel.png" alt="logo" width="20" height="20">
+                        <h1>Auto</h1>
+                    </div>
+                    <div>
+                        <img src="assets/img/car-seat.png" alt="logo" width="20" height="20">
+                        <h1>4 Seat</h1>
+                    </div>
+                    <div>
+                        <img src="assets/img/petrol-pump.png" alt="logo" width="20" height="20">
+                        <h1>petrol</h1>
+                    </div>
+                </div>
+                <div>
+                    <button class="rentNow">Rent Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="carCardInRent">
+            <div class="carImg">
+
+                <div  class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" >
+                            <img src=assets/img/i8.png class="d-block w-100" alt="fontView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-b.png " class="d-block w-100" alt="sideView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-s.png" class="d-block w-100" alt="BackView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-i.png" class="d-block w-100" alt="BackView">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="detailCon">
+                <div>
+                    <h1>Toyota Premio</h1>
+                    <h2 class="dailyPrice">10000LKR</h2>
+                    <h2 class="monthlyPrice">227,150.00LKR/month</h2>
+                </div>
+                <div class="typeCon">
+                    <div>
+                        <img src="assets/img/steering-wheel.png" alt="logo" width="20" height="20">
+                        <h1>Auto</h1>
+                    </div>
+                    <div>
+                        <img src="assets/img/car-seat.png" alt="logo" width="20" height="20">
+                        <h1>4 Seat</h1>
+                    </div>
+                    <div>
+                        <img src="assets/img/petrol-pump.png" alt="logo" width="20" height="20">
+                        <h1>petrol</h1>
+                    </div>
+                </div>
+                <div>
+                    <button class="rentNow">Rent Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="carCardInRent">
+            <div class="carImg">
+
+                <div  class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" >
+                            <img src=assets/img/i8.png class="d-block w-100" alt="fontView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-b.png " class="d-block w-100" alt="sideView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-s.png" class="d-block w-100" alt="BackView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-i.png" class="d-block w-100" alt="BackView">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="detailCon">
+                <div>
+                    <h1>Toyota Premio</h1>
+                    <h2 class="dailyPrice">10000LKR</h2>
+                    <h2 class="monthlyPrice">227,150.00LKR/month</h2>
+                </div>
+                <div class="typeCon">
+                    <div>
+                        <img src="assets/img/steering-wheel.png" alt="logo" width="20" height="20">
+                        <h1>Auto</h1>
+                    </div>
+                    <div>
+                        <img src="assets/img/car-seat.png" alt="logo" width="20" height="20">
+                        <h1>4 Seat</h1>
+                    </div>
+                    <div>
+                        <img src="assets/img/petrol-pump.png" alt="logo" width="20" height="20">
+                        <h1>petrol</h1>
+                    </div>
+                </div>
+                <div>
+                    <button class="rentNow">Rent Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="carCardInRent">
+            <div class="carImg">
+
+                <div  class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" >
+                            <img src=assets/img/i8.png class="d-block w-100" alt="fontView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-b.png " class="d-block w-100" alt="sideView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-s.png" class="d-block w-100" alt="BackView">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/i8-i.png" class="d-block w-100" alt="BackView">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="detailCon">
+                <div>
+                    <h1>Toyota Premio</h1>
+                    <h2 class="dailyPrice">10000LKR</h2>
+                    <h2 class="monthlyPrice">227,150.00LKR/month</h2>
+                </div>
+                <div class="typeCon">
+                    <div>
+                        <img src="assets/img/steering-wheel.png" alt="logo" width="20" height="20">
+                        <h1>Auto</h1>
+                    </div>
+                    <div>
+                        <img src="assets/img/car-seat.png" alt="logo" width="20" height="20">
+                        <h1>4 Seat</h1>
+                    </div>
+                    <div>
+                        <img src="assets/img/petrol-pump.png" alt="logo" width="20" height="20">
+                        <h1>petrol</h1>
+                    </div>
+                </div>
+                <div>
+                    <button class="rentNow">Rent Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </body>
+</main>
 
 <script src="controller/CustomerRegistration.js"></script>
 <script src="controller/CustomerLogin.js"></script>
@@ -638,6 +1118,7 @@
     $("#loginPage").hide();
     $("#CustomerReg").hide();
     $("#cusDetail").hide();
+    $("#rentCar").hide();
 
     $("#btnSignIn").click(function (){
         $("#loginPage").show();
@@ -660,9 +1141,13 @@
       $("#HomePage").show();
 
   });*/
-    $("#btnRegCus").click(function (){
+    $("#btnVewMoreCar").click(function (){
 
-
+        $("#loginPage").hide();
+        $("#CustomerReg").hide();
+        $("#cusDetail").hide();
+        $("#HomePage").hide();
+        $("#rentCar").show();
     });
 
 
