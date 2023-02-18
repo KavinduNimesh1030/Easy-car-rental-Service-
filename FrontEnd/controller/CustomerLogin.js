@@ -1,4 +1,3 @@
-
 $("#btnLogin").click(function (){
     let email= $("#txtLoginEmail").val();
     let password = $("#txtCusLoginPassword").val();
@@ -12,6 +11,12 @@ $("#btnLogin").click(function (){
                 if(resp.data == password) {
                     console.log(resp.data);
                     alert(resp.message);
+
+                    $("#loginPage").hide();
+                    $("#CustomerReg").hide();
+                    $("#cusDetail").hide();
+                    $("#HomePage").show();
+
                 }else {
                     alert("invalid email or password")
                 }
