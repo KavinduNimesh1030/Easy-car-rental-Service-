@@ -1,3 +1,9 @@
+function setUserNameAndEmail(name) {
+    console.log("name"+name);
+    $("#lblNavUserName").text(name);
+    $("#lblNavEmail").text($("#txtLoginEmail").val());
+}
+
 $("#btnLogin").click(function (){
     let email= $("#txtLoginEmail").val();
     let password = $("#txtCusLoginPassword").val();
@@ -11,6 +17,7 @@ $("#btnLogin").click(function (){
                 if(resp.data.password == password) {
                     console.log(resp.data);
                     alert(resp.message);
+                    setUserNameAndEmail(resp.data.name);
 
                     $("#loginPage").hide();
                     $("#CustomerReg").hide();
