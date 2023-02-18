@@ -451,7 +451,7 @@
 /*-----------------------------------------------Show Car Section-----------------------------------*/
 
 .carOutSec{
-    width: 98.7vw;
+    width: 84.7vw;
     /* display: grid; */
     height: 80vh;
     top: 40px;
@@ -463,6 +463,9 @@
     justify-items: center;
     column-gap: -45px;
     margin-top: 12px;
+    gap: -68px;
+    /* margin-right: -58px; */
+    transform: translateX(102px);
 
 }
 .carCardInRent{
@@ -478,25 +481,31 @@
     width: 91.7vw;
     /* height: 37px; */
     /* border: 2px solid black; */
-    margin-top: 217px;
-    margin-left: 45px;
+    margin-top: 6px;
+    transform: translateX(127px);
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 6px;
+    background-color: white;
+
 }
-.col-md-4 {
-    flex: 0 0 auto;
-    /* width: 33.33333333%; */
-    margin-right: 20px;
-}
+
 .btnCategoriesFind{
     height: 30px;
-    width: 108px;
+    width: 105px;
     border-radius: 4px;
-    color: white;
-    background-color: #5d00ff;
-    border: none;
+    color: #5d00ff;
+    background-color: transparent;
 
+    border: 1px solid #5d00ff;
+    font-size: 15px;
+
+}
+.rentCarImg{
+    width: 1349px;
+    height: 216px;
+    position: relative;
+    background: linear-gradient(160deg, #e7280f 50%, #ffb939);
 }
 
 
