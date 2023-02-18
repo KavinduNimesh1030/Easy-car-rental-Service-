@@ -482,10 +482,10 @@
     /* height: 37px; */
     /* border: 2px solid black; */
     margin-top: 6px;
-    transform: translateX(127px);
+    transform: translateX(96px);
     display: flex;
     flex-direction: row;
-    gap: 6px;
+    gap: 13px;
     background-color: white;
 
 }
@@ -503,9 +503,21 @@
 }
 .rentCarImg{
     width: 1349px;
-    height: 216px;
-    position: relative;
-    background: linear-gradient(160deg, #e7280f 50%, #ffb939);
+    height: 106px;
+
+}
+.rentCarText{
+    margin-left: 92px;
+    margin-top: 48px;
+    /* text-align: center; */
+}
+.rentCarText>h2{
+    color: #e74c0f;
+    font-size: 26px;
+}
+.rentCarText>h1{
+
+    font-size: 30px;
 }
 
 
