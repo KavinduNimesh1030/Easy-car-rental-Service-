@@ -6,12 +6,19 @@ $("#btnLogin").click(function (){
     $.ajax({
         url: baseUrl+"Customer?email="+email,
         method :"get",
+        dataType:"json",
         success: function (resp) {
-            alert(resp.message);
+            console.log(resp);
+                if(resp.data == password) {
+                    console.log(resp.data);
+                    alert(resp.message);
+                }else {
+                    alert("invalid email or password")
+                }
         },
         error: function(error) {
             let prase = JSON.parse(error.responseText);
-            alert(prase.message);
+            alert("invalid email or password");
 
         }
 
