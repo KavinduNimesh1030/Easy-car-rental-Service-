@@ -482,6 +482,7 @@
     margin-left: 45px;
     display: flex;
     flex-direction: row;
+    gap: 10px;
 }
 .col-md-4 {
     flex: 0 0 auto;
