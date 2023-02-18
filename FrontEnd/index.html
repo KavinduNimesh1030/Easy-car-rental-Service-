@@ -11,43 +11,44 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="mainNav">
+        <div class="container-fluid">
+            <img src="assets/img/logo.png" alt="logo" width="35" height="30">
+            <a class="navbar-brand fw-bolder" href="#">Easy Car</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form class="container-fluid justify-content-end" id="HomeNavBarButton">
+            <!--<button class="btn btn-outline-success me-2" type="button">Sign Up</button>
+            <button class="btn  btn-outline-secondary" type="button">Sign In</button>-->
+            <button id="btnSignIn" type="button">Sign In</button>
+            <button id="btnSignUp" type="button">Sign Up</button>
+        </form>
+    </nav>
+
+</header>
 <main id="HomePage">
     <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <img src="assets/img/logo.png" alt="logo" width="35" height="30">
-                <a class="navbar-brand fw-bolder" href="#">Easy Car</a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav justify-content-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Booking</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Service</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Contact us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <form class="container-fluid justify-content-end" id="HomeNavBarButton">
-                <!--<button class="btn btn-outline-success me-2" type="button">Sign Up</button>
-                <button class="btn  btn-outline-secondary" type="button">Sign In</button>-->
-                <button id="btnSignIn" type="button">Sign In</button>
-                <button id="btnSignUp" type="button">Sign Up</button>
-            </form>
-        </nav>
-
-    </header>
 
 
     <section class="home">
@@ -422,7 +423,7 @@
 </main>
 <main id="CustomerReg">
     <body>
-    <header>
+    <!--<header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary" id="cusRegNav">
             <div class="container-fluid">
                 <img src="assets/img/logo.png" alt="logo" width="35" height="30">
@@ -448,14 +449,14 @@
                     </ul>
                 </div>
             </div>
-            <!--<form class="container-fluid justify-content-end">
+            &lt;!&ndash;<form class="container-fluid justify-content-end">
               &lt;!&ndash;<button class="btn btn-outline-success me-2" type="button">Sign Up</button>
               <button class="btn  btn-outline-secondary" type="button">Sign In</button>&ndash;&gt;
               <button id="btnSignIn">Sign In</button>
               <button id="btnSignUp">Sign Up</button>
-            </form>-->
+            </form>&ndash;&gt;
         </nav>
-    </header>
+    </header>-->
     <h1 class="title">REGISTRATION FORM</h1>
     <hr style="width:90%;text-align:left;margin-left:64px">
     <section class="detailsSec">
@@ -527,7 +528,7 @@
 </main>
 <main id="cusDetail">
     <body>
-    <header>
+   <!-- <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary" id="cusDetailNav">
             <div class="container-fluid">
                 <img src="assets/img/logo.png" alt="logo" width="35" height="30">
@@ -553,14 +554,14 @@
                     </ul>
                 </div>
             </div>
-            <!--<form class="container-fluid justify-content-end">
+            &lt;!&ndash;<form class="container-fluid justify-content-end">
               &lt;!&ndash;<button class="btn btn-outline-success me-2" type="button">Sign Up</button>
               <button class="btn  btn-outline-secondary" type="button">Sign In</button>&ndash;&gt;
               <button id="btnSignIn">Sign In</button>
               <button id="btnSignUp">Sign Up</button>
-            </form>-->
+            </form>&ndash;&gt;
         </nav>
-    </header>
+    </header>-->
 
     <h1 class="title">QUICK INQUIRY FORM</h1>
     <hr style="width:90%;text-align:left;margin-left:64px">
@@ -633,7 +634,7 @@
 </main>
 <main id="rentCar">
     <body>
-    <header>
+  <!--  <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary" id="RentCarNav">
             <div class="container-fluid">
                 <img src="assets/img/logo.png" alt="logo" width="35" height="30">
@@ -659,14 +660,14 @@
                     </ul>
                 </div>
             </div>
-            <!--<form class="container-fluid justify-content-end">
+            &lt;!&ndash;<form class="container-fluid justify-content-end">
               &lt;!&ndash;<button class="btn btn-outline-success me-2" type="button">Sign Up</button>
               <button class="btn  btn-outline-secondary" type="button">Sign In</button>&ndash;&gt;
               <button id="btnSignIn">Sign In</button>
               <button id="btnSignUp">Sign Up</button>
-            </form>-->
+            </form>&ndash;&gt;
         </nav>
-    </header>
+    </header>-->
     <section class="rentCarImg">
         <div class="rentCarText">
             <h2>Catalogue</h2>
@@ -1121,6 +1122,7 @@
     $("#rentCar").hide();
 
     $("#btnSignIn").click(function (){
+        $("#HomeNavBarButton").hide();
         $("#loginPage").show();
         $("#CustomerReg").hide();
         $("#cusDetail").hide();
@@ -1128,6 +1130,7 @@
 
     });
   $("#btnSignUp").click(function (){
+      navSetting();
       $("#loginPage").hide();
       $("#CustomerReg").show();
       $("#cusDetail").hide();
@@ -1142,13 +1145,18 @@
 
   });*/
     $("#btnVewMoreCar").click(function (){
-
+            navSetting();
         $("#loginPage").hide();
         $("#CustomerReg").hide();
         $("#cusDetail").hide();
         $("#HomePage").hide();
         $("#rentCar").show();
     });
+
+    function navSetting(){
+        $("#HomeNavBarButton").hide();
+        $("#mainNav").css("box-shadow"," 0 0 0 2px rgb(255, 255, 255),0.3em 0.3em 1em rgba(0, 0, 0, 0.2)");
+    }
 
 
 
