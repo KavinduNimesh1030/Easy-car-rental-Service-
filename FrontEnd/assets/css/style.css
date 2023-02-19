@@ -366,13 +366,29 @@
 .title{
     font-size: 20px;
     margin-top: 31px;
-    margin-left: 64px;
+    margin-left: 42px;
+}
+.detailsSecCon{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+}
+.detailImgSec{
+    width: 50%;
+    height: 80vh;
+    margin-top: 40px;
+
+}
+.detailImgSec>img{
+    width: 613px;
+    transform: translate(10px, 70px);
 }
 .detailsSec{
     width: 50%;
     height: 80vh;
-    margin-top: 40px;
-    margin-left: 64px;
+    margin-top: 15px;
+    margin-left: 43px;
 }
 #cusRegNav{
     box-shadow: 0 0 0 2px rgb(255, 255, 255),
