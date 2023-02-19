@@ -9,6 +9,7 @@ import javax.persistence.*;
 import java.sql.Time;
 import java.time.LocalTime;
 import java.util.Date;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -29,5 +30,8 @@ public class Rental {
     @ManyToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
     @JoinColumn(name = "id",referencedColumnName = "id",nullable = false)
     private Customer cusId;
+
+    @OneToMany(mappedBy = "rental",cascade = CascadeType.ALL)
+    private List<RentDetail> rentDetail;
 
 }

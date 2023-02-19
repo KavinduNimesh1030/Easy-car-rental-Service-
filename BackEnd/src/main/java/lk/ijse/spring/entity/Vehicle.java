@@ -8,6 +8,7 @@ import lombok.ToString;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.ArrayList;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -30,6 +31,6 @@ public class Vehicle {
     double dailyPrice;
     double priceForExtraKm;
     int qty;
-    ArrayList<String> imagesPath;
+   String imgPathName;
 
 }
