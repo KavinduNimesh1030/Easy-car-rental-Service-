@@ -1,24 +1,8 @@
 let baseUrl = "http://localhost:8080/BackEnd_war/";
 $("#submitCusRegDetail").click(function (){
     var formData = $("#cusRegForm").serialize();
-    let email =  $("#txtCusEmail").val();
-    let name =   $("#txtName").val();
+
    /* var formData = new FormData();*/
-
-
-/*    let id = $("#txtCusRegId").val();
-    let email = $("#txtCusEmail").val();
-    let password = $("#txtPassword").val();
-    let address = $("#txtCusRegId").val();
-    let contactNo = $("#txtContactNo").val();
-    let nic = $("#txtNicNo").val();
-    let dln = $("#txtDrivingLNo").val();
-
-    let nicImgPath = $("#formFileNic")[0].files[0].name;
-    let dlnImgPath = $("#formFileDL")[0].files[0].name;
-    let file = $("#formFileDL")[0].files[0];
-    let file1 =$("#formFileNic")[0].files[0];
-    console.log(nicImgPath);*/
 
     /*formData.append("id",id);
     formData.append("email",email);
@@ -30,13 +14,43 @@ $("#submitCusRegDetail").click(function (){
     formData.append("nicImgPath",nicImgPath);
     formData.append("dlnImgPath",dlnImgPath);*/
 
+    let id = $("#txtCusRegId").val();
+    let name =   $("#txtName").val();
+    let email = $("#txtCusEmail").val();
+    let password = $("#txtPassword").val();
+    let address = $("#txtCusRegId").val();
+    let contactNo = $("#txtContactNo").val();
+    let nic = $("#txtNicNo").val();
+    let dln = $("#txtDrivingLNo").val();
+
+    let nicImgPath = $("#formFileNic")[0].files[0].name;
+    let dlnImgPath = $("#formFileDL")[0].files[0].name;
+    let file = $("#formFileDL")[0].files[0];
+    let file1 =$("#formFileNic")[0].files[0];
+    console.log(nicImgPath);
+    console.log(file);
+
+    var Customer = {
+        id : id,
+        name : name,
+        email : email,
+        password : password,
+        address : address,
+        contactNo : contactNo,
+        nic : nic,
+        dln : dln,
+        nicImgPath : nicImgPath,
+        dlnImgPath : dlnImgPath
+    }
+
 
     console.log(formData);
 
     $.ajax({
         url: baseUrl+"Customer",
         method :"post",
-        data : formData,
+        data : JSON.stringify(Customer),
+        contentType:"application/json",
         success: function (resp) {
             console.log(resp);
             alert(resp.message);
