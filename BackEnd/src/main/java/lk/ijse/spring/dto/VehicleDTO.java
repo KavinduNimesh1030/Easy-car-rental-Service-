@@ -26,7 +26,7 @@ public class VehicleDTO {
     double dailyPrice;
     double priceForExtraKm;
     int qty;
-    ArrayList<String>imagesPath;
+    String imagesPath;
 
 
 }

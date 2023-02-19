@@ -1,6 +1,8 @@
 let baseUrl = "http://localhost:8080/BackEnd_war/";
 $("#submitCusRegDetail").click(function (){
     var formData = $("#cusRegForm").serialize();
+    let email =  $("#txtCusEmail").val();
+    let name =   $("#txtName").val();
    /* var formData = new FormData();*/
 
 
@@ -38,8 +40,13 @@ $("#submitCusRegDetail").click(function (){
         success: function (resp) {
             console.log(resp);
             alert(resp.message);
+
+
+            console.log("email"+email)
+            setUserNameAndEmail(name,email);
+
             boxShadowRemove();
-            clearRegData();
+           /* clearRegData();*/
             $("#loginPage").hide();
             $("#CustomerReg").hide();
             $("#cusDetail").hide();
@@ -66,4 +73,9 @@ function clearRegData(){
     $("#txtContactNo").val("");
     $("#txtNicNo").val("");
     $("#txtDrivingLNo").val("");
+}
+function setUserNameAndEmail(name,email) {
+    console.log("name"+name);
+    $("#lblNavUserName").text(name);
+    $("#lblNavEmail").text(email);
 }

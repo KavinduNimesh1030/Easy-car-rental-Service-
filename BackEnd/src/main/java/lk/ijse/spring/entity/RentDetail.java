@@ -5,16 +5,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Time;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Data
+@IdClass(RentVehicle_PK.class)
 @Entity
 public class RentDetail {
     @Id
