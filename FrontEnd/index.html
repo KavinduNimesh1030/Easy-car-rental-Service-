@@ -23,13 +23,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#HomePage">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Booking</a>
+                        <a class="nav-link active"  aria-current="page" href="#rentCar">Booking</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Service</a>
+                        <a class="nav-link" href="#cusRegForm">Service</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled">Contact us</a>
@@ -1131,7 +1131,9 @@
 
 <script src="controller/CustomerRegistration.js"></script>
 <script src="controller/CustomerLogin.js"></script>
+<script src="controller/CustomerHome.js"></script>
 <script>
+
     $("#loginPage").hide();
     $("#CustomerReg").hide();
     $("#cusDetail").hide();
@@ -1149,6 +1151,7 @@
     });
   $("#btnSignUp").click(function (){
       navSetting();
+
       $("#userNameNav").show();
       $("#loginPage").hide();
       $("#CustomerReg").show();
@@ -1175,11 +1178,11 @@
     function navSetting(){
         $("#HomeNavBarButton").hide();
         $("#mainNav").css("box-shadow"," 0 0 0 2px rgb(255, 255, 255),0.3em 0.3em 1em rgba(0, 0, 0, 0.2)");
-    }
-    $("#userNameNav").click(function (){
-        alert("a");
 
-    });
+    }
+    function boxShadowRemove(){
+        $("#mainNav").css("box-shadow","none");
+    }
 
 
 

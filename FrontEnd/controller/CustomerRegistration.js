@@ -38,6 +38,8 @@ $("#submitCusRegDetail").click(function (){
         success: function (resp) {
             console.log(resp);
             alert(resp.message);
+            boxShadowRemove();
+            clearRegData();
             $("#loginPage").hide();
             $("#CustomerReg").hide();
             $("#cusDetail").hide();
@@ -55,3 +57,13 @@ $("#submitCusRegDetail").click(function (){
 
 
 });
+function clearRegData(){
+    $("#txtCusRegId").val("");
+    $("#txtCusEmail").val("");
+    $("#txtPassword").val("");
+    $("#txtName").val("");
+    $("#txtAddress").val("");
+    $("#txtContactNo").val("");
+    $("#txtNicNo").val("");
+    $("#txtDrivingLNo").val("");
+}
