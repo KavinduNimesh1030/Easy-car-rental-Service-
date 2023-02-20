@@ -1,4 +1,5 @@
 let baseUrl = "http://localhost:8080/BackEnd_war/";
+
 $("#submitCusRegDetail").click(function (){
     var formData = $("#cusRegForm").serialize();
 
@@ -55,7 +56,7 @@ $("#submitCusRegDetail").click(function (){
             console.log(resp);
             alert(resp.message);
 
-
+            sendImagePath();
             console.log("email"+email)
             setUserNameAndEmail(name,email);
 
@@ -92,4 +93,28 @@ function setUserNameAndEmail(name,email) {
     console.log("name"+name);
     $("#lblNavUserName").text(name);
     $("#lblNavEmail").text(email);
+}
+
+function sendImagePath() {
+    var data = new FormData();
+    let file = $("#file")[0].files[0];
+    let fileName = $("#file")[0].files[0].name;
+    data.append("myFile", file, fileName);
+    console.log("file name "+ fileName);
+
+    $.ajax({
+        url: baseUrl + "api/v1/upload",
+        method: 'post',
+        async: true,
+        contentType: false,
+        processData: false,
+        data: data,
+        success: function (resp) {
+            alert("Successfully Uploaded");
+           /* loadTheLastUploadedImage();*/
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
 }
