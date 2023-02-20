@@ -16,14 +16,29 @@ import java.util.ArrayList;
 @RequestMapping("api/v1/upload")
 @CrossOrigin
 public class FileUploadController {
+
     private static final ArrayList<String> allImages = new ArrayList<>();
 
     @PutMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity uploadFile(@RequestPart("myFile") MultipartFile myFile, @RequestPart("myFile") byte[] isFile, @RequestPart("myFile") Part myPart) {
 
+        /*
+         * There are three ways we can obtain this value, but in all cases we need to use
+         * @RequestPart annotation.
+         * 1. Byte Array ( byte [] )
+         * 2. MultipartFile ( Spring way )
+         * 3. Part ( Java EE way )
+         */
 
         System.out.println(isFile);
         System.out.println(myPart.getSubmittedFileName());
+
+        System.out.println("================================");
+
+        /**
+         * It is important to note that you can also use @RequestParam annotation if you need
+         * But with that you can't retrieve the data as a byte array
+         */
 
         System.out.println(myFile.getOriginalFilename());
         System.out.println(myPart.getSubmittedFileName());
@@ -74,6 +89,7 @@ public class FileUploadController {
             return new ResponseEntity(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity getAllImagesFromDatabase() {
         return new ResponseEntity(allImages, HttpStatus.OK);

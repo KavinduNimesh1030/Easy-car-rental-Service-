@@ -24,10 +24,11 @@ $("#submitCusRegDetail").click(function (){
     let nic = $("#txtNicNo").val();
     let dln = $("#txtDrivingLNo").val();
 
-    let nicImgPath = $("#formFileNic")[0].files[0].name;
+ /*   let file = $("#file")[0].files[0];*/
+    let nicImgPath = $("#file")[0].files[0].name;
     let dlnImgPath = $("#formFileDL")[0].files[0].name;
     let file = $("#formFileDL")[0].files[0];
-    let file1 =$("#formFileNic")[0].files[0];
+    let file1 =$("#file")[0].files[0];
     console.log(nicImgPath);
     console.log(file);
 
@@ -97,9 +98,9 @@ function setUserNameAndEmail(name,email) {
 
 function sendImagePath() {
     var data = new FormData();
-    let file = $("#formFileNic")[0].files[0];
-    let fileName = $("#formFileNic")[0].files[0].name;
-    data.append("nicImgPath", file, fileName);
+    let file = $("#file")[0].files[0];
+    let fileName = $("#file")[0].files[0].name;
+    data.append("myFile", file, fileName);
     console.log("file name "+ fileName);
 
     $.ajax({
@@ -110,6 +111,7 @@ function sendImagePath() {
         processData: false,
         data: data,
         success: function (resp) {
+            alert(resp);
             alert("Successfully Uploaded");
            /* loadTheLastUploadedImage();*/
         },
