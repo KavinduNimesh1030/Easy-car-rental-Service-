@@ -617,5 +617,33 @@
     border-style: none;
     border-width: 0;
 }
+.cartDetailSec>h2{
+    transform: translate(13px, 18px);
+    font-weight: 600;
+    color: white;
+}
+.cartDetailSec>div{
+    width: 355px;
+    margin-left: 10px;
+}
+#txtPickUpLocation::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+#cartForm>div>input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+#cartForm>div>input{
+    background-color: transparent;
+}
+#DatPickDate,#DatReturnDate,#DatPickUpTime,#DatReturnTime,#inputState::placeholder{
+    color: white;
+
+}
+#inputState{
+    background-color: transparent;
+}
+
 
 
