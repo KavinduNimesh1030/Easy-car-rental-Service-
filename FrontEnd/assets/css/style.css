@@ -567,7 +567,7 @@
 
 .cartOutCon{
     width: 91.7vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: row;
     /* row-gap: 16px; */
@@ -591,7 +591,11 @@
     border-radius: 10px;
 
 }
-.cartOutCon>table{
-    margin-top: 11%;
+.tableSec>table{
+    margin-top: 3%;
+}
+.tableSec>h2{
+    transform: translate(13px, 18px);
+    font-weight: 600;
 }
 
