@@ -593,6 +593,8 @@
 }
 .tableSec>table{
     margin-top: 3%;
+    border-collapse: separate;
+    border-spacing: 1em;
 }
 .tableSec>h2{
     transform: translate(13px, 18px);
@@ -608,6 +610,12 @@
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 
+}
+
+.tableSec>table>tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: none;
+    border-width: 0;
 }
 
 
