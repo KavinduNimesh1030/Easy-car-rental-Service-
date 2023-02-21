@@ -598,4 +598,16 @@
     transform: translate(13px, 18px);
     font-weight: 600;
 }
+.tableSec>table>tbody>tr{
+    /* width: 129px; */
+    height: 71px;
+    column-gap: 10px;
+    gap: 10px;
+    /* margin-bottom: 13px; */
+    /* margin-top: -12px; */
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+
+}
+
 
