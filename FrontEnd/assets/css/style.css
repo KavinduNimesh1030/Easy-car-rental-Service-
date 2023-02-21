@@ -637,13 +637,56 @@
 #cartForm>div>input{
     background-color: transparent;
 }
-#DatPickDate,#DatReturnDate,#DatPickUpTime,#DatReturnTime,#inputState::placeholder{
+#cartForm>div>input::placeholder{
+    color: white;
+}
+#cartForm>div>input[type=date]{
+    color: white;
+}
+#cartForm>div>input[type=time]{
+    color: white;
+}
+/*#DatPickDate::placeholder{
     color: white;
 
 }
+
+#DatReturnTime,::placeholder{
+    color: white;
+
+}
+#DatPickUpTime::placeholder{
+    color: white;
+
+}
+#DatReturnDate::placeholder{
+     color: white;
+
+ }*/
+
 #inputState{
     background-color: transparent;
 }
+#inputState::placeholder{
+     color: white;
+ }
+
+
+#inputState {
+    color: white;
+}
+option {
+    color: black; // color of all the other options
+}
+#btnRentSubmit{
+    transform: translate(185px, -54px);
+    width: 170px;
+    background-color: #5d00ff;
+    border: none;
+}
+
+
+
 
 
 
