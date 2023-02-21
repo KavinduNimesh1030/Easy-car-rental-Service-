@@ -563,4 +563,35 @@
     transform: translateY(-36px);
 }
 
+/*---------------------------------------car cart--------------------------------------*/
+
+.cartOutCon{
+    width: 91.7vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    /* row-gap: 16px; */
+    /* margin-top: 185px; */
+    transform: translate(55px, 47px);
+}
+.tableSec{
+    width: 70%;
+    height: 100%;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.cartDetailSec{
+    width: 30%;
+    height: 100%;
+
+    /* margin-right: 35px; */
+    margin-left: 16px;
+    background: linear-gradient(160deg, #e7280f 50%, #ffb939);
+    border-radius: 10px;
+
+}
+.cartOutCon>table{
+    margin-top: 11%;
+}
 
