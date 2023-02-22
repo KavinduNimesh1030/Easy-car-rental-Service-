@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class VehicleController {
     @PostMapping(params = "vid")
     public ResponseUtil getVehicleDetail(String vid){
-        
+        return new ResponseUtil();
     }
 }
