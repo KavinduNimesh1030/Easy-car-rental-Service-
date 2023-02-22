@@ -4,10 +4,7 @@ import lk.ijse.spring.dto.VehicleDTO;
 import lk.ijse.spring.service.VehicleService;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/Vehicle")
@@ -16,7 +13,7 @@ public class VehicleController {
     @Autowired
     VehicleService vehicleService;
 
-    @PostMapping(params = "vid")
+    @GetMapping(params = "vid")
     public ResponseUtil getVehicleDetail(String vid){
         VehicleDTO vehicleDetail = vehicleService.getVehicleDetail(vid);
         System.out.println(vehicleDetail.toString());
