@@ -1241,6 +1241,7 @@
 <script src="controller/CustomerRegistration.js"></script>
 <script src="controller/CustomerLogin.js"></script>
 <script src="controller/CustomerHome.js"></script>
+<script src="controller/CartDetail.js"></script>
 <script>
 
     $("#loginPage").hide();
@@ -1306,6 +1307,7 @@
         $("#HomePage").hide();
         $("#rentCar").hide();
        alert(this.id);
+       getVehicleDetail(this.id);
         $("#addToCarPage").show();
 
         boxShadowRemove();
