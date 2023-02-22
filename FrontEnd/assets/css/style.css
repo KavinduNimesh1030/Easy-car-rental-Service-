@@ -624,6 +624,14 @@
 .tableSec>table>thead>tr>th{
 font-size: 14px;
 }
+
+#cartForm>div>input[type="file"]::-webkit-file-upload-button {
+    padding: 0.2em 0.4em;
+    border-radius: 0.2em;
+    background-color: transparent;
+    transition: 1s;
+    color: white;
+}
 .cartDetailSec>h2{
     transform: translate(13px, 18px);
     font-weight: 600;
@@ -686,7 +694,7 @@ option {
     color: black; // color of all the other options
 }
 #btnRentSubmit{
-    transform: translate(185px, -54px);
+    transform: translate(185px, 11px);
     width: 170px;
     background-color: #5d00ff;
     border: none;
