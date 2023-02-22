@@ -31,8 +31,5 @@ public class CustomerServiceImpl implements CustomerService {
         return modelMapper.map(repo.findCustomerByEmail(email),CustomerDTO.class);
     }
 
-    @Override
-    public VehicleDTO getVehicleDetail(String vid) {
-        return null;
-    }
+
 }

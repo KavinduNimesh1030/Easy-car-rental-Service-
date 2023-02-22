@@ -9,5 +9,5 @@ import org.springframework.stereotype.Component;
 public interface CustomerService {
     void saveCustomer(CustomerDTO customerDTO);
     CustomerDTO CheckCustomer(String email);
-    VehicleDTO getVehicleDetail(String vid);
+
 }

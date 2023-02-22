@@ -1,4 +1,12 @@
 package lk.ijse.spring.service.impl;
 
-public class VehicleServiceImpl {
+import lk.ijse.spring.dto.VehicleDTO;
+import lk.ijse.spring.service.VehicleService;
+
+public class VehicleServiceImpl implements VehicleService {
+
+    @Override
+    public VehicleDTO getVehicleDetail(String vid) {
+        return null;
+    }
 }
