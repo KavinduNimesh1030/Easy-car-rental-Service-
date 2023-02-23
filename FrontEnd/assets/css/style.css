@@ -624,6 +624,9 @@
 .tableSec>table>thead>tr>th{
 font-size: 14px;
 }
+#cartForm{
+    margin-top: -30px;
+}
 
 #cartForm>div>input[type="file"]::-webkit-file-upload-button {
     padding: 0.2em 0.4em;
@@ -694,12 +697,44 @@ option {
     color: black; // color of all the other options
 }
 #btnRentSubmit{
-    transform: translate(185px, 11px);
-    width: 170px;
+    transform: translate(259px, -12px);
+    width: 94px;
     background-color: #5d00ff;
     border: none;
+    height: 30px;
+    font-size: 14px;
 }
 #cartForm>div>label{
+    color: white;
+}
+
+/*----------------total--------------*/
+.lblPrice>h2{
+    font-size: 15px;
+    color: white;
+}
+#totalSec{
+    margin-left: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 349px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 137px;
+}
+.lblPrice{
+    width: 50%;
+    height: 100%;
+    margin-top: 4px;
+}
+.lblAmount{
+    width: 30%;
+    height: 100%;
+    margin-top: 4px;
+}
+.lblAmount>h2{
+    font-size: 15px;
     color: white;
 }
 
