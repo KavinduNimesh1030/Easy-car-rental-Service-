@@ -2,11 +2,11 @@ function getRentDetail(rentId) {
     let array =[];
     let vid = "V001";
     let pickUpDate = $("#DatPickDate").val();
-    let pickUpTime = $("#DatPickTime").val();
+    let pickUpTime = $("#DatPickUpTime").val();
     let returnDate = $("#DatReturnDate").val();
     let driverOption = $("#driverOpSelector").val();
 
-    array.push({rentId:rentId,vid:vid,pickUpDate:pickUpDate,pickUpTime:pickUpTime,returnDate:returnDate,driverOption:driverOption})
+    array.push({rentId:rentId,vid:vid,pickDate:pickUpDate,pickTime:pickUpTime,returnDate:returnDate,driverOption:driverOption})
 
     return array;
 }
@@ -16,7 +16,7 @@ $("#btnRentSubmit").click(function (){
     let lossDamageWaiver = 30000.00;
     let duration = "100km"
     let pickUpDate = $("#DatPickDate").val();
-    let pickUpTime = $("#DatPickTime").val();
+    let pickUpTime = $("#DatPickUpTime").val();
     let returnDate = $("#DatReturnDate").val();
     let pickUpVenue = $("#txtPickUpLocation").val();
     let returnVenue = $("#txtReturnLocation").val()

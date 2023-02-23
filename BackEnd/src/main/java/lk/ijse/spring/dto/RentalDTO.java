@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.sql.Time;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
 
@@ -20,7 +22,7 @@ public class RentalDTO {
     Date returnDate;
     String pickUpVenue;
     String returnVenue;
-    Time pickUpTime;
+    String pickUpTime;
     String statusOfReq;
     double total;
     double LossDamageWaiver;

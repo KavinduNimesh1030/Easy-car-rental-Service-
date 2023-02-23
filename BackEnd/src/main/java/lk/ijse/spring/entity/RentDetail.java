@@ -8,6 +8,9 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
@@ -21,7 +24,7 @@ public class RentDetail {
     String vId;
     String driverOption;
     Date pickDate;
-    Time pickTime;
+    String pickTime;
     Date returnDate;
 
     @ManyToOne

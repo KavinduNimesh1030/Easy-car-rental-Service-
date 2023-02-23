@@ -7,6 +7,9 @@ import lombok.ToString;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -15,7 +18,7 @@ public class RentDetailDTO {
     String rentId;
     String vId;
     String driverOption;
-    Date pickDate;
+    String pickDate;
     Time pickTime;
     Date returnDate;
 }

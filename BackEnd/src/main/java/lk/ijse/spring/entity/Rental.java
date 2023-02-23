@@ -7,6 +7,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.sql.Time;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
@@ -23,7 +24,7 @@ public class Rental {
     Date returnDate;
     String pickUpVenue;
     String returnVenue;
-    Time pickUpTime;
+    String pickUpTime;
     String statusOfReq;
     double total;
     double LossDamageWaiver;

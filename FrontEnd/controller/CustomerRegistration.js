@@ -43,8 +43,7 @@ $("#submitCusRegDetail").click(function (){
         imgPath : nicImgPath,
 
     }
-
-
+    
     console.log(formData);
 
     $.ajax({
