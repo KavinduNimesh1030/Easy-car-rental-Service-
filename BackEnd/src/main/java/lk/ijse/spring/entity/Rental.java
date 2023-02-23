@@ -25,7 +25,9 @@ public class Rental {
     Time pickUpTime;
     String statusOfReq;
     double total;
+    double LossDamageWaiver;
     String duration;
+    String slipImgPath;
 
     @ManyToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
     @JoinColumn(name = "id",referencedColumnName = "id",nullable = false)

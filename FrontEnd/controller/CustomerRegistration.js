@@ -26,11 +26,11 @@ $("#submitCusRegDetail").click(function (){
 
  /*   let file = $("#file")[0].files[0];*/
     let nicImgPath = $("#file")[0].files[0].name;
-    let dlnImgPath = $("#formFileDL")[0].files[0].name;
-    let file = $("#formFileDL")[0].files[0];
+  /*  let dlnImgPath = $("#formFileDL")[0].files[0].name;
+    let file = $("#formFileDL")[0].files[0];*/
     let file1 =$("#file")[0].files[0];
     console.log(nicImgPath);
-    console.log(file);
+ /*   console.log(file);*/
 
     var Customer = {
         id : id,
@@ -39,10 +39,9 @@ $("#submitCusRegDetail").click(function (){
         password : password,
         address : address,
         contactNo : contactNo,
-        nic : nic,
         dln : dln,
-        nicImgPath : nicImgPath,
-        dlnImgPath : dlnImgPath
+        imgPath : nicImgPath,
+
     }
 
 

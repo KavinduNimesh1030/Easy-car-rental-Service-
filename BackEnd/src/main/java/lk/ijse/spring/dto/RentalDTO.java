@@ -22,7 +22,9 @@ public class RentalDTO {
     Time pickUpTime;
     String statusOfReq;
     double total;
+    double LossDamageWaiver;
     String duration;
     String cusId;
+    String slipImgPath;
     List<RentDetail> rentDetail;
 }

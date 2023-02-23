@@ -16,9 +16,8 @@ public class CustomerDTO {
     String password;
     String address;
     String contactNo;
-    String nic;
     String dln;
-    String nicImgPath;
-    String dlnImgPath;
+    String imgPath;
+
 
 }
