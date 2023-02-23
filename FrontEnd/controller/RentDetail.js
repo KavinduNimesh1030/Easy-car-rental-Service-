@@ -1,3 +1,4 @@
+let customerId = null;
 function getRentDetail(rentId) {
     let rows = $("#tblAddToCart").children().length;
 
@@ -19,7 +20,7 @@ function getRentDetail(rentId) {
 }
 
 $("#btnRentSubmit").click(function (){
-    let rentId = "R002"
+    let rentId = "uuid"
     let lossDamageWaiver = 30000.00;
     let duration = $("#txtDuration").val();
     let pickUpDate = $("#DatPickDate").val();
@@ -65,3 +66,8 @@ $("#btnRentSubmit").click(function (){
     });
 
 });
+
+function getCustomerId(id){
+    customerId = id;
+    console.log("b"+customerId);
+}

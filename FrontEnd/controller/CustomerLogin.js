@@ -17,7 +17,10 @@ $("#btnLogin").click(function (){
                 if(resp.data.password == password) {
                     console.log(resp.data);
                     alert(resp.message);
+                    console.log("a"+resp.data.id);
+                    getCustomerId(resp.data.id);
                     setUserNameAndEmail(resp.data.name,email);
+
 
                     $("#loginPage").hide();
                     $("#CustomerReg").hide();
