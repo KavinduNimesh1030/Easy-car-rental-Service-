@@ -1,20 +1,27 @@
 function getRentDetail(rentId) {
+    let rows = $("#tblAddToCart").children().length;
+
     let array =[];
-    let vid = "V001";
+   /* let vid = "V001";*/
     let pickUpDate = $("#DatPickDate").val();
     let pickUpTime = $("#DatPickUpTime").val();
     let returnDate = $("#DatReturnDate").val();
     let driverOption = $("#driverOpSelector").val();
+    for (let i = 0; i < rows; i++) {
+        let vid = $("#tblAddToCart").children().eq(i).children(":eq(0)").text();
+        array.push({rentId:rentId,vid:vid,pickDate:pickUpDate,pickTime:pickUpTime,returnDate:returnDate,driverOption:driverOption})
 
-    array.push({rentId:rentId,vid:vid,pickDate:pickUpDate,pickTime:pickUpTime,returnDate:returnDate,driverOption:driverOption})
+    }
+
+
 
     return array;
 }
 
 $("#btnRentSubmit").click(function (){
-    let rentId = "R001"
+    let rentId = "R002"
     let lossDamageWaiver = 30000.00;
-    let duration = "100km"
+    let duration = $("#txtDuration").val();
     let pickUpDate = $("#DatPickDate").val();
     let pickUpTime = $("#DatPickUpTime").val();
     let returnDate = $("#DatReturnDate").val();
