@@ -19,6 +19,7 @@ public class RentalDTO {
     Date pickUpDate;
     Date returnDate;
     String pickUpVenue;
+    String returnVenue;
     Time pickUpTime;
     String statusOfReq;
     double total;
