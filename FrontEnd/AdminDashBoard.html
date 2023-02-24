@@ -133,8 +133,15 @@
             </div>
         </div>
     </div>
-    <div class="DashBoardDetail"></div>
+    <div class="DashBoardDetail">
+        <div class="shortCutCon">
+            <div></div>
+        </div>
+        <div></div>
+    </div>
 </section>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 <script>
     let btn = document.querySelector("#btn");
     let sidebar = document.querySelector(".sidebar");
@@ -142,10 +149,22 @@
 
     btn.onclick = function(){
         sidebar.classList.toggle("active");
+
+        if($(".DashBoardDetail").width()==1266.23){
+            $(".DashBoardDetail").css("width", "90%");
+            $(".DashBoardDetail").css("margin-left", "239px");
+        }else {
+            $(".DashBoardDetail").css("width", "100%");
+            $(".DashBoardDetail").css("margin-left", "78px");
+        }
+
     }
     searchBtn.onclick = function(){
         sidebar.classList.toggle("active");
+
+
     }
+
 </script>
 </body>
 </html>
