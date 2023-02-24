@@ -1014,8 +1014,27 @@ option {
 .DashBoardDetail{
     width: 100%;
     height: 100%;
-    border: 2px solid black;
     margin-left: 78px;
+    display: flex;
+    flex-direction: column;
+
 }
+.shortCutCon{
+    width: 100%;
+    height: 156px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    gap: 54px;
+    justify-content: center;
+    margin-top: 18px;
+}
+.shortCutCon>div{
+    width: 20%;
+    height: 100%;
+    border: 2px solid gold;
+}
+
 
 
