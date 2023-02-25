@@ -1097,10 +1097,28 @@ option {
     position: relative;
     display: flex;
     flex-direction: column;
+    gap: 26px;
 }
 .carManageSec{
-    width: 100%;
-    
+    width: 97%;
+    height: 50vh;
+    transform: translateX(17px);
+}
+.carManageImgSec{
+    width: 98.7vw;
+    height: 50vh;
+    background: linear-gradient(160deg, #e7280f 50%, #ffb939);
+}
+.carManageImgSec>img{
+    transform: translate(160px, 48px);
+}
+.carManageImgSec>h1{
+    position: absolute;
+    color: white;
+    font-size: 140px;
+    transform: translate(227px, -8px);
+    font-weight: bolder;
+    /* text-align: center; */
 }
 
 
