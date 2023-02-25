@@ -1019,6 +1019,7 @@ option {
     flex-direction: column;
     z-index: 99;
 
+
 }
 .shortCutCon{
     width: 100%;
@@ -1030,24 +1031,63 @@ option {
     gap: 54px;
     justify-content: center;
     margin-top: 18px;
+
 }
 .dashBoardCard{
     width: 20%;
     height: 100%;
-    border: 2px solid gold;
     display: flex;
     flex-direction: column;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0.3em 0.3em 1em rgba(0, 0, 0, 1);
 }
 .cardDetail{
     width: 100%;
     height: 75%;
-    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
 }
 .cardLink{
     width: 100%;
     height: 25%;
-    border: 2px solid black;
 }
+.cardImg{
+    width: 30%;
+    height: 100%;
+
+    position: relative;
+}
+.cardText{
+    width: 70%;
+    height: 100%;
+
+}
+.cardImg>img{
+    width: 100%;
+    margin-top: 19px;
+}
+.cardText>h2{
+    font-size: 100%;
+    font-weight: 400;
+    transform: translate(10px, 17px);
+}
+.cardText>h1{
+    transform: translate(10px, 10px);
+    width: 100%;
+}
+.cardLink{
+    position: relative;
+}
+.cardLink>h4{
+    font-size: 15px;
+    font-weight: 600;
+    /* transform: translate(142px, 7px); */
+    position: absolute;
+    margin-left: 60%;
+    transform: translateY(5px);
+    color:#5d00ff;
+}
+
 
 
 
