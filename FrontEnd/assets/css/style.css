@@ -1052,31 +1052,32 @@ option {
     height: 25%;
 }
 .cardImg{
-    width: 30%;
+    width: 40%;
     height: 100%;
-
     position: relative;
 }
 .cardText{
-    width: 70%;
+    width: 60%;
     height: 100%;
 
 }
 .cardImg>img{
-    width: 100%;
+    width: 90%;
     margin-top: 19px;
+    margin-left: 10px;
 }
 .cardText>h2{
-    font-size: 100%;
+    font-size: 90%;
     font-weight: 400;
-    transform: translate(10px, 17px);
+    transform: translate(11px, 42px);
 }
 .cardText>h1{
-    transform: translate(10px, 10px);
+    transform: translate(10px, 31px);
     width: 100%;
 }
 .cardLink{
     position: relative;
+    background: #E7280FFF;
 }
 .cardLink>h4{
     font-size: 15px;
@@ -1084,8 +1085,8 @@ option {
     /* transform: translate(142px, 7px); */
     position: absolute;
     margin-left: 60%;
-    transform: translateY(5px);
-    color:#5d00ff;
+    transform: translateY(11px);
+    color:white;
 }
 
 
