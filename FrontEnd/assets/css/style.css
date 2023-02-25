@@ -1062,31 +1062,34 @@ option {
 
 }
 .cardImg>img{
-    width: 90%;
-    margin-top: 19px;
-    margin-left: 10px;
+    width: 70%;
+    margin-top: 28px;
+    margin-left: 17px;
 }
 .cardText>h2{
     font-size: 90%;
     font-weight: 400;
-    transform: translate(11px, 42px);
+    text-align: center;
+    transform: translateY(32px);
 }
 .cardText>h1{
-    transform: translate(10px, 31px);
+    transform: translate(13px, 26px);
     width: 100%;
+
 }
 .cardLink{
     position: relative;
     background: #E7280FFF;
 }
 .cardLink>h4{
-    font-size: 15px;
-    font-weight: 600;
-    /* transform: translate(142px, 7px); */
+    font-size: 12px;
+    font-weight: 400;
     position: absolute;
-    margin-left: 60%;
+    margin-left: 70%;
     transform: translateY(11px);
-    color:white;
+    color: white;
+    padding-right: -44px;
+    text-align: center;
 }
 
 
