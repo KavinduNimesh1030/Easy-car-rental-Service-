@@ -1092,6 +1092,17 @@ option {
     text-align: center;
 }
 
+/*-------------------------------------------Car Manage--------------------------------*/
+.carDetailsSecCon{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.carManageSec{
+    width: 100%;
+    
+}
+
 
 
 

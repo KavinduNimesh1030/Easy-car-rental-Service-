@@ -10,7 +10,107 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<main id="CustomerReg">
+    <body>
+    <h1 class="title">Vehicle Manage</h1>
+    <hr style="width:93%;text-align:left;margin-left:43px">
+    <div class="carDetailsSecCon">
+        <section class="carManageSec">
 
-</body>
+            <form class="row g-3" id="CarManageForm">
+
+                <div class="col-md-6">
+                    <label for="txtCarRegId" class="form-label">Registration Number</label>
+                    <input type="text" class="form-control" id="txtCarRegId" placeholder="KN-9090" name="vid">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="txtCarBrand" class="form-label">Brand</label>
+                    <input type="email" class="form-control" id="txtCarBrand" placeholder="Toyota"name="brand">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="txtCarType" class="form-label">Type</label>
+                    <input type="email" class="form-control" id="txtCarType" placeholder="General"name="type">
+                </div>
+
+
+                <div class="col-md-6">
+                    <label for="txtCarColor" class="form-label">color</label>
+                    <input type="text" class="form-control" id="txtCarColor" placeholder="Red" name="color">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="txtCarFuelType" class="form-label">FuelType</label>
+                    <input type="text" class="form-control" id="txtCarFuelType" placeholder="Petrol" name="fuelType">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="txtCarTranType" class="form-label">Transmission Type</label>
+                    <input type="text" class="form-control" id="txtCarTranType" placeholder="+9477055332" name="transmissionType">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="txtNumOfPassengers" class="form-label">No Of Passenger</label>
+                    <input type="text" class="form-control" id="txtNumOfPassengers" placeholder="4" name="noOfPassenger">
+                </div>
+                <div class="col-md-6">
+                    <label for="txtFreeKmForDay" class="form-label">Free KM For Day</label>
+                    <input type="text" class="form-control" id="txtFreeKmForDay" placeholder="10km" name="freeKmForDay">
+                </div>
+                <div class="col-md-6">
+                    <label for="txtFreeKmForMonth" class="form-label">Free KM For Month</label>
+                    <input type="text" class="form-control" id="txtFreeKmForMonth" placeholder="10km" name="freeKmForMonth">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="txtIsAvailable" class="form-label">Available</label>
+                    <input type="text" class="form-control" id="txtIsAvailable" placeholder="" name="isAvailable">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="txtCarMonthlyPrice" class="form-label">Monthly Price</label>
+                    <input type="text" class="form-control" id="txtCarMonthlyPrice" placeholder="" name="monthlyPrice">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="txtCarDailyPrice" class="form-label">Daily Price</label>
+                    <input type="text" class="form-control" id="txtCarDailyPrice" placeholder="" name="dailyPrice">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="txtPriceFormExKm" class="form-label">Daily Price</label>
+                    <input type="text" class="form-control" id="txtPriceFormExKm" placeholder="" name="priceForExtraKm">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="file" class="form-label">Car Images</label>
+                    <input class="form-control" id="file" name="myFile" type="file" >
+                </div>
+
+
+
+                <!-- <div class="col-md-3">
+                   <label for="txtLowPrice" class="form-label">Low Price</label>
+                   <input type="text" class="form-control" id="txtLowPrice" placeholder="2000.00">
+                 </div>
+
+
+                 <div class="col-md-3">
+                   <label for="txtMaxPrice" class="form-label">Max Price</label>
+                   <input type="text" class="form-control" id="txtMaxPrice" placeholder="5000.00">
+                 </div>-->
+
+                <div class="col-12">
+                    <button type="button" class="btn btn-primary" id="submitCusRegDetail">Submit</button>
+                </div>
+            </form>
+        </section>
+        <section class="CarManageImgSec">
+            <img src="assets/img/carRotation3.gif" alt="rotation">
+        </section>
+    </div>
+
+    </body>
+</main>
 </html>
