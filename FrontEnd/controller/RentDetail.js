@@ -20,7 +20,7 @@ function getRentDetail(rentId) {
 }
 
 $("#btnRentSubmit").click(function (){
-    let rentId = "R001"
+    let rentId = "R002"
     let lossDamageWaiver = 30000.00;
     let duration = $("#txtDuration").val();
     let pickUpDate = $("#DatPickDate").val();
@@ -58,6 +58,7 @@ $("#btnRentSubmit").click(function (){
         data:JSON.stringify(rent),
         contentType:"application/json",
         success: function (resp) {
+            sendImagePath();
             alert(resp.message);
         },
         error:function (error){
@@ -70,4 +71,28 @@ $("#btnRentSubmit").click(function (){
 function getCustomerId(id){
     customerId = id;
     console.log("b"+customerId);
+}
+function sendImagePath() {
+    var data = new FormData();
+    let file = $("#formLossDamage")[0].files[0];
+    let fileName = $("#formLossDamage")[0].files[0].name;
+    data.append("myFile", file, fileName);
+    console.log("file name " + fileName);
+
+    $.ajax({
+        url: baseUrl + "api/v1/upload",
+        method: 'post',
+        async: true,
+        contentType: false,
+        processData: false,
+        data: data,
+        success: function (resp) {
+            alert(resp);
+            alert("Successfully Uploaded");
+            /* loadTheLastUploadedImage();*/
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
 }
