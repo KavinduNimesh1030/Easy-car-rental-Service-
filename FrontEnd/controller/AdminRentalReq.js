@@ -39,6 +39,7 @@ function getCustomerImgName(cusId){
             for (const r of resp.data) {
                 if(r.id == cusId){
                     alert("matching"+r.imgPath);
+                    loadCustomerImg(r.imgPath);
                 }
             }
 
@@ -54,6 +55,14 @@ $('body').on('click', '.tblTr', function() {
     // code here
    alert("aa");
 });
+function loadCustomerImg(cusPath){
+    $(".nicImg").css({
+        "background": `url(${"assets/img/fileSave/uploads/"+cusPath})`,
+        "background-size": "cover",
+        "background-position":"center",
+
+    });
+}
 
 
 
