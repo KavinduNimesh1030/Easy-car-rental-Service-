@@ -1133,7 +1133,7 @@ option {
     width: 60%;
     height: 181px;
     border: 2px solid white;
-    transform: translate(59px, 10px);
+    transform: translate(59px, 25px);
 
 }
 .adminRentalSec{
@@ -1154,9 +1154,13 @@ option {
     color: white;
 }
 .adminRentalSec>h3{
-    font-size: 19px;
+    font-size: 13px;
     color: white;
     transform: translate(16px, 1px);
+}
+#lblLossDamage{
+    transform: translate(16px, 21px);
+
 }
 .adminRentalTableSec{
     width: 75%;
@@ -1194,6 +1198,13 @@ option {
 }
 .adminRentalTableSec>table>thead>tr>th{
     font-size: 14px;
+}
+.nicImg{
+    width: 60%;
+    height: 181px;
+    border: 2px solid white;
+    transform: translate(59px, 10px);
+
 }
 
 
