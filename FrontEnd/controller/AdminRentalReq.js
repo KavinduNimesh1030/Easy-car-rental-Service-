@@ -8,7 +8,8 @@ function getAllRentalDetails(){
         success: function (resp) {
             for (const r of resp.data) {
                 console.log(r.rentId);
-                $("#tblCustomerReq").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.rentId+"</td><td>"+r.cusId+"</td><td>"+r.pickUpDate+"</td><td>"+r.returnDate+"</td><td>"+r.pickUpVenue+"</td><td>"+r.returnVenue+"</td><td>"+r.statusOfReq+"</td><td>"+r.total+"</td><td><button class=\"editbtn\" id="+r.slipImgPath+">edit</button></td></td></tr>");
+                console.log(r.cusId);
+                $("#tblCustomerReq").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.rentId+"</td><td>"+r.cusId+"</td><td>"+r.pickUpDate+"</td><td>"+r.returnDate+"</td><td>"+r.pickUpVenue+"</td><td>"+r.returnVenue+"</td><td>"+r.statusOfReq+"</td><td>"+r.total+"</td><td><button class=\"editbtn\" name="+r.cusId+" id="+r.slipImgPath+">edit</button></td></td></tr>");
 
             }
 
@@ -19,11 +20,15 @@ function getAllRentalDetails(){
     });
 }
 
+
 $('body').on('click', '.editbtn', function() {
     // code here
     loadTheLastUploadedImage(this.id);
     alert(this.id);
+    alert(this.name);
 });
+
+
 
 $('body').on('click', '.tblTr', function() {
     // code here
