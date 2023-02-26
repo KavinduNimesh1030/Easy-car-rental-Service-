@@ -1,10 +1,8 @@
 package lk.ijse.spring.dto;
 
+import lk.ijse.spring.entity.Customer;
 import lk.ijse.spring.entity.RentDetail;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.sql.Time;
 import java.time.LocalDateTime;
@@ -14,7 +12,8 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Setter
+@Getter
 @ToString
 public class RentalDTO {
     String rentId;
@@ -29,5 +28,6 @@ public class RentalDTO {
     String duration;
     String cusId;
     String slipImgPath;
-    List<RentDetail> rentDetail;
+    List<RentDetailDTO> rentDetail;
+
 }

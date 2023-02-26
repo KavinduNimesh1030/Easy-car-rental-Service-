@@ -1,21 +1,19 @@
-getAllRentalDetails();
+let baseUrl = "http://localhost:8080/BackEnd_war/";
+
 function getAllRentalDetails(){
-    console.log(id);
     $.ajax({
-        url: baseUrl+"Rental",
+        url: baseUrl+"Rent",
         method :"get",
         dataType:"json",
         success: function (resp) {
-            console.log(resp);
-            console.log(resp.data)
+            for (const r of resp.data) {
+                alert(r.rentId);
+                console.log(r.rentId);
+            }
 
-/*      $("#tblAddToCart").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+resp.data.vid+"</td><td>"+resp.data.brand+"</td><td>"+resp.data.dailyPrice+"</td><td>"+resp.data.monthlyPrice+"</td><td>"+resp.data.priceForExtraKm+"</td><td>"+resp.data.freeKmForDay+"</td><td>"+resp.data.freeKmForMonth+"</td></tr>")*/
-        },
-        error: function(error) {
-            let prase = JSON.parse(error.responseText);
-            console.log(prase.message);
-
+     /* $("#tblCustomerReq").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+resp.data.rentId+"</td><td>"+resp.data.cusId+"</td><td>"+resp.data.pickUpDate+"</td><td>"+resp.data.returnDate+"</td><td>"+resp.data.pickUpVenue+"</td><td>"+resp.data.returnValue+"</td><td>"+resp.data.statusOfReq+"</td><td>"+resp.data.statusOfReq+"</td></tr>");*/
         }
+
 
     });
 }

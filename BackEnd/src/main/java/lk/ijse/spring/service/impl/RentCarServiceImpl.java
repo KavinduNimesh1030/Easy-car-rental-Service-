@@ -5,6 +5,7 @@ import lk.ijse.spring.dto.RentalDTO;
 import lk.ijse.spring.entity.Customer;
 import lk.ijse.spring.entity.Rental;
 import lk.ijse.spring.repo.RentCarRepo;
+import lk.ijse.spring.repo.RentDetailRepo;
 import lk.ijse.spring.service.RentCarService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
@@ -24,6 +25,9 @@ public class RentCarServiceImpl implements RentCarService {
     @Autowired
     ModelMapper modelMapper;
 
+    @Autowired
+    RentDetailRepo rentDetailRepo;
+
 
     @Override
     public void saveRentDetail(RentalDTO rentalDTO) {
@@ -33,6 +37,10 @@ public class RentCarServiceImpl implements RentCarService {
     @Override
     public ArrayList<RentalDTO> getAllRentDetail() {
         List<Rental> all = rentCarRepo.findAll();
+        System.out.println(all.toString());
+        System.out.println("------------------");
+        System.out.println(all);
+
         return  modelMapper.map(rentCarRepo.findAll(),new TypeToken<ArrayList<RentalDTO>>(){}.getType());
     }
 }

@@ -1,9 +1,6 @@
 package lk.ijse.spring.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -14,8 +11,9 @@ import java.time.LocalTime;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
-@Data
+
+@Setter
+@Getter
 @IdClass(RentVehicle_PK.class)
 @Entity
 public class RentDetail {
