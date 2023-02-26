@@ -37,7 +37,7 @@ public class FileUploadController {
             String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
 
             // Let's create a folder there for uploading purposes, if not exists
-            File uploadsDir = new File(projectPath + "/uploads");
+            File uploadsDir = new File("E:\\EasyCarRental\\FrontEnd\\assets\\img\\fileSave" + "/uploads");
             uploadsDir.mkdir();
 
             // It is time to transfer the file into the newly created dir
@@ -60,7 +60,7 @@ public class FileUploadController {
     public ResponseEntity uploadFileWithSpringWay(@RequestPart("myFile") MultipartFile myFile) {
         try {
             String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
-            File uploadsDir = new File("E:\\fileSaved"+ "/uploads");
+            File uploadsDir = new File("E:\\EasyCarRental\\FrontEnd\\assets\\img\\fileSave"+ "/uploads");
             System.out.println(projectPath);
             uploadsDir.mkdir();
             myFile.transferTo(new File(uploadsDir.getAbsolutePath() + "/" + myFile.getOriginalFilename()));
