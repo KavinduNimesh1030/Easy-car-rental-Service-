@@ -26,7 +26,13 @@ $('body').on('click', '.editbtn', function() {
     loadTheLastUploadedImage(this.id);
     alert(this.id);
     alert(this.name);
+    getCustomerImgName(this.name)
 });
+
+function getCustomerImgName(cusId){
+
+
+}
 
 
 

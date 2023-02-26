@@ -13,6 +13,11 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
 
+    @GetMapping
+    public ResponseUtil getAllCustomers(){
+        
+    }
+
     @PostMapping
     public ResponseUtil saveCus(@RequestBody CustomerDTO customerDTO){
         customerService.saveCustomer(customerDTO);
