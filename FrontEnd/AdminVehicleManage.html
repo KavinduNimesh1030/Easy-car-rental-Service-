@@ -90,13 +90,22 @@
 
                 <div class="col-md-4">
                     <label for="txtCarTranType" class="form-label">Transmission Type</label>
-                    <input type="text" class="form-control" id="txtCarTranType" placeholder="+9477055332" name="transmissionType">
-                </div>
+                    <select id="txtCarTranType" class="form-select">
+                        <option selected>Auto</option>
+                        <option>Manual</option>
+
+                    </select>
+                    </div>
 
                 <div class="col-md-4">
-                    <label for="txtNumOfPassengers" class="form-label">No Of Passenger</label>
-                    <input type="text" class="form-control" id="txtNumOfPassengers" placeholder="4" name="noOfPassenger">
-                </div>
+                    <label for="txtCarNoOfPassenger" class="form-label">Passengers</label>
+                    <select id="txtCarNoOfPassenger" class="form-select">
+                        <option>2</option>
+                        <option>4</option>
+                        <option>6</option>
+
+                    </select>
+                    </div>
                 <div class="col-md-4">
                     <label for="txtFreeKmForDay" class="form-label">Free KM For Day</label>
                     <input type="text" class="form-control" id="txtFreeKmForDay" placeholder="10km" name="freeKmForDay">
@@ -107,8 +116,12 @@
                 </div>
 
                 <div class="col-md-4">
-                    <label for="txtIsAvailable" class="form-label">Available</label>
-                    <input type="text" class="form-control" id="txtIsAvailable" placeholder="" name="isAvailable">
+                    <label for="txtCarTranType" class="form-label"> Availability</label>
+                    <select id="txtCarIsAvailable" class="form-select">
+                        <option>Available</option>
+                        <option>Not Available</option>
+
+                    </select>
                 </div>
 
                 <div class="col-md-4">
@@ -127,8 +140,20 @@
                 </div>
 
                 <div class="col-md-4">
-                    <label for="file" class="form-label">Car Images</label>
-                    <input class="form-control" id="file" name="myFile" type="file" >
+                    <label for="fileFront" class="form-label">Car Front Images</label>
+                    <input class="form-control" id="fileFront" name="myFileFront" type="file" >
+                </div>
+                <div class="col-md-4">
+                    <label for="fileBack" class="form-label">Car Back Images</label>
+                    <input class="form-control" id="fileBack" name="myFileBack" type="file" >
+                </div>
+                <div class="col-md-4">
+                    <label for="fileSide" class="form-label">Car Side Images</label>
+                    <input class="form-control" id="fileSide" name="myFileSide" type="file" >
+                </div>
+                <div class="col-md-4">
+                    <label for="fileInterior" class="form-label">Car Interior Images</label>
+                    <input class="form-control" id="fileInterior" name="myFileInterior" type="file" >
                 </div>
 
 
