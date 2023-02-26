@@ -4,10 +4,7 @@ import lk.ijse.spring.entity.Customer;
 import lk.ijse.spring.entity.RentDetail;
 import lombok.*;
 
-import java.sql.Time;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 @NoArgsConstructor
@@ -17,8 +14,8 @@ import java.util.List;
 @ToString
 public class RentalDTO {
     String rentId;
-    Date pickUpDate;
-    Date returnDate;
+    String pickUpDate;
+     String returnDate;
     String pickUpVenue;
     String returnVenue;
     String pickUpTime;

@@ -4,10 +4,7 @@ import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.sql.Time;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 @NoArgsConstructor
@@ -19,8 +16,8 @@ import java.util.List;
 public class Rental {
     @Id
     String rentId;
-    Date pickUpDate;
-    Date returnDate;
+    String pickUpDate;
+    String returnDate;
     String pickUpVenue;
     String returnVenue;
     String pickUpTime;

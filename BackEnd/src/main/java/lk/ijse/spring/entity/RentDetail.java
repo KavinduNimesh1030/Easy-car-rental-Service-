@@ -11,7 +11,6 @@ import java.time.LocalTime;
 
 @AllArgsConstructor
 @NoArgsConstructor
-
 @Setter
 @Getter
 @IdClass(RentVehicle_PK.class)
@@ -22,9 +21,9 @@ public class RentDetail {
     @Id
     String vId;
     String driverOption;
-    Date pickDate;
+    String pickDate;
     String pickTime;
-    Date returnDate;
+    String returnDate;
 
     @ManyToOne
     @JoinColumn(name = "rentId",referencedColumnName = "rentId",insertable = false,updatable = false)

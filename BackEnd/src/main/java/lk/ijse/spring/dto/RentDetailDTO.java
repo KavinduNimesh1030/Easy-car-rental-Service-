@@ -18,5 +18,5 @@ public class RentDetailDTO {
     String driverOption;
     String pickDate;
     String pickTime;
-    Date returnDate;
+    String returnDate;
 }
