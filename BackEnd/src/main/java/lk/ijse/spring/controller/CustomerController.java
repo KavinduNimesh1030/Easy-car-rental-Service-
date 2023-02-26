@@ -6,6 +6,8 @@ import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping("/Customer")
 @CrossOrigin
@@ -15,7 +17,8 @@ public class CustomerController {
 
     @GetMapping
     public ResponseUtil getAllCustomers(){
-        
+        ArrayList<CustomerDTO>all = customerService.getAllCustomers();
+        return new ResponseUtil("200","done",all);
     }
 
     @PostMapping

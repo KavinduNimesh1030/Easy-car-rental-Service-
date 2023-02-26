@@ -30,7 +30,21 @@ $('body').on('click', '.editbtn', function() {
 });
 
 function getCustomerImgName(cusId){
+    $.ajax({
+        url: baseUrl+"Customer",
+        dataType:"Json",
+        method: "get",
+        success: function (resp) {
+            console.log(resp)
+            for (const r of resp.data) {
+                if(r.id == cusId){
+                    alert("matching"+r.imgPath);
+                }
+            }
 
+        }
+
+    });
 
 }
 
