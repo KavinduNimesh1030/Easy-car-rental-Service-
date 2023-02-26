@@ -20,16 +20,17 @@
             <thead>
             <tr>
 
-                <th scope="col">RegId</th>
-                <th scope="col">Brand</th>
-                <th scope="col">Daily Price</th>
-                <th scope="col">Monthly Price</th>
-                <th scope="col">Price for extra KM</th>
-                <th scope="col">freeKmForDay</th>
-                <th scope="col">freeKmForMonth</th>
+                <th scope="col">Rental Id</th>
+                <th scope="col">Customer Id</th>
+                <th scope="col">Pick Up Date</th>
+                <th scope="col">Return Date</th>
+                <th scope="col">pick Up Venue</th>
+                <th scope="col">Return Venue</th>
+                <th scope="col">Status of request</th>
+                <th scope="col">Option</th>
             </tr>
             </thead>
-            <tbody id="tblAddToCart">
+            <tbody id="tblCustomerReq">
             </tbody>
         </table>
     </div>
@@ -37,65 +38,7 @@
         <h2>Details</h2>
         <hr style="width:97%;text-align:left;margin-left:8px;margin-top: 19px;">
         <div>
-            <form class="row g-3" id="cartForm">
-                <div class="col-md-6">
-                    <label for="txtPickUpLocation" class="form-label">pick Up Venue</label>
-                    <input type="text" class="form-control" id="txtPickUpLocation" placeholder="1234 Main St" style="background-color: transparent">
-                </div>
 
-                <div class="col-md-6">
-                    <label for="txtReturnLocation" class="form-label">Return Venue</label>
-                    <input type="text" class="form-control" id="txtReturnLocation" placeholder="1234 Main St">
-                </div>
-
-                <div class="col-md-6">
-                    <label for="DatPickDate" class="form-label">Pick Date</label>
-                    <input type="date" class="form-control" id="DatPickDate" >
-                </div>
-
-                <div class="col-md-6">
-                    <label for="DatPickUpTime" class="form-label">pick-Up Time</label>
-                    <input type="time" class="form-control" id="DatPickUpTime" >
-                </div>
-
-                <div class="col-md-6">
-                    <label for="DatReturnDate" class="form-label">Return Date</label>
-                    <input type="date" class="form-control" id="DatReturnDate" >
-                </div>
-                <div class="col-md-6">
-                    <label for="txtDuration" class="form-label">Duration</label>
-                    <input type="text" class="form-control" id="txtDuration" placeholder="Total KM">
-                </div>
-
-                <div class="col-md-6">
-                    <label for="driverOpSelector" class="form-label">Service Option</label>
-                    <select id="driverOpSelector" class="form-select">
-                        <option selected>Please Choose</option>
-                        <option>With Driver</option>
-                        <option>With Out Driver</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <label for="formLossDamage" class="form-label">Input Photo Of NIC</label>
-                    <input class="form-control" type="file" id="formLossDamage" name="myFile" multiple>
-                </div>
-                <div id="totalSec">
-                    <div class="lblPrice">
-                        <h2>Additional  :</h2>
-                        <h2>Loss damage :</h2>
-                        <h2>Total       :</h2>
-                    </div>
-                    <div class="lblAmount">
-                        <h2>20000.00</h2>
-                        <h2 id="lblLossDamage">30000.00</h2>
-                        <h2 id="lblTotal">50000.00</h2>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <button type="button" class="btn btn-primary" id="btnRentSubmit">Submit</button>
-                </div>
-            </form>
         </div>
     </div>
 </section>
