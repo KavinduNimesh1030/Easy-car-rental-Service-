@@ -1,6 +1,5 @@
 let baseUrl = "http://localhost:8080/BackEnd_war/";
 getAllRentalDetails();
-let path = "car.png";
 function getAllRentalDetails(){
     $.ajax({
         url: baseUrl+"Rent",
@@ -9,8 +8,7 @@ function getAllRentalDetails(){
         success: function (resp) {
             for (const r of resp.data) {
                 console.log(r.rentId);
-                path=r.slipImgPath;
-                $("#tblCustomerReq").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.rentId+"</td><td>"+r.cusId+"</td><td>"+r.pickUpDate+"</td><td>"+r.returnDate+"</td><td>"+r.pickUpVenue+"</td><td>"+r.returnVenue+"</td><td>"+r.statusOfReq+"</td><td><button class=\"editbtn\" id='v'>edit</button></td></td></tr>");
+                $("#tblCustomerReq").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.rentId+"</td><td>"+r.cusId+"</td><td>"+r.pickUpDate+"</td><td>"+r.returnDate+"</td><td>"+r.pickUpVenue+"</td><td>"+r.returnVenue+"</td><td>"+r.statusOfReq+"</td><td>"+r.total+"</td><td><button class=\"editbtn\" id="+r.slipImgPath+">edit</button></td></td></tr>");
 
             }
 
@@ -23,7 +21,8 @@ function getAllRentalDetails(){
 
 $('body').on('click', '.editbtn', function() {
     // code here
-    loadTheLastUploadedImage();
+    loadTheLastUploadedImage(this.id);
+    alert(this.id);
 });
 
 $('body').on('click', '.tblTr', function() {
@@ -35,14 +34,15 @@ $('body').on('click', '.tblTr', function() {
 
 
 
-function loadTheLastUploadedImage() {
+function loadTheLastUploadedImage(path) {
     $(".slipImg").css({
         "background": `url(${"assets/img/fileSave/uploads/"+path})`,
         "background-size": "cover",
-        "height": "300px"
+        "background-position":"center",
+
     });
 
-   /* $.ajax({
+/*    $.ajax({
         url: baseUrl + "api/v1/upload",
         method: 'get',
         dataType: 'json',

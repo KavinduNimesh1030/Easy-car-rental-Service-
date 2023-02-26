@@ -1144,6 +1144,11 @@ option {
     font-weight: 600;
     color: white;
 }
+.adminRentalSec>h3{
+    font-size: 19px;
+    color: white;
+    transform: translate(16px, 1px);
+}
 
 
 
