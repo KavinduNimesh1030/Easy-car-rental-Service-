@@ -1,6 +1,6 @@
 let customerId = null;
 var driverId = "D005";
-var Driver ={};
+// var Driver ={};
 var driverIds= [];
 
 getAllAvailableDriver();
@@ -19,6 +19,7 @@ function getRentDetail(rentId) {
         for (let i = 0; i < rows; i++) {
             let vid = $("#tblAddToCart").children().eq(i).children(":eq(0)").text();
             array.push({rentId:rentId,vid:vid,pickDate:pickUpDate,pickTime:pickUpTime,returnDate:returnDate,driverId:driverIds[i]});
+            a(driverIds[i]);
 
         }
 
@@ -77,7 +78,7 @@ $("#btnRentSubmit").click(function (){
         contentType:"application/json",
         success: function (resp) {
             sendRentImagePath();
-            a();
+          /*  a();*/
             alert(resp.message);
         },
         error:function (error){
@@ -115,7 +116,17 @@ function sendRentImagePath() {
         }
     });
 }
-function a(){
+function a(id){
+    alert(id);
+
+   let Driver = {
+        driverId: id,
+        driverName:"kamal",
+        driverContactNo:"111",
+        availability: "unAvailable"
+    }
+
+
     $.ajax({
         url: baseUrl + "Driver",
         method: "put",
@@ -158,7 +169,7 @@ function getAllAvailableDriver(){
                     alert(r.driverName);
                     driverId = r.driverId;
                     driverIds.push(r.driverId);
-
+/*
                     for (let i = 0; i < driverIds.length; i++) {
                         if(driverIds[i] == r.driverId){
                             Driver = {
@@ -169,7 +180,7 @@ function getAllAvailableDriver(){
                             }
                         }
 
-                    }
+                    }*/
 
 
 

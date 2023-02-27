@@ -21,13 +21,15 @@ public class DriverController {
        ArrayList<DriverDTO>all = driverService.findDriverByAvailability(availability);
        return new ResponseUtil("200","done",all);
    }
+
    @PutMapping
     public ResponseUtil updateDriver( @RequestBody DriverDTO driverDTO){
        driverService.updateDriver(driverDTO);
         return  new ResponseUtil("200","done",null);
    }
-  /*  @PutMapping(params = "driverID,availability")
-    public ResponseUtil updateDriver1( @RequestBody DriverDTO driverDTO){
-        return  new ResponseUtil("200","done",null);
-    }*/
+   @GetMapping(params = "driverId")
+    public  ResponseUtil getDriverById(String driverId){
+       
+   }
+
 }
