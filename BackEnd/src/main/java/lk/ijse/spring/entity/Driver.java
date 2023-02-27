@@ -2,8 +2,8 @@ package lk.ijse.spring.entity;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,4 +17,7 @@ public class Driver {
     String driverName;
     String driverContactNo;
     String availability;
+
+    @OneToMany(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
+    private List<Rental> rentalList;
 }

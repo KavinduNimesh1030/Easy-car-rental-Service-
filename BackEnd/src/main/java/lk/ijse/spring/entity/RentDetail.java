@@ -20,6 +20,7 @@ public class RentDetail {
     String rentId;
     @Id
     String vId;
+    @Id
     String driverOption;
     String pickDate;
     String pickTime;
@@ -32,5 +33,11 @@ public class RentDetail {
     @ManyToOne
     @JoinColumn(name = "vId",referencedColumnName = "vId",insertable = false,updatable = false)
     private Vehicle vehicle;
+
+    @ManyToOne
+    @JoinColumn(name = "driverId",referencedColumnName = "driverId",insertable = false,updatable = false)
+    private Driver driver;
+
+
 
 }
