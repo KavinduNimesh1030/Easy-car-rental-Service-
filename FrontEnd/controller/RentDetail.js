@@ -159,13 +159,20 @@ function getAllAvailableDriver(){
                     driverId = r.driverId;
                     driverIds.push(r.driverId);
 
+                    for (let i = 0; i < driverIds.length; i++) {
+                        if(driverIds[i] == r.driverId){
+                            Driver = {
+                                driverId: r.driverId,
+                                driverName: r.driverName,
+                                driverContactNo: r.driverContactNo,
+                                availability: "unAvailable"
+                            }
+                        }
 
-                    Driver = {
-                        driverId: r.driverId,
-                        driverName: r.driverName,
-                        driverContactNo: r.driverContactNo,
-                        availability: "unAvailable"
                     }
+
+
+
                     /*updateDriver(r.driverId,r.name,r.contactNo,"UnAvailable");*/
 
                 }
