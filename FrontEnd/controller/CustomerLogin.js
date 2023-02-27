@@ -8,18 +8,29 @@ $("#btnLogin").click(function (){
     let email= $("#txtLoginEmail").val();
     let password = $("#txtCusLoginPassword").val();
     console.log("email"+email)
-    $.ajax({
-        url: baseUrl+"Customer?email="+email,
-        method :"get",
-        dataType:"json",
-        success: function (resp) {
-            console.log(resp);
-                if(resp.data.password == password) {
+    let a ="easycar@gmail.com";
+    if(email == a){
+        alert("Admin Login Success !!");
+        $("#loginPage").hide();
+        $("#CustomerReg").hide();
+        $("#cusDetail").hide();
+        $("#HomePage").hide();
+        $("#adminDashBoard").show();
+
+    }else {
+        $.ajax({
+            url: baseUrl + "Customer?email=" + email,
+            method: "get",
+            dataType: "json",
+            success: function (resp) {
+                console.log(resp);
+
+                if (resp.data.password == password) {
                     console.log(resp.data);
                     alert(resp.message);
-                    console.log("a"+resp.data.id);
+                    console.log("a" + resp.data.id);
                     getCustomerId(resp.data.id);
-                    setUserNameAndEmail(resp.data.name,email);
+                    setUserNameAndEmail(resp.data.name, email);
 
 
                     $("#loginPage").hide();
@@ -27,15 +38,16 @@ $("#btnLogin").click(function (){
                     $("#cusDetail").hide();
                     $("#HomePage").show();
 
-                }else {
+                } else {
                     alert("invalid email or password")
                 }
-        },
-        error: function(error) {
-            let prase = JSON.parse(error.responseText);
-            alert("invalid email or password");
+            },
+            error: function (error) {
+                let prase = JSON.parse(error.responseText);
+                alert("invalid email or password");
 
-        }
+            }
 
-    });
+        });
+    }
 });

@@ -9,6 +9,7 @@
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+  <!--  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>-->
 </head>
 <body>
 <header>
@@ -1073,6 +1074,7 @@
     </body>
 </main>
 
+
 <script src="controller/CustomerRegistration.js"></script>
 <script src="controller/CustomerLogin.js"></script>
 <script src="controller/CustomerHome.js"></script>
@@ -1086,6 +1088,7 @@
     $("#rentCar").hide();
     $("#userNameNav").hide();
     $("#addToCarPage").hide();
+    $("#adminDashBoard").hide();
 
     $("#btnSignIn").click(function (){
         $("#userNameNav").show();
@@ -1094,6 +1097,7 @@
         $("#CustomerReg").hide();
         $("#cusDetail").hide();
         $("#HomePage").hide();
+        $(".AdminRentalOutCon").hide();
 
     });
   $("#btnSignUp").click(function (){
@@ -1148,6 +1152,9 @@
 
         boxShadowRemove();
     });
+   /* $("#cusReq").click(function (){
+        $(".AdminRentalOutCon").show();
+    });*/
 
 
     function navSetting(){

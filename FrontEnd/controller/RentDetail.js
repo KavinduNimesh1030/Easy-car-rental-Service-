@@ -20,7 +20,7 @@ function getRentDetail(rentId) {
 }
 
 $("#btnRentSubmit").click(function (){
-    let rentId = "R001"
+    let rentId = "R002"
     let lossDamageWaiver = 30000.00;
     let duration = $("#txtDuration").val();
     let pickUpDate = $("#DatPickDate").val();
@@ -31,7 +31,7 @@ $("#btnRentSubmit").click(function (){
     let slipImgPath = $("#formLossDamage")[0].files[0].name;
     let statusOfReq = "Pending";
     let total = 50000.00;
-    let cusId = "200120303030";
+    let cusId = customerId;
     let rentDetail = getRentDetail(rentId);
     console.log("date "+$("#DatPickDate").val())
 
@@ -59,7 +59,7 @@ $("#btnRentSubmit").click(function (){
         data:JSON.stringify(rent),
         contentType:"application/json",
         success: function (resp) {
-            sendImagePath();
+            sendRentImagePath();
             alert(resp.message);
         },
         error:function (error){
@@ -73,7 +73,7 @@ function getCustomerId(id){
     customerId = id;
     console.log("b"+customerId);
 }
-function sendImagePath() {
+function sendRentImagePath() {
     var data = new FormData();
     let file = $("#formLossDamage")[0].files[0];
     let fileName = $("#formLossDamage")[0].files[0].name;

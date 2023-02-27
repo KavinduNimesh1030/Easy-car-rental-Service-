@@ -19,7 +19,7 @@ $("#submitCusRegDetail").click(function (){
     let name =   $("#txtName").val();
     let email = $("#txtCusEmail").val();
     let password = $("#txtPassword").val();
-    let address = $("#txtCusRegId").val();
+    let address = $("#txtAddress").val();
     let contactNo = $("#txtContactNo").val();
     let nic = $("#txtNicNo").val();
     let dln = $("#txtDrivingLNo").val();
