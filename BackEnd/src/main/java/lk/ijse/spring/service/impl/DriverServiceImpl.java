@@ -32,4 +32,9 @@ public class DriverServiceImpl implements DriverService {
     public ArrayList<DriverDTO> findDriverByAvailability(String availability) {
         return  modelMapper.map(repo.findDriverByAvailability(availability),new TypeToken<ArrayList<DriverDTO>>(){}.getType());
     }
+
+    @Override
+    public DriverDTO updateDriver(DriverDTO driverDTO) {
+        return null;
+    }
 }

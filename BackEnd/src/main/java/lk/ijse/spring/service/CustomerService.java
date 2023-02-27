@@ -13,4 +13,5 @@ public interface CustomerService {
     CustomerDTO CheckCustomer(String email);
     ArrayList<CustomerDTO>getAllCustomers();
 
+
 }

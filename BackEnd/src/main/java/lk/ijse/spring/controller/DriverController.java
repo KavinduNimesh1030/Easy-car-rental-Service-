@@ -23,6 +23,6 @@ public class DriverController {
    }
    @PutMapping
     public ResponseUtil updateDriver( @RequestBody DriverDTO driverDTO){
-       
+        return  new ResponseUtil("200","done",null);
    }
 }
