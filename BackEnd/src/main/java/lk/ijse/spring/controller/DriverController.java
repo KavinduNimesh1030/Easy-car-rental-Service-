@@ -23,6 +23,11 @@ public class DriverController {
    }
    @PutMapping
     public ResponseUtil updateDriver( @RequestBody DriverDTO driverDTO){
+       driverService.updateDriver(driverDTO);
         return  new ResponseUtil("200","done",null);
    }
+  /*  @PutMapping(params = "driverID,availability")
+    public ResponseUtil updateDriver1( @RequestBody DriverDTO driverDTO){
+        return  new ResponseUtil("200","done",null);
+    }*/
 }

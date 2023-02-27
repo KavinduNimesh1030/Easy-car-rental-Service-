@@ -1,5 +1,6 @@
 let customerId = null;
 var driverId = "D005";
+var Driver ={};
 
 getAllAvailableDriver();
 
@@ -35,7 +36,7 @@ function getRentDetail(rentId) {
 
 
 $("#btnRentSubmit").click(function (){
-    let rentId = "R002"
+    let rentId = "R003"
     let lossDamageWaiver = 30000.00;
     let duration = $("#txtDuration").val();
     let pickUpDate = $("#DatPickDate").val();
@@ -46,7 +47,7 @@ $("#btnRentSubmit").click(function (){
     let slipImgPath = $("#formLossDamage")[0].files[0].name;
     let statusOfReq = "Pending";
     let total = 50000.00;
-    let cusId = customerId;
+    let cusId = "199029383838";
     let rentDetail = getRentDetail(rentId);
     console.log("date "+$("#DatPickDate").val())
 
@@ -75,6 +76,7 @@ $("#btnRentSubmit").click(function (){
         contentType:"application/json",
         success: function (resp) {
             sendRentImagePath();
+            a();
             alert(resp.message);
         },
         error:function (error){
@@ -112,6 +114,36 @@ function sendRentImagePath() {
         }
     });
 }
+function a(){
+    $.ajax({
+        url: baseUrl + "Driver",
+        method: "put",
+        data: JSON.stringify(Driver),
+        contentType: "application/json",
+        success: function (resp) {
+
+            alert(resp.message);
+
+        },
+        error: function (error) {
+            let prase = JSON.parse(error.responseText);
+            alert(prase.message);
+
+        }
+
+    });
+
+
+}
+
+function updateDriver(driverId, name, contactNo, unAvailable) {
+
+
+
+
+
+}
+
 function getAllAvailableDriver(){
         $.ajax({
             url: baseUrl+"Driver?availability="+"Available",
@@ -122,7 +154,18 @@ function getAllAvailableDriver(){
                 for (const r of resp.data) {
                     console.log(r.driverId);
                     alert(r.driverId);
+                    alert(r.driverName);
                     driverId = r.driverId;
+
+                    
+                    Driver = {
+                        driverId: r.driverId,
+                        driverName: r.driverName,
+                        driverContactNo: r.driverContactNo,
+                        availability: "unAvailable"
+                    }
+                    /*updateDriver(r.driverId,r.name,r.contactNo,"UnAvailable");*/
+
                 }
 
             }

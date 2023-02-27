@@ -34,7 +34,7 @@ public class RentDetail {
     @JoinColumn(name = "vId",referencedColumnName = "vId",insertable = false,updatable = false)
     private Vehicle vehicle;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "driverId",referencedColumnName = "driverId",insertable = false,updatable = false)
     private Driver driver;
 
