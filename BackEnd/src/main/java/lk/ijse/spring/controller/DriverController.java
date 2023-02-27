@@ -29,7 +29,8 @@ public class DriverController {
    }
    @GetMapping(params = "driverId")
     public  ResponseUtil getDriverById(String driverId){
-       
+       DriverDTO driverDTO = driverService.getDriverById(driverId);
+       return  new ResponseUtil("200","done",driverDTO);
    }
 
 }

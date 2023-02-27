@@ -11,4 +11,5 @@ public interface DriverService {
     ArrayList<DriverDTO>getAllDriver();
     ArrayList<DriverDTO> findDriverByAvailability(String availability);
     void updateDriver(DriverDTO driverDTO);
+    DriverDTO getDriverById(String driverId);
 }

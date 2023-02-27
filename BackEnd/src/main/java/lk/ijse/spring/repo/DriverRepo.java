@@ -8,4 +8,5 @@ import java.util.ArrayList;
 
 public interface DriverRepo extends JpaRepository<Driver,String> {
         ArrayList<Driver> findDriverByAvailability(String availability);
+        Driver findDriverByDriverId(String driverId);
 }

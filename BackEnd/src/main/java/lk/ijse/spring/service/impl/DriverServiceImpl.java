@@ -37,4 +37,9 @@ public class DriverServiceImpl implements DriverService {
     public void updateDriver(DriverDTO driverDTO) {
         repo.save(modelMapper.map(driverDTO,Driver.class));
     }
+
+    @Override
+    public DriverDTO getDriverById(String driverId) {
+        return modelMapper.map(repo.findDriverByDriverId(driverId),DriverDTO.class);
+    }
 }
