@@ -118,23 +118,40 @@ function sendRentImagePath() {
 }
 function a(id){
     alert(id);
-
-   let Driver = {
-        driverId: id,
-        driverName:"kamal",
-        driverContactNo:"111",
-        availability: "unAvailable"
-    }
-
-
     $.ajax({
-        url: baseUrl + "Driver",
-        method: "put",
-        data: JSON.stringify(Driver),
-        contentType: "application/json",
+        url: baseUrl + "Driver?driverId="+id,
+        dataType:"Json",
+        method: "get",
         success: function (resp) {
-
             alert(resp.message);
+            alert(resp.data);
+
+                console.log("did"+resp.data.driverId);
+                let Driver = {
+                    driverId: resp.data.driverId,
+                    driverName:resp.data.driverName,
+                    driverContactNo:resp.data.driverContactNo,
+                    availability: "unAvailable"
+
+            }
+
+            $.ajax({
+                url: baseUrl + "Driver",
+                method: "put",
+                data: JSON.stringify(Driver),
+                contentType: "application/json",
+                success: function (resp) {
+
+                    alert(resp.message);
+
+                },
+                error: function (error) {
+                    let prase = JSON.parse(error.responseText);
+                    alert(prase.message);
+
+                }
+
+            });
 
         },
         error: function (error) {
@@ -144,6 +161,8 @@ function a(id){
         }
 
     });
+
+
 
 
 }
