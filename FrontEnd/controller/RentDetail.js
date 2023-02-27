@@ -1,6 +1,7 @@
 let customerId = null;
 var driverId = "D005";
 var Driver ={};
+var driverIds= [];
 
 getAllAvailableDriver();
 
@@ -17,7 +18,7 @@ function getRentDetail(rentId) {
     if(driverOption == "With Driver"){
         for (let i = 0; i < rows; i++) {
             let vid = $("#tblAddToCart").children().eq(i).children(":eq(0)").text();
-            array.push({rentId:rentId,vid:vid,pickDate:pickUpDate,pickTime:pickUpTime,returnDate:returnDate,driverId:driverId});
+            array.push({rentId:rentId,vid:vid,pickDate:pickUpDate,pickTime:pickUpTime,returnDate:returnDate,driverId:driverIds[i]});
 
         }
 
@@ -156,8 +157,9 @@ function getAllAvailableDriver(){
                     alert(r.driverId);
                     alert(r.driverName);
                     driverId = r.driverId;
+                    driverIds.push(r.driverId);
 
-                    
+
                     Driver = {
                         driverId: r.driverId,
                         driverName: r.driverName,
