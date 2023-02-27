@@ -34,7 +34,7 @@ public class DriverServiceImpl implements DriverService {
     }
 
     @Override
-    public DriverDTO updateDriver(DriverDTO driverDTO) {
-        return null;
+    public void updateDriver(DriverDTO driverDTO) {
+        repo.save(modelMapper.map(driverDTO,Driver.class));
     }
 }

@@ -10,5 +10,5 @@ import java.util.ArrayList;
 public interface DriverService {
     ArrayList<DriverDTO>getAllDriver();
     ArrayList<DriverDTO> findDriverByAvailability(String availability);
-    DriverDTO updateDriver(DriverDTO driverDTO);
+    void updateDriver(DriverDTO driverDTO);
 }
