@@ -2,6 +2,7 @@ package lk.ijse.spring.service.impl;
 
 import lk.ijse.spring.dto.DriverDTO;
 import lk.ijse.spring.dto.RentalDTO;
+import lk.ijse.spring.entity.Driver;
 import lk.ijse.spring.repo.DriverRepo;
 import lk.ijse.spring.service.DriverService;
 import org.modelmapper.ModelMapper;
@@ -25,5 +26,10 @@ public class DriverServiceImpl implements DriverService {
     @Override
     public ArrayList<DriverDTO> getAllDriver() {
        return  modelMapper.map(repo.findAll(),new TypeToken<ArrayList<DriverDTO>>(){}.getType());
+    }
+
+    @Override
+    public ArrayList<DriverDTO> findDriverByAvailability(String availability) {
+        return  modelMapper.map(repo.findDriverByAvailability(availability),new TypeToken<ArrayList<DriverDTO>>(){}.getType());
     }
 }

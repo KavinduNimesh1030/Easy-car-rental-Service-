@@ -1,5 +1,8 @@
 let customerId = null;
-let driver = null;
+var driverId = "D005";
+
+getAllAvailableDriver();
+
 function getRentDetail(rentId) {
     let rows = $("#tblAddToCart").children().length;
 
@@ -11,20 +14,25 @@ function getRentDetail(rentId) {
     let driverOption = $("#driverOpSelector").val();
     console.log(driverOption);
     if(driverOption == "With Driver"){
-        driver ="D001";
+        for (let i = 0; i < rows; i++) {
+            let vid = $("#tblAddToCart").children().eq(i).children(":eq(0)").text();
+            array.push({rentId:rentId,vid:vid,pickDate:pickUpDate,pickTime:pickUpTime,returnDate:returnDate,driverId:driverId});
+
+        }
+
     }else {
-        driver = "with out Driver";
-    }
-    for (let i = 0; i < rows; i++) {
-        let vid = $("#tblAddToCart").children().eq(i).children(":eq(0)").text();
-        array.push({rentId:rentId,vid:vid,pickDate:pickUpDate,pickTime:pickUpTime,returnDate:returnDate,driverId :"D001"})
+        driverId= "with out Driver";
+        for (let i = 0; i < rows; i++) {
+            let vid = $("#tblAddToCart").children().eq(i).children(":eq(0)").text();
+            array.push({rentId:rentId,vid:vid,pickDate:pickUpDate,pickTime:pickUpTime,returnDate:returnDate,driverId:driverId});
 
+        }
     }
-
 
 
     return array;
 }
+
 
 $("#btnRentSubmit").click(function (){
     let rentId = "R002"
@@ -103,4 +111,24 @@ function sendRentImagePath() {
             console.log(err);
         }
     });
+}
+function getAllAvailableDriver(){
+        $.ajax({
+            url: baseUrl+"Driver?availability="+"Available",
+            dataType:"Json",
+            method: "get",
+            success: function (resp) {
+                console.log(resp)
+                for (const r of resp.data) {
+                    console.log(r.driverId);
+                    alert(r.driverId);
+                    driverId = r.driverId;
+                }
+
+            }
+
+        });
+
+
+
 }

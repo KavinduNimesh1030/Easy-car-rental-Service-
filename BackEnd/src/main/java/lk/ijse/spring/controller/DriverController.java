@@ -4,10 +4,7 @@ import lk.ijse.spring.dto.DriverDTO;
 import lk.ijse.spring.service.DriverService;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -19,9 +16,13 @@ public class DriverController {
     @Autowired
     DriverService driverService;
 
-   @GetMapping
-    public ResponseUtil getAllDrivers(){
-       ArrayList<DriverDTO>all = driverService.getAllDriver();
+   @GetMapping(params = "availability")
+    public ResponseUtil getAllDrivers(String availability){
+       ArrayList<DriverDTO>all = driverService.findDriverByAvailability(availability);
        return new ResponseUtil("200","done",all);
+   }
+   @PutMapping
+    public ResponseUtil updateDriver( @RequestBody DriverDTO driverDTO){
+       
    }
 }
