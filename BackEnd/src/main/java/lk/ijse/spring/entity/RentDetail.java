@@ -21,7 +21,7 @@ public class RentDetail {
     @Id
     String vId;
     @Id
-    String driverOption;
+    String driverId;
     String pickDate;
     String pickTime;
     String returnDate;

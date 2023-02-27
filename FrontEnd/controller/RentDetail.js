@@ -1,4 +1,5 @@
 let customerId = null;
+let driver = null;
 function getRentDetail(rentId) {
     let rows = $("#tblAddToCart").children().length;
 
@@ -8,9 +9,15 @@ function getRentDetail(rentId) {
     let pickUpTime = $("#DatPickUpTime").val();
     let returnDate = $("#DatReturnDate").val();
     let driverOption = $("#driverOpSelector").val();
+    console.log(driverOption);
+    if(driverOption == "With Driver"){
+        driver ="D001";
+    }else {
+        driver = "with out Driver";
+    }
     for (let i = 0; i < rows; i++) {
         let vid = $("#tblAddToCart").children().eq(i).children(":eq(0)").text();
-        array.push({rentId:rentId,vid:vid,pickDate:pickUpDate,pickTime:pickUpTime,returnDate:returnDate,driverOption:driverOption})
+        array.push({rentId:rentId,vid:vid,pickDate:pickUpDate,pickTime:pickUpTime,returnDate:returnDate,driverId :"D001"})
 
     }
 
