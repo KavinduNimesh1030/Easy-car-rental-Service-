@@ -36,7 +36,14 @@ $("#submitVehicleDetail").click(function (){
         backImgPath : backImgPath,
         sideImgPath : sideImgPath,
         interiorImgPath : interiorImgPath,
+
+
     }
+    let img=[];
+    img.push("fileFront");
+    img.push("fileBack");
+    img.push("fileSide");
+    img.push("fileInterior");
     $.ajax({
         url: baseUrl+"Vehicle",
         method :"post",
@@ -44,8 +51,13 @@ $("#submitVehicleDetail").click(function (){
         contentType:"application/json",
         success: function (resp) {
             console.log(resp);
+
+
+            for (let i = 0; i < img.length; i++) {
+                sendVehicleImagePath(img[i]);
+            }
             alert(resp.message);
-            sendVehicleImagePath();
+
 
         },
         error: function(error) {
@@ -59,20 +71,20 @@ $("#submitVehicleDetail").click(function (){
 
 
 
-function sendVehicleImagePath() {
+function sendVehicleImagePath(filId) {
     var data = new FormData();
-    let frontFile = $("#fileFront")[0].files[0];
-    let frontFileName = $("#fileFront")[0].files[0].name;
-    let backFile = $("#fileBack")[0].files[0];
+    let frontFile = $("#"+filId)[0].files[0];
+    let frontFileName = $("#"+filId)[0].files[0].name;
+   /* let backFile = $("#fileBack")[0].files[0];
     let backFileName = $("#fileBack")[0].files[0].name;
     let sideFile = $("#fileSide")[0].files[0];
     let sideFileName = $("#fileSide")[0].files[0].name;
     let interiorFile = $("#fileFront")[0].files[0];
-    let interiorName = $("#fileFront")[0].files[0].name;
+    let interiorName = $("#fileFront")[0].files[0].name;*/
     data.append("myFile", frontFile, frontFileName);
-    data.append("myFile", backFile, backFileName);
+   /* data.append("myFile", backFile, backFileName);
     data.append("myFile", sideFile, sideFileName);
-    data.append("myFile", interiorFile, interiorName);
+    data.append("myFile", interiorFile, interiorName);*/
 
     $.ajax({
         url: baseUrl + "api/v1/upload",
