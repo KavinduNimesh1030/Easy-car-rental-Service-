@@ -3,17 +3,6 @@ let baseUrl = "http://localhost:8080/BackEnd_war/";
 $("#submitCusRegDetail").click(function (){
     var formData = $("#cusRegForm").serialize();
 
-   /* var formData = new FormData();*/
-
-    /*formData.append("id",id);
-    formData.append("email",email);
-    formData.append("password",password);
-    formData.append("address",address);
-    formData.append("contactNo",contactNo);
-    formData.append("nic",nic);
-    formData.append("dln",dln);
-    formData.append("nicImgPath",nicImgPath);
-    formData.append("dlnImgPath",dlnImgPath);*/
 
     let id = $("#txtCusRegId").val();
     let name =   $("#txtName").val();

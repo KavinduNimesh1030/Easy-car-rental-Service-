@@ -45,6 +45,7 @@ $("#submitVehicleDetail").click(function (){
         success: function (resp) {
             console.log(resp);
             alert(resp.message);
+            sendVehicleImagePath();
 
         },
         error: function(error) {
@@ -55,3 +56,39 @@ $("#submitVehicleDetail").click(function (){
     });
 
 });
+
+
+
+function sendVehicleImagePath() {
+    var data = new FormData();
+    let frontFile = $("#fileFront")[0].files[0];
+    let frontFileName = $("#fileFront")[0].files[0].name;
+    let backFile = $("#fileBack")[0].files[0];
+    let backFileName = $("#fileBack")[0].files[0].name;
+    let sideFile = $("#fileSide")[0].files[0];
+    let sideFileName = $("#fileSide")[0].files[0].name;
+    let interiorFile = $("#fileFront")[0].files[0];
+    let interiorName = $("#fileFront")[0].files[0].name;
+    data.append("myFile", frontFile, frontFileName);
+    data.append("myFile", backFile, backFileName);
+    data.append("myFile", sideFile, sideFileName);
+    data.append("myFile", interiorFile, interiorName);
+
+    $.ajax({
+        url: baseUrl + "api/v1/upload",
+        method: 'post',
+        async: true,
+        contentType: false,
+        processData: false,
+        data: data,
+        success: function (resp) {
+            alert(resp);
+            alert("Successfully Uploaded");
+            /* loadTheLastUploadedImage();*/
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+
+}
