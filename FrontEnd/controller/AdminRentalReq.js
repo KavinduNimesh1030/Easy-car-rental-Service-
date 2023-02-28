@@ -88,17 +88,20 @@ function loadSlipImg(path) {
 }
 $("#btnRequestAccept").click(function (){
     request = "Accept";
+    rentalUpdate(request);
 });
 $("#btnRequestReject").click(function (){
     request = "Reject";
 });
 
-function RentalUpdate(request){
+function rentalUpdate(request){
+    console.log(rentalId);
+    console.log(request);
+
+
     $.ajax({
-        url: baseUrl + "Rental?rentId?statusOfReq="+rentalId,request,
+        url: baseUrl + "Rent?rentId="+rentalId,
         method: "put",
-        data: JSON.stringify(Driver),
-        contentType: "application/json",
         success: function (resp) {
 
             alert(resp.message);
