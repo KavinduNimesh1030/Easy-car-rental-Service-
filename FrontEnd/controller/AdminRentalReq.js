@@ -93,7 +93,24 @@ $("#btnRequestReject").click(function (){
     request = "Reject";
 });
 
-function orderUpdate(request){
-    
+function RentalUpdate(request){
+    $.ajax({
+        url: baseUrl + "Rental?rentId?statusOfReq="+rentalId,request,
+        method: "put",
+        data: JSON.stringify(Driver),
+        contentType: "application/json",
+        success: function (resp) {
+
+            alert(resp.message);
+
+        },
+        error: function (error) {
+            let prase = JSON.parse(error.responseText);
+            alert(prase.message);
+
+        }
+
+    });
+
 }
 

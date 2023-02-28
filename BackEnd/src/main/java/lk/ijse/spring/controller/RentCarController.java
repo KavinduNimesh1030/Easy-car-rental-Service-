@@ -28,4 +28,8 @@ public class RentCarController {
         rentCarService.saveRentDetail(rentalDTO);
         return new ResponseUtil("200","Saved!",null);
     }
+    @PutMapping(params = "rentId,statusOfReq")
+    public ResponseUtil updateRental(String rentId,String statusOfReq){
+        
+    }
 }
