@@ -30,6 +30,6 @@ public class RentCarController {
     }
     @PutMapping(params = "rentId,statusOfReq")
     public ResponseUtil updateRental(String rentId,String statusOfReq){
-        
+
     }
 }
