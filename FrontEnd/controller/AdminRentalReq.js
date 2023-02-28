@@ -1,5 +1,7 @@
 let baseUrl = "http://localhost:8080/BackEnd_war/";
 getAllRentalDetails();
+let request;
+let rentalId;
 function getAllRentalDetails(){
     $.ajax({
         url: baseUrl+"Rent",
@@ -12,10 +14,12 @@ function getAllRentalDetails(){
                 for (const rd of r.rentDetail) {
                     console.log("v"+rd.vid)
                     console.log("dr"+rd.driverId)
+
+                    //append driverId and vehicle id
                    /* $(".adminDriver").append("<h2 style='font-size: 16px;transform: translateX(32px);margin-bottom: 18px;'>"+rd.vid+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+rd.driverId+"</h2>")*/
                     $("#tblDriver").append("<tr><td>"+r.rentId+"</td><td>"+rd.vid+"</td><td>"+rd.driverId+"</td><td><button class=\"Drivereditbtn\">edit</button></td></tr>");
                 }
-                $("#tblCustomerReq").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.rentId+"</td><td>"+r.cusId+"</td><td>"+r.pickUpDate+"</td><td>"+r.returnDate+"</td><td>"+r.pickUpVenue+"</td><td>"+r.returnVenue+"</td><td>"+r.statusOfReq+"</td><td>"+r.total+"</td><td><button class=\"editbtn\" name="+r.cusId+" id="+r.slipImgPath+">view</button></td></td></tr>");
+                $("#tblCustomerReq").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.rentId+"</td><td>"+r.cusId+"</td><td>"+r.pickUpDate+"</td><td>"+r.returnDate+"</td><td>"+r.pickUpVenue+"</td><td>"+r.returnVenue+"</td><td>"+r.statusOfReq+"</td><td>"+r.total+"</td><td><button class=\"editbtn\" name="+r.cusId+" id="+r.slipImgPath+" value="+r.rentId+">view</button></td></td></tr>");
 
             }
 
@@ -32,6 +36,7 @@ $('body').on('click', '.editbtn', function() {
     loadSlipImg(this.id);
     alert(this.id);
     alert(this.name);
+    rentalId = this.value;
     getCustomerImgName(this.name)
 });
 
@@ -81,3 +86,14 @@ function loadSlipImg(path) {
     });
 
 }
+$("#btnRequestAccept").click(function (){
+    request = "Accept";
+});
+$("#btnRequestReject").click(function (){
+    request = "Reject";
+});
+
+function orderUpdate(request){
+    
+}
+
