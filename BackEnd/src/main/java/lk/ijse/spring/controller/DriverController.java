@@ -32,5 +32,11 @@ public class DriverController {
        DriverDTO driverDTO = driverService.getDriverById(driverId);
        return  new ResponseUtil("200","done",driverDTO);
    }
+   @PostMapping
+    public ResponseUtil addDriver(DriverDTO driverDTO){
+       driverService.addDriver(driverDTO);
+       return  new ResponseUtil("200","Saved..!",null);
+   }
+
 
 }

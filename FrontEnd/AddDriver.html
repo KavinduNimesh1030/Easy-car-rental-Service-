@@ -42,28 +42,33 @@
 <div class="detailsSecCon">
     <section class="driverDetailsSec">
 
-        <form class="row g-3" id="cusRegForm">
+        <form class="row g-3" id="driverRegForm">
             <div class="col-md-12">
-                <label for="txtDriId" class="form-label">Driver Id</label>
-                <input type="text" class="form-control" id="txtDriId" placeholder="1234 Main St">
-            </div>
-
-            <div class="col-md-12">
-                <label for="txtdriAva" class="form-label">Availability</label>
-                <input type="text" class="form-control" id="txtdriAva" placeholder="+9477055332">
-            </div>
-
-            <div class="col-md-12">
-                <label for="txtdriNo" class="form-label">Contact no</label>
-                <input type="text" class="form-control" id="txtdriNo" placeholder="200130401928">
+                <label for="txtDriId" class="form-label">Driver Nic</label>
+                <input type="text" class="form-control" id="txtDriId" placeholder="199078892827" name="driverId">
             </div>
 
             <div class="col-md-12">
                 <label for="txtDriName" class="form-label">Driver Name</label>
-                <input type="text" class="form-control" id="txtDriName" placeholder="219040584738">
+                <input type="text" class="form-control" id="txtDriName" placeholder="Driver Name" name="driverName">
             </div>
+
+            <div class="col-md-12">
+                <label for="txtDriAva" class="form-label"> Availability</label>
+                <select id="txtDriAva" class="form-select" name="availability">
+                    <option>Available</option>
+                    <option>Not Available</option>
+
+                </select>
+            </div>
+
+            <div class="col-md-12">
+                <label for="txtdriNo" class="form-label">Contact no</label>
+                <input type="text" class="form-control" id="txtdriNo" placeholder="+94778789178" name="driverContactNo">
+            </div>
+
             <div class="col-12">
-                <button type="button" class="btn btn-primary">Submit</button>
+                <button type="button" id="btnSaveDriver" class="btn btn-primary">Submit</button>
             </div>
 
         </form>
@@ -87,6 +92,9 @@
         </table>
     </section>
 </div>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="controller/DriverManage.js"></script>
 
 </body>
 </html>
