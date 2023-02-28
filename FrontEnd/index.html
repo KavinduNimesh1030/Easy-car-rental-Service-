@@ -599,7 +599,7 @@
 
     </section>
     <section class="carOutSec">
-        <div class="carCardInRent">
+      <!--  <div class="carCardInRent">
             <div class="carImg">
 
                 <div id="carouselExample5" class="carousel slide" data-bs-ride="carousel">
@@ -652,8 +652,8 @@
                     <button class="rentNow">Rent Now</button>
                 </div>
             </div>
-        </div>
-        <div class="carCardInRent">
+        </div>-->
+   <!--     <div class="carCardInRent">
             <div class="carImg">
 
                 <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel">
@@ -976,7 +976,7 @@
                     <button class="rentNow">Rent Now</button>
                 </div>
             </div>
-        </div>
+        </div>-->
     </section>
 
     </body>
@@ -1082,6 +1082,7 @@
 <script src="controller/RentDetail.js"></script>
 <script src="controller/DriverManage.js"></script>
 <script src="controller/VehicleManage.js"></script>
+<script src="controller/CarHome.js"></script>
 
 <script>
 
@@ -1140,6 +1141,15 @@
         $("#CustomerReg").hide();
         $("#cusDetail").hide();
         $("#HomePage").hide();
+        $("#rentCar").show();
+        boxShadowRemove();
+    });
+    $("#NavRentCar").click(function (){
+        $("#loginPage").hide();
+        $("#CustomerReg").hide();
+        $("#cusDetail").hide();
+        $("#HomePage").hide();
+        $("#addToCarPage").hide();
         $("#rentCar").show();
         boxShadowRemove();
     });

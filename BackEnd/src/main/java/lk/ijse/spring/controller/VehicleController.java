@@ -6,6 +6,8 @@ import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping("/Vehicle")
 @CrossOrigin
@@ -24,5 +26,10 @@ public class VehicleController {
         vehicleService.SaveVehicle(vehicleDTO);
         return new ResponseUtil("200","done","null");
 
+    }
+    @GetMapping
+    public  ResponseUtil getAllVehicle(){
+        ArrayList<VehicleDTO>all = vehicleService.getAllVehicle();
+        return new ResponseUtil("200","done",all);
     }
 }
