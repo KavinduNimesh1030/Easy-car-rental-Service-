@@ -48,4 +48,9 @@ public class RentCarServiceImpl implements RentCarService {
     public void updateRent(String rentId, String statusOfReq) {
         rentCarRepo.updateRental(rentId,statusOfReq);
     }
+
+    @Override
+    public RentalDTO getRentById(String rentId) {
+        return modelMapper.map(rentCarRepo.findRentalByRentId(rentId),RentalDTO.class);
+    }
 }

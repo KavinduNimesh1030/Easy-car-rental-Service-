@@ -10,4 +10,5 @@ public interface RentCarService {
     void saveRentDetail(RentalDTO rentalDTO);
     ArrayList<RentalDTO>getAllRentDetail();
     void updateRent(String rentId,String statusOfReq);
+    RentalDTO getRentById(String rentId);
 }

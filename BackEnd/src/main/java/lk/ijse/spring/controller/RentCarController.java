@@ -36,6 +36,7 @@ public class RentCarController {
 
     @GetMapping(params = "rentId")
     public  ResponseUtil getRentDetailById(String rentId){
-        
+      RentalDTO rentalDTO = rentCarService.getRentById(rentId);
+        return new ResponseUtil("200","done",rentalDTO);
     }
 }

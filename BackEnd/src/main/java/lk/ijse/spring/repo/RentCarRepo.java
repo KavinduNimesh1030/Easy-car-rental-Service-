@@ -8,4 +8,5 @@ import org.springframework.data.jpa.repository.Query;
 public interface RentCarRepo extends JpaRepository<Rental,String> {
     @Query(value = "update  rental set statusOfReq =?1 where rentId =?2",nativeQuery = true)
     void updateRental(String name, String address);
+    Rental findRentalByRentId(String rentId);
 }
