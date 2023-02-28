@@ -1095,7 +1095,7 @@ option {
 /*-------------------------------------------Car Manage--------------------------------*/
 .AdminRentalOutCon{
     width: 94.7vw;
-    height: 80vh;
+    height: 102vh;
     display: flex;
     flex-direction: row;
     /* row-gap: 16px; */

@@ -15,6 +15,8 @@ function getRentDetail(rentId) {
     let returnDate = $("#DatReturnDate").val();
     let driverOption = $("#driverOpSelector").val();
     console.log(driverOption);
+
+
     if(driverOption == "With Driver"){
         for (let i = 0; i < rows; i++) {
             let vid = $("#tblAddToCart").children().eq(i).children(":eq(0)").text();
@@ -49,7 +51,7 @@ $("#btnRentSubmit").click(function (){
     let slipImgPath = $("#formLossDamage")[0].files[0].name;
     let statusOfReq = "Pending";
     let total = 50000.00;
-    let cusId = "199029383838";
+    let cusId = customerId;
     let rentDetail = getRentDetail(rentId);
     console.log("date "+$("#DatPickDate").val())
 
@@ -78,7 +80,6 @@ $("#btnRentSubmit").click(function (){
         contentType:"application/json",
         success: function (resp) {
             sendRentImagePath();
-          /*  a();*/
             alert(resp.message);
         },
         error:function (error){
@@ -116,6 +117,7 @@ function sendRentImagePath() {
         }
     });
 }
+//get added driver ids and updated driver availability
 function a(id){
     alert(id);
     $.ajax({
@@ -163,17 +165,8 @@ function a(id){
     });
 
 
-
-
 }
 
-function updateDriver(driverId, name, contactNo, unAvailable) {
-
-
-
-
-
-}
 
 function getAllAvailableDriver(){
         $.ajax({
@@ -188,22 +181,8 @@ function getAllAvailableDriver(){
                     alert(r.driverName);
                     driverId = r.driverId;
                     driverIds.push(r.driverId);
-/*
-                    for (let i = 0; i < driverIds.length; i++) {
-                        if(driverIds[i] == r.driverId){
-                            Driver = {
-                                driverId: r.driverId,
-                                driverName: r.driverName,
-                                driverContactNo: r.driverContactNo,
-                                availability: "unAvailable"
-                            }
-                        }
 
-                    }*/
-
-
-
-                    /*updateDriver(r.driverId,r.name,r.contactNo,"UnAvailable");*/
+                    //set all available drivers to array
 
                 }
 
