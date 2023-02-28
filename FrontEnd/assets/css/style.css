@@ -1251,6 +1251,18 @@ option {
     height: 30px;
 }
 
+/*------------------------driver------------------------------*/
+.driverDetailsSec{
+    width: 50%;
+    height: 80vh;
+    margin-top: 43px;
+    margin-left: 43px;
+}
+.driverDetailImgSec{
+    width: 50%;
+    margin-top: 58px;
+}
+
 
 
 
