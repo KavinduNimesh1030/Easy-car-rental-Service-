@@ -19,4 +19,10 @@ public class VehicleController {
         System.out.println(vehicleDetail.toString());
         return new ResponseUtil("200","Get",vehicleDetail);
     }
+    @PostMapping
+    public ResponseUtil saveVehicle(@RequestBody VehicleDTO vehicleDTO){
+        vehicleService.SaveVehicle(vehicleDTO);
+        return new ResponseUtil("200","done","null");
+
+    }
 }

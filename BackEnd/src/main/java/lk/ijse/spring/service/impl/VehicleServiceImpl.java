@@ -1,6 +1,7 @@
 package lk.ijse.spring.service.impl;
 
 import lk.ijse.spring.dto.VehicleDTO;
+import lk.ijse.spring.entity.Vehicle;
 import lk.ijse.spring.repo.VehicleRepo;
 import lk.ijse.spring.service.VehicleService;
 import org.modelmapper.ModelMapper;
@@ -21,5 +22,10 @@ public class VehicleServiceImpl implements VehicleService {
     @Override
     public VehicleDTO getVehicleDetail(String vid) {
         return modelMapper.map(vehicleRepo.findVehicleByVid(vid),VehicleDTO.class);
+    }
+
+    @Override
+    public void SaveVehicle(VehicleDTO vehicleDTO) {
+        vehicleRepo.save(modelMapper.map(vehicleDTO, Vehicle.class));
     }
 }

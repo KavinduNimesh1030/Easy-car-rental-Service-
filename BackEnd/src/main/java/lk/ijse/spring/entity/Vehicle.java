@@ -30,7 +30,6 @@ public class Vehicle {
     double monthlyPrice;
     double dailyPrice;
     double priceForExtraKm;
-    int qty;
     String frontImgPath;
     String BackImgPath;
     String SideImgPath;

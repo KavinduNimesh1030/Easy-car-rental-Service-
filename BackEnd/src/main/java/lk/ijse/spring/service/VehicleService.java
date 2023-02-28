@@ -6,4 +6,5 @@ import org.springframework.stereotype.Component;
 @Component
 public interface VehicleService {
     VehicleDTO getVehicleDetail(String vid);
+    void SaveVehicle(VehicleDTO vehicleDTO);
 }
