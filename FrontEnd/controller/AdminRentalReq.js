@@ -100,6 +100,7 @@ function rentalUpdate(request){
     console.log(rentalId);
     console.log(request);
 
+    //Rent detail Updated
     $.ajax({
         url: baseUrl + "Rent?rentId="+rentalId,
         dataType:"Json",
@@ -141,6 +142,57 @@ function rentalUpdate(request){
 
                 });
 
+
+                //get Driver Id nd Update Driver-----------------------------------
+
+            for (const re of resp.data.rentDetail) {
+
+                alert("dr"+re.driverId)
+
+                $.ajax({
+                    url: baseUrl + "Driver?driverId="+re.driverId,
+                    dataType:"Json",
+                    method: "get",
+                    success: function (resp) {
+                        alert(resp.message);
+                        alert(resp.data);
+
+                        console.log("did"+resp.data.driverId);
+                        let Driver = {
+                            driverId: resp.data.driverId,
+                            driverName:resp.data.driverName,
+                            driverContactNo:resp.data.driverContactNo,
+                            availability: "unAvailable"
+
+                        }
+                        $.ajax({
+                            url: baseUrl + "Driver",
+                            method: "put",
+                            data: JSON.stringify(Driver),
+                            contentType: "application/json",
+                            success: function (resp) {
+
+                                alert(resp.message);
+
+                            },
+                            error: function (error) {
+                                let prase = JSON.parse(error.responseText);
+                                alert(prase.message);
+
+                            }
+
+                        });
+
+                    },
+                    error: function (error) {
+                        let prase = JSON.parse(error.responseText);
+                        alert(prase.message);
+
+                    }
+
+                });
+
+            }
 
 
 

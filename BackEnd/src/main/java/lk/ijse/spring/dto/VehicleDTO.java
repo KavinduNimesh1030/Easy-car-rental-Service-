@@ -26,7 +26,11 @@ public class VehicleDTO {
     double dailyPrice;
     double priceForExtraKm;
     int qty;
-    String imagesPath;
+    String frontImgPath;
+    String BackImgPath;
+    String SideImgPath;
+    String interiorImgPath;
+
 
 
 }

@@ -18,6 +18,6 @@ public class Driver {
     String driverContactNo;
     String availability;
 
-    @OneToMany(mappedBy = "driver",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "driver", cascade = {CascadeType.REFRESH,CascadeType.DETACH})
     private List<RentDetail> rentDetailList;
 }

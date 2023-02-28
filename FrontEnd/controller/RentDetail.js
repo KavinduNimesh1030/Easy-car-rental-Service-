@@ -40,7 +40,7 @@ function getRentDetail(rentId) {
 
 
 $("#btnRentSubmit").click(function (){
-    let rentId = "R005"
+    let rentId = "R001"
     let lossDamageWaiver = 30000.00;
     let duration = $("#txtDuration").val();
     let pickUpDate = $("#DatPickDate").val();
@@ -51,7 +51,7 @@ $("#btnRentSubmit").click(function (){
     let slipImgPath = $("#formLossDamage")[0].files[0].name;
     let statusOfReq = "Pending";
     let total = 50000.00;
-    let cusId = customerId;
+    let cusId = "200130282939";
     let rentDetail = getRentDetail(rentId);
     console.log("date "+$("#DatPickDate").val())
 
