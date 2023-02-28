@@ -2,6 +2,7 @@ let baseUrl = "http://localhost:8080/BackEnd_war/";
 getAllRentalDetails();
 let request;
 let rentalId;
+let cusId;
 function getAllRentalDetails(){
     $.ajax({
         url: baseUrl+"Rent",
@@ -37,6 +38,7 @@ $('body').on('click', '.editbtn', function() {
     alert(this.id);
     alert(this.name);
     rentalId = this.value;
+    cusId = this.name;
     getCustomerImgName(this.name)
 });
 
@@ -98,13 +100,52 @@ function rentalUpdate(request){
     console.log(rentalId);
     console.log(request);
 
-
     $.ajax({
         url: baseUrl + "Rent?rentId="+rentalId,
-        method: "put",
+        dataType:"Json",
+        method: "get",
         success: function (resp) {
-
             alert(resp.message);
+            alert(resp.data);
+            for (const r of resp.data) {
+                alert(r.pickUpDate);
+
+                let rent ={
+                    rentId : r.rentId,
+                    pickUpDate : r.pickUpDate,
+                    returnDate : r.returnDate,
+                    pickUpVenue :r.pickUpDate,
+                    returnVenue :r.returnVenue,
+                    pickUpTime : r.pickUpTime,
+                    statusOfReq : request,
+                    total : r.total,
+                    lossDamageWaiver : r.lossDamageWaiver,
+                    duration : r.duration,
+                    slipImgPath : r.slipImgPath,
+                    cusId : cusId,
+                    rentDetail:r.rentDetail
+
+                }
+
+                $.ajax({
+                    url: baseUrl + "Rent",
+                    method: "put",
+                    data: JSON.stringify(rent),
+                    contentType: "application/json",
+                    success: function (resp) {
+                        alert(resp.message);
+
+                    },
+                    error: function (error) {
+                        let prase = JSON.parse(error.responseText);
+                        alert(prase.message);
+
+                    }
+
+                });
+
+
+            }
 
         },
         error: function (error) {
@@ -114,6 +155,8 @@ function rentalUpdate(request){
         }
 
     });
+
+
 
 }
 
