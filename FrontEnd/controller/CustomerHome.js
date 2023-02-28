@@ -19,6 +19,7 @@ $("#userNameNav").click(function (){
             $("#txtContactNo").val(resp.data.contactNo);
             $("#txtNicNo").val(resp.data.nic);
             $("#txtDrivingLNo").val(resp.data.dln);
+            $("#file").val(resp.data.imgPath);
 
 
         },
