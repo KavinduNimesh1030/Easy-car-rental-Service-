@@ -28,9 +28,9 @@ public class RentCarController {
         rentCarService.saveRentDetail(rentalDTO);
         return new ResponseUtil("200","Saved!",null);
     }
-    @PutMapping(params = "rentId")
-    public ResponseUtil updateRental(String rentId,String statusOfReq){
-        rentCarService.updateRent(rentId,statusOfReq);
+    @PutMapping()
+    public ResponseUtil updateRental(@RequestBody RentalDTO rentalDTO){
+        rentCarService.updateRent(rentalDTO);
         return new ResponseUtil("200","done",null);
     }
 

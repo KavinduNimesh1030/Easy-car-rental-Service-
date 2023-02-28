@@ -9,6 +9,6 @@ import java.util.ArrayList;
 public interface RentCarService {
     void saveRentDetail(RentalDTO rentalDTO);
     ArrayList<RentalDTO>getAllRentDetail();
-    void updateRent(String rentId,String statusOfReq);
+    void updateRent(RentalDTO rentalDTO);
     RentalDTO getRentById(String rentId);
 }

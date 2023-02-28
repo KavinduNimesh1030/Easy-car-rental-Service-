@@ -107,23 +107,20 @@ function rentalUpdate(request){
         success: function (resp) {
             alert(resp.message);
             alert(resp.data);
-            for (const r of resp.data) {
-                alert(r.pickUpDate);
-
                 let rent ={
-                    rentId : r.rentId,
-                    pickUpDate : r.pickUpDate,
-                    returnDate : r.returnDate,
-                    pickUpVenue :r.pickUpDate,
-                    returnVenue :r.returnVenue,
-                    pickUpTime : r.pickUpTime,
+                    rentId : resp.data.rentId,
+                    pickUpDate : resp.data.pickUpDate,
+                    returnDate : resp.data.returnDate,
+                    pickUpVenue :resp.data.pickUpDate,
+                    returnVenue :resp.data.returnVenue,
+                    pickUpTime : resp.data.pickUpTime,
                     statusOfReq : request,
-                    total : r.total,
-                    lossDamageWaiver : r.lossDamageWaiver,
-                    duration : r.duration,
-                    slipImgPath : r.slipImgPath,
+                    total : resp.data.total,
+                    lossDamageWaiver : resp.data.lossDamageWaiver,
+                    duration : resp.data.duration,
+                    slipImgPath : resp.data.slipImgPath,
                     cusId : cusId,
-                    rentDetail:r.rentDetail
+                    rentDetail:resp.data.rentDetail
 
                 }
 
@@ -145,7 +142,7 @@ function rentalUpdate(request){
                 });
 
 
-            }
+
 
         },
         error: function (error) {
