@@ -1101,6 +1101,7 @@ option {
     /* row-gap: 16px; */
     /* margin-top: 185px; */
     transform: translate(33px, 47px);
+
 }
 .carDetailsSecCon{
     position: relative;
@@ -1163,8 +1164,8 @@ option {
 
 }
 .adminRentalTableSec{
-    width: 75%;
-    height: 100%;
+    width: 100%;
+    height: 562px;
     box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 5);
     border-radius: 10px;
@@ -1204,6 +1205,27 @@ option {
     height: 181px;
     border: 2px solid white;
     transform: translate(59px, 10px);
+
+}
+.adminMainSec{
+    width: 75%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 756px;
+    gap: 10px;
+}
+.adminDriver{
+    width: 100%;
+    height: 127px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 5);
+    border-radius: 10px;
+}
+#lblCar {
+    font-weight: 600;
+    font-size: 19px;
+    transform: translate(10px, 10px);
 
 }
 

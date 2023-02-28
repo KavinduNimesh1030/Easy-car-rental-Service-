@@ -9,6 +9,12 @@ function getAllRentalDetails(){
             for (const r of resp.data) {
                 console.log(r.rentId);
                 console.log(r.cusId);
+                for (const rd of r.rentDetail) {
+                    console.log("v"+rd.vid)
+                    console.log("dr"+rd.driverId)
+                    $(".adminDriver").append("<h2 style='font-size: 16px;transform: translateX(32px);'>"+rd.vid+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+rd.driverId+"</h2>")
+
+                }
                 $("#tblCustomerReq").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.rentId+"</td><td>"+r.cusId+"</td><td>"+r.pickUpDate+"</td><td>"+r.returnDate+"</td><td>"+r.pickUpVenue+"</td><td>"+r.returnVenue+"</td><td>"+r.statusOfReq+"</td><td>"+r.total+"</td><td><button class=\"editbtn\" name="+r.cusId+" id="+r.slipImgPath+">edit</button></td></td></tr>");
 
             }
@@ -23,7 +29,7 @@ function getAllRentalDetails(){
 
 $('body').on('click', '.editbtn', function() {
     // code here
-    loadTheLastUploadedImage(this.id);
+    loadSlipImg(this.id);
     alert(this.id);
     alert(this.name);
     getCustomerImgName(this.name)
@@ -66,9 +72,7 @@ function loadCustomerImg(cusPath){
 
 
 
-
-
-function loadTheLastUploadedImage(path) {
+function loadSlipImg(path) {
     $(".slipImg").css({
         "background": `url(${"assets/img/fileSave/uploads/"+path})`,
         "background-size": "cover",
@@ -76,31 +80,4 @@ function loadTheLastUploadedImage(path) {
 
     });
 
-/*    $.ajax({
-        url: baseUrl + "api/v1/upload",
-        method: 'get',
-        dataType: 'json',
-        success: function (resp) {
-            let url = resp[resp.length - 1];
-
-            console.log( "url"+url);
-            console.log(resp.length-1);
-
-         /!*   $(".slipImg").css({
-                "background": `url(${baseUrl + "uploads/"+path})`,
-                "background-size": "cover",
-                "height": "300px"
-            });*!/
-
-
-            for (let i in resp) {
-                let row = `<tr><td><img src="${baseUrl + resp[i]}" width="100px"></td></tr>`;
-                $("#tblCustomerReq").append(row);
-            }
-
-        },
-        error: function (err) {
-            console.log(err);
-        }
-    });*/
 }
