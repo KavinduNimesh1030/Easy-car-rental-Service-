@@ -49,7 +49,7 @@ $("#submitCusRegDetail").click(function (){
             $("#loginPage").hide();
             $("#CustomerReg").hide();
             $("#cusDetail").hide();
-            $("#HomePage").show();
+            $("#HomePage").show();rentId
 
         },
         error: function(error) {
@@ -120,7 +120,6 @@ function viewCustomerRental(){
                 dataType:"json",
                 success: function (resp) {
                     console.log(resp);
-                    alert(resp.data)
                     for (let r of resp.data) {
                         $("#tblRentDetail").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.rentId+"</td><td>"+r.pickUpDate+"</td><td>"+r.returnDate+"</td><td>"+r.pickUpVenue+"</td><td>"+r.returnVenue+"</td><td>"+r.pickUpTime+"</td><td>"+r.statusOfReq+"</td></tr>");
                     }
