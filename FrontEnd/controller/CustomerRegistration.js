@@ -103,3 +103,24 @@ function sendImagePath() {
         }
     });
 }
+
+function viewCustomerRental(){
+
+    let navEmail= $("#lblNavEmail").text();
+    $.ajax({
+        url: baseUrl+"Customer?email="+navEmail,
+        method :"get",
+        dataType:"json",
+        success: function (resp) {
+            console.log(resp);
+            
+        },
+        error: function(error) {
+            let prase = JSON.parse(error.responseText);
+            console.log(prase.message);
+
+        }
+
+    });
+}
+

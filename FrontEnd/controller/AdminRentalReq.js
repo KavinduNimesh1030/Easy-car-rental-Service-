@@ -35,8 +35,8 @@ function getAllRentalDetails(){
 $('body').on('click', '.editbtn', function() {
     // code here
     loadSlipImg(this.id);
-    alert(this.id);
-    alert(this.name);
+   /* alert(this.id);
+    alert(this.name);*/
     rentalId = this.value;
     cusId = this.name;
     getCustomerImgName(this.name)

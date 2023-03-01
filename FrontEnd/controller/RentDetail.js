@@ -177,8 +177,8 @@ function getAllAvailableDriver(){
                 console.log(resp)
                 for (const r of resp.data) {
                     console.log(r.driverId);
-                    alert(r.driverId);
-                    alert(r.driverName);
+                   /* alert(r.driverId);
+                    alert(r.driverName);*/
                     driverId = r.driverId;
                     driverIds.push(r.driverId);
 

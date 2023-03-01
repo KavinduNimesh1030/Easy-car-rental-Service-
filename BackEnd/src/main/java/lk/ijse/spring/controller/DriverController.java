@@ -25,7 +25,7 @@ public class DriverController {
    @PutMapping
     public ResponseUtil updateDriver( @RequestBody DriverDTO driverDTO){
        driverService.updateDriver(driverDTO);
-        return  new ResponseUtil("200","done",null);
+        return  new ResponseUtil("200","Updated",null);
    }
    @GetMapping(params = "driverId")
     public  ResponseUtil getDriverById(String driverId){
@@ -36,6 +36,11 @@ public class DriverController {
     public ResponseUtil addDriver(DriverDTO driverDTO){
        driverService.addDriver(driverDTO);
        return  new ResponseUtil("200","Saved..!",null);
+   }
+   @GetMapping
+    public ResponseUtil getDrivers(){
+       ArrayList<DriverDTO>all =driverService.getAllDriver();
+       return  new ResponseUtil("200","Saved..!",all);
    }
 
 

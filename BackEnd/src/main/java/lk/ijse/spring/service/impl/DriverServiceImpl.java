@@ -1,5 +1,6 @@
 package lk.ijse.spring.service.impl;
 
+import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.dto.DriverDTO;
 import lk.ijse.spring.dto.RentalDTO;
 import lk.ijse.spring.entity.Driver;
@@ -46,5 +47,11 @@ public class DriverServiceImpl implements DriverService {
     @Override
     public void addDriver(DriverDTO driverDTO) {
         repo.save(modelMapper.map(driverDTO,Driver.class));
+    }
+
+    @Override
+    public ArrayList<DriverDTO> getAllDrivers() {
+        return  modelMapper.map(repo.findAll(),new TypeToken<ArrayList<DriverDTO>>(){}.getType());
+
     }
 }
