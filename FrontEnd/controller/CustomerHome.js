@@ -1,6 +1,7 @@
 $("#userNameNav").click(function (){
     navigationBefore();
     let navEmail= $("#lblNavEmail").text();
+    viewCustomerRental();
 
     console.log("email"+navEmail)
     $.ajax({
@@ -19,7 +20,7 @@ $("#userNameNav").click(function (){
             $("#txtContactNo").val(resp.data.contactNo);
             $("#txtNicNo").val(resp.data.nic);
             $("#txtDrivingLNo").val(resp.data.dln);
-            $("#file").val(resp.data.imgPath);
+            $("#file").html(resp.data.imgPath);
 
 
         },

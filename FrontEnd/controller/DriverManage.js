@@ -41,6 +41,8 @@ $("#btnSaveDriver").click(function (){
             success: function (resp) {
 
                 alert(resp.message);
+                $("#btnSaveDriver").html("Submit")
+                getAllDrivers();
 
             },
             error: function (error) {

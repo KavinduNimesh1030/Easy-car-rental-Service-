@@ -1289,6 +1289,13 @@ option {
     margin-left: 96px;
 }
 
+#lblRental{
+    font-size: 20px;
+    font-weight: 600;
+    transform: translate(43px, -110px);
+    width: 200px;
+}
+
 
 
 

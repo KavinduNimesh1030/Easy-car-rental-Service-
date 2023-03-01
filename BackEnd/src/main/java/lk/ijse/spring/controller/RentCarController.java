@@ -39,4 +39,10 @@ public class RentCarController {
       RentalDTO rentalDTO = rentCarService.getRentById(rentId);
         return new ResponseUtil("200","done",rentalDTO);
     }
+    @GetMapping(params = "CusId")
+    public ResponseUtil getRentalByCusId(String cusId){
+        ArrayList<RentalDTO> all = rentCarService.getRentalByCusId(cusId);
+        return new ResponseUtil("200","done",all);
+
+    }
 }

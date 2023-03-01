@@ -2,6 +2,7 @@ package lk.ijse.spring.service.impl;
 
 import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.dto.RentalDTO;
+import lk.ijse.spring.dto.VehicleDTO;
 import lk.ijse.spring.entity.Customer;
 import lk.ijse.spring.entity.Rental;
 import lk.ijse.spring.repo.RentCarRepo;
@@ -52,5 +53,10 @@ public class RentCarServiceImpl implements RentCarService {
     @Override
     public RentalDTO getRentById(String rentId) {
         return modelMapper.map(rentCarRepo.findRentalByRentId(rentId),RentalDTO.class);
+    }
+
+    @Override
+    public ArrayList<RentalDTO> getRentalByCusId(String cusId) {
+        return  modelMapper.map(rentCarRepo.findAll(),new TypeToken<ArrayList<RentalDTO>>(){}.getType());
     }
 }
