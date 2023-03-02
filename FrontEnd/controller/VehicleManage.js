@@ -104,3 +104,36 @@ function sendVehicleImagePath(filId) {
     });
 
 }
+
+$("#btnVhSearch").click(function (){
+    let vid = $("#txtVHSearch").val();
+    $.ajax({
+        url: baseUrl+"Vehicle?vid="+vid,
+        method :"get",
+        dataType:"json",
+        success: function (resp) {
+            console.log(resp);
+            console.log(resp.data)
+            $("#txtCarRegId").val(resp.data.vid);
+           $("#txtCarBrand").val(resp.data.brand);
+            $("#txtCarColor").val(resp.data.color);
+            $("#txtCarDailyPrice").val(resp.data.dailyPrice);
+            $("#txtFreeKmForDay").val(resp.data.freeKmForDay);
+             $("#txtFreeKmForMonth").val(resp.data.freeKmForMonth);
+           $("#txtCarFuelType").val(resp.data.fuelType);
+             $("#txtCarIsAvailable").val(resp.data.isAvailable);
+            $("#txtCarMonthlyPrice").val(resp.data.monthlyPrice);
+            $("#txtCarNoOfPassenger").val(resp.data.noOfPassenger);
+             $("#txtPriceFormExKm").val(resp.data.priceForExtraKm);
+            $("#txtCarTranType").val(resp.data.transmissionType);
+           $("#txtCarType").val(resp.data.type);
+
+        },
+        error: function(error) {
+            let prase = JSON.parse(error.responseText);
+            console.log(prase.message);
+
+        }
+
+    });
+});
