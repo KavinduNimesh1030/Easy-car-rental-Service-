@@ -164,20 +164,26 @@
 
                 <div class="col-12">
                     <button type="button" class="btn btn-primary"  id="submitVehicleDetail">Submit</button>
+                    <button type="button" class="btn btn-success"  id="updateVehicleDetail">Update</button>
+                    <button type="button" class="btn btn-danger"  id="deleteVehicleDetail">Delete</button>
+
                 </div>
             </form>
         </section>
 
+        <h2 id="lblAllVehicle">All Vehicle</h2>
+        <hr style="width:97%;text-align:left;margin-top: 206px;margin-left: 13px;">
+
+
         <section class="allVehicleCon">
-            <h2 id="lblAllVehicle">All Vehicle</h2>
-            <hr style="width:97%;text-align:left;margin-left: 10px;">
             <table class="table table-sm">
-                <thead>
+                <thead id="vhThead">
                 <tr>
                     <th scope="col">Vehicle Reg No</th>
                     <th scope="col">Brand</th>
                     <th scope="col">Color</th>
                     <th scope="col">DailyPrice</th>
+                    <th scope="col">MonthlyPrice</th>
                     <th scope="col">FreeKmForDay</th>
                     <th scope="col">freeKmForMonth</th>
                     <th scope="col">FuelType</th>
