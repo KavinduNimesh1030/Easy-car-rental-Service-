@@ -1,4 +1,8 @@
 let baseUrl = "http://localhost:8080/BackEnd_war/";
+let fImg = "";
+let sImg = "";
+let bImg = "";
+let iImg = "";
 $("#submitVehicleDetail").click(function (){
     let vid = $("#txtCarRegId").val();
     let brand = $("#txtCarBrand").val();
@@ -128,6 +132,11 @@ $("#btnVhSearch").click(function (){
             $("#txtCarTranType").val(resp.data.transmissionType);
            $("#txtCarType").val(resp.data.type);
 
+           fImg = resp.data.frontImgPath;
+           sImg = resp.data.sideImgPath;
+           bImg = resp.data.backImgPath;
+           iImg = resp.data.interiorImgPath;
+
         },
         error: function(error) {
             let prase = JSON.parse(error.responseText);
@@ -154,3 +163,66 @@ function getAllVehicleAdmin(){
     });
 }
 
+$("#updateVehicleDetail").click(function (){
+    let vid = $("#txtCarRegId").val();
+    let brand = $("#txtCarBrand").val();
+    let color = $("#txtCarColor").val();
+    let dailyPrice = $("#txtCarDailyPrice").val();
+    let freeKmForDay = $("#txtFreeKmForDay").val();
+    let freeKmForMonth = $("#txtFreeKmForMonth").val();
+    let fuelType = $("#txtCarFuelType").val();
+    let isAvailable = $("#txtCarIsAvailable").val();
+    let monthlyPrice = $("#txtCarMonthlyPrice").val();
+    let noOfPassenger = $("#txtCarNoOfPassenger").val();
+    let priceForExtraKm = $("#txtPriceFormExKm").val();
+    let transmissionType = $("#txtCarTranType").val();
+    let type = $("#txtCarType").val();
+    let frontImgPath = $("#fileFront").val();
+    let backImgPath = $("#fileBack").val();
+    let sideImgPath = $("#fileSide").val();
+    let interiorImgPath = $("#fileInterior").val();
+    if(frontImgPath == ""){
+        frontImgPath = fImg;
+    }else {
+        frontImgPath = $("#fileFront")[0].files[0].name;
+    }
+
+    if(backImgPath == ""){
+        backImgPath = bImg;
+    }else {
+        backImgPath = $("#fileBack")[0].files[0].name;
+    }
+    if(sideImgPath == ""){
+        sideImgPath = sImg;
+    }else {
+       sideImgPath = $("#fileSide")[0].files[0].name;
+    }
+    if(interiorImgPath == ""){
+        interiorImgPath = iImg;
+    }else {
+       interiorImgPath = $("#fileInterior")[0].files[0].name;
+    }
+
+
+    let vehicle ={
+        vid : vid,
+        brand : brand,
+        color : color,
+        dailyPrice : dailyPrice,
+        freeKmForDay : freeKmForDay,
+        freeKmForMonth : freeKmForMonth,
+        fuelType : fuelType,
+        isAvailable : isAvailable,
+        monthlyPrice : monthlyPrice,
+        noOfPassenger : noOfPassenger,
+        priceForExtraKm : priceForExtraKm,
+        transmissionType : transmissionType,
+        type : type,
+        frontImgPath : frontImgPath,
+        backImgPath : backImgPath,
+        sideImgPath : sideImgPath,
+        interiorImgPath : interiorImgPath,
+
+    }
+
+});
