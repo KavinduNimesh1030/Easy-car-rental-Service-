@@ -37,4 +37,9 @@ public class VehicleServiceImpl implements VehicleService {
     public ArrayList<VehicleDTO> getAllVehicle() {
         return  modelMapper.map(vehicleRepo.findAll(),new TypeToken<ArrayList<VehicleDTO>>(){}.getType());
     }
+
+    @Override
+    public void updateVehicle(VehicleDTO vehicleDTO) {
+        vehicleRepo.save(modelMapper.map(vehicleDTO,Vehicle.class));
+    }
 }

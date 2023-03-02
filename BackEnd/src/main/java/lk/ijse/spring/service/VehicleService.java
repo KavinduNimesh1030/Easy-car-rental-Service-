@@ -10,4 +10,5 @@ public interface VehicleService {
     VehicleDTO getVehicleDetail(String vid);
     void SaveVehicle(VehicleDTO vehicleDTO);
     ArrayList<VehicleDTO>getAllVehicle();
+    void updateVehicle(VehicleDTO vehicleDTO);
 }

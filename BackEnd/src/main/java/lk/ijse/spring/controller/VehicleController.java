@@ -1,6 +1,7 @@
 package lk.ijse.spring.controller;
 
 import lk.ijse.spring.dto.VehicleDTO;
+import lk.ijse.spring.entity.Vehicle;
 import lk.ijse.spring.service.VehicleService;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,11 @@ public class VehicleController {
     public  ResponseUtil getAllVehicle(){
         ArrayList<VehicleDTO>all = vehicleService.getAllVehicle();
         return new ResponseUtil("200","done",all);
+    }
+    @PutMapping
+    public  ResponseUtil updateVehicle(VehicleDTO dto){
+        vehicleService.updateVehicle(dto);
+        return new ResponseUtil("200","done","updated");
     }
 
 }
