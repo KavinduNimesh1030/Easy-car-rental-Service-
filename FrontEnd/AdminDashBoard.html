@@ -12,45 +12,43 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<main class="adminDashBoard"></main>
+
 <body id="adminBody">
 <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="mainNav">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="adminNav">
         <div class="container-fluid">
             <img src="assets/img/logo.png" alt="logo" width="35" height="30">
             <a class="navbar-brand fw-bolder" href="#">Easy Car</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <!--   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>-->
+            <div class="collapse navbar-collapse" id="adminNavbarNav">
                 <ul class="navbar-nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" id="NavHome" aria-current="page" href="#HomePage">Home</a>
+                        <a class="nav-link active" id="NavDashBoard" aria-current="page" href="AdminDashBoard.html">Dash Board</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active"  id="NavRentCar"aria-current="page" href="#rentCar">Booking</a>
+                        <a class="nav-link active"  id="NavRentalReq"aria-current="page" href="AdminRentalReq.html">Rental Request</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#cusRegForm">Service</a>
+                        <a class="nav-link active"  id="NavCustomer"aria-current="page" href="CustomerDetail.html">Customer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Contact us</a>
+                        <a class="nav-link active" id="NavVehicle" href="AdminVehicleManage.html">Vehicle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="navDriver" href="AddDriver.html">Driver</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="navUserNameCon" id="userNameNav">
             <img src="assets/img/user.jpg" alt="user" style="width: 27px">
-            <h1 style="font-size: 13px" id="lblNavEmail">user@gmail.com</h1>
-            <h2 style="font-size: 10px" id="lblNavUserName">user</h2>
+            <h1 style="font-size: 13px" id="lblNavEmail">easycar@gmail.com</h1>
+            <h2 style="font-size: 10px" id="lblNavUserName">Admin</h2>
         </div>
-        <form class="container-fluid justify-content-end" id="HomeNavBarButton">
-            <!--<button class="btn btn-outline-success me-2" type="button">Sign Up</button>
-            <button class="btn  btn-outline-secondary" type="button">Sign In</button>-->
-            <button id="btnSignIn" type="button">Sign In</button>
-            <button id="btnSignUp" type="button">Sign Up</button>
-        </form>
+
     </nav>
 </header>
 
@@ -67,7 +65,8 @@
             <li>
                 <a href="#">
                     <i class='bx bx-grid-alt'></i>
-                    <span class="links_name">Dashboard</span>
+                    <span class="links_name" >Dashboard</span>
+                    <a href="/AdminRentalReq.html"></a>
                 </a>
                 <span class="tooltip">Dashboard</span>
             </li>
@@ -80,7 +79,7 @@
             </li>
             <li>
                 <a href="#">
-                    <i class='bx bx-chat'></i>
+                    <i class='bx bx-chat' id="adminReq"></i>
                     <span class="links_name">Messages</span>
                 </a>
                 <span class="tooltip">Messages</span>
@@ -135,6 +134,67 @@
         </div>
     </div>
     <div class="DashBoardDetail">
+        <section class="AdminRentalOutCon">
+            <div class="adminMainSec">
+                <div class="adminRentalTableSec">
+                    <h2>Car cart</h2>
+                    <hr style="width:97%;text-align:left;margin-left:8px;margin-top: 19px;">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Rental Id</th>
+                            <th scope="col">Customer Id</th>
+                            <th scope="col">Pick Up Date</th>
+                            <th scope="col">Return Date</th>
+                            <th scope="col">pick Up Venue</th>
+                            <th scope="col">Return Venue</th>
+                            <th scope="col">Status of request</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Option</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblCustomerReq">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="adminDriver">
+                    <h2 id="lblCar">Car and Driver Details</h2>
+                    <hr style="width:97%;text-align:left;margin-left:8px;margin-top: 10px;">
+                    <table class="table table-sm">
+                        <thead>
+                        <tr>
+                            <th scope="col">Rent Id</th>
+                            <th scope="col">Vehicle Reg No</th>
+                            <th scope="col">Driver Id</th>
+                            <th scope="col">option</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblDriver">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="adminRentalSec">
+                <h2>Details</h2>
+                <hr style="width:97%;text-align:left;margin-left:8px;margin-top: 19px;">
+                <h3>Customer Nic</h3>
+
+                <div class="nicImg">
+
+                </div>
+
+                <h3 id="lblLossDamagePayment">loss damage payment slip</h3>
+                <div class="slipImg">
+
+                </div>
+
+                <div class="btnAccept">
+                    <button id="btnRequestAccept">Accept</button>
+                    <button id="btnRequestReject">Reject</button>
+                </div>
+            </div>
+        </section>
         <div class="shortCutCon">
             <div class="dashBoardCard">
               <div class="cardDetail">
@@ -193,7 +253,6 @@
                 </div>
             </div>
         </div>
-        <div></div>
     </div>
 </section>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
@@ -215,11 +274,22 @@
         }
 
     }
-    searchBtn.onclick = function(){
+/*    searchBtn.onclick = function(){
         sidebar.classList.toggle("active");
 
+    }*/
+    $("#adminNav").hide();
+    $(".AdminRentalOutCon").hide();
+    $("#adminReq").click(function (){
+        $("#adminNav").show();
+        $("body").load("AdminRentalReq.html")
 
-    }
+
+    });
+
+    $(document).ready(function(){
+       alert("aaa");
+        });
 
 </script>
 </body>

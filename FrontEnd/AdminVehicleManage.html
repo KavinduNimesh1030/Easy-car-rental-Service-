@@ -10,44 +10,43 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<main id="CustomerReg">
+
+<main id="adminVehicle">
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="mainNav">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="adminNav">
             <div class="container-fluid">
                 <img src="assets/img/logo.png" alt="logo" width="35" height="30">
                 <a class="navbar-brand fw-bolder" href="#">Easy Car</a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <!--   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                   </button>-->
+                <div class="collapse navbar-collapse" id="adminNavbarNav">
                     <ul class="navbar-nav justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link active" id="NavHome" aria-current="page" href="#HomePage">Home</a>
+                            <a class="nav-link active" id="NavDashBoard" aria-current="page" href="AdminDashBoard.html">Dash Board</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active"  id="NavRentCar"aria-current="page" href="#rentCar">Booking</a>
+                            <a class="nav-link active"  id="NavRentalReq"aria-current="page" href="AdminRentalReq.html">Rental Request</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#cusRegForm">Service</a>
+                            <a class="nav-link active"  id="NavCustomer"aria-current="page" href="CustomerDetail.html">Customer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled">Contact us</a>
+                            <a class="nav-link active" id="NavVehicle" href="AdminVehicleManage.html">Vehicle</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="navDriver" href="AddDriver.html">Driver</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="navUserNameCon" id="userNameNav">
                 <img src="assets/img/user.jpg" alt="user" style="width: 27px">
-                <h1 style="font-size: 13px" id="lblNavEmail">user@gmail.com</h1>
-                <h2 style="font-size: 10px" id="lblNavUserName">user</h2>
+                <h1 style="font-size: 13px" id="lblNavEmail">easycar@gmail.com</h1>
+                <h2 style="font-size: 10px" id="lblNavUserName">Admin</h2>
             </div>
-            <form class="container-fluid justify-content-end" id="HomeNavBarButton">
-                <!--<button class="btn btn-outline-success me-2" type="button">Sign Up</button>
-                <button class="btn  btn-outline-secondary" type="button">Sign In</button>-->
-                <button id="btnSignIn" type="button">Sign In</button>
-                <button id="btnSignUp" type="button">Sign Up</button>
-            </form>
+
         </nav>
     </header>
     <body>
