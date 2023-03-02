@@ -181,6 +181,8 @@ $("#updateVehicleDetail").click(function (){
     let backImgPath = $("#fileBack").val();
     let sideImgPath = $("#fileSide").val();
     let interiorImgPath = $("#fileInterior").val();
+
+    //if admin not select img  in detail update,add old img path
     if(frontImgPath == ""){
         frontImgPath = fImg;
     }else {
@@ -222,7 +224,23 @@ $("#updateVehicleDetail").click(function (){
         backImgPath : backImgPath,
         sideImgPath : sideImgPath,
         interiorImgPath : interiorImgPath,
-
     }
+
+    $.ajax({
+        url: baseUrl+"Vehicle",
+        method :"put",
+        data : JSON.stringify(vehicle),
+        contentType: "application/json",
+        success: function (resp) {
+            alert(resp.message);
+
+        },
+        error: function(error) {
+            let prase = JSON.parse(error.responseText);
+            alert(prase.message);
+
+        }
+
+    });
 
 });
