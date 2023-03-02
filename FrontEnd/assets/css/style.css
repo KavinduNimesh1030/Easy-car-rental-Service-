@@ -1113,6 +1113,7 @@ option {
     width: 97%;
     height: 50vh;
     transform: translateX(17px);
+    margin-top: -24px;
 }
 .carManageImgSec{
     width: 98.7vw;
@@ -1249,6 +1250,25 @@ option {
     font-size: 15px;
     width: 86px;
     height: 30px;
+}
+
+.vhTitle{
+    margin-left: 10px;
+    font-size: 26px;
+}
+#txtVHSearch{
+    width: 200px;
+    transform: translate(1023px, -65px);
+}
+#btnVhSearch{
+    transform: translate(1241px, -124px);
+    background: #5d00ff;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    width: 81px;
+    height: 32px;
 }
 
 /*------------------------driver------------------------------*/

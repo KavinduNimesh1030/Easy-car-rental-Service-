@@ -1,4 +1,4 @@
-/*let baseUrl = "http://localhost:8080/BackEnd_war/";*/
+let baseUrl = "http://localhost:8080/BackEnd_war/";
 $("#submitVehicleDetail").click(function (){
     let vid = $("#txtCarRegId").val();
     let brand = $("#txtCarBrand").val();

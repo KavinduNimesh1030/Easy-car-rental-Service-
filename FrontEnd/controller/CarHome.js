@@ -47,7 +47,7 @@ function getAllVehicle(){
                     "                <div class=\"typeCon\">\n" +
                     "                    <div>\n" +
                     "                        <img src=\"assets/img/steering-wheel.png\" alt=\"logo\" width=\"20\" height=\"20\">\n" +
-                    "                        <h1>Auto</h1>\n" +
+                    "                        <h1>"+r.transmissionType+"</h1>\n" +
                     "                    </div>\n" +
                     "                    <div>\n" +
                     "                        <img src=\"assets/img/car-seat.png\" alt=\"logo\" width=\"20\" height=\"20\">\n" +
@@ -55,11 +55,11 @@ function getAllVehicle(){
                     "                    </div>\n" +
                     "                    <div>\n" +
                     "                        <img src=\"assets/img/petrol-pump.png\" alt=\"logo\" width=\"20\" height=\"20\">\n" +
-                    "                        <h1>petrol</h1>\n" +
+                    "                        <h1>"+r.fuelType+"</h1>\n" +
                     "                    </div>\n" +
                     "                </div>\n" +
                     "                <div>\n" +
-                    "                    <button class=\"rentNow\" id="+r.vid+">Rent Now</button>\n" +
+                    "                    <button class=\"rentNow\" id="+r.vid+">Add to cart</button>\n" +
                     "                </div>\n" +
                     "            </div>\n" +
                     "        </div>")
