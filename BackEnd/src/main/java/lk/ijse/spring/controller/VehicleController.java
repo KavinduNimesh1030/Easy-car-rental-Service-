@@ -32,4 +32,5 @@ public class VehicleController {
         ArrayList<VehicleDTO>all = vehicleService.getAllVehicle();
         return new ResponseUtil("200","done",all);
     }
+
 }

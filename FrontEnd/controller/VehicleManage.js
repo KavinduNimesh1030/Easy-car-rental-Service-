@@ -137,3 +137,7 @@ $("#btnVhSearch").click(function (){
 
     });
 });
+function getAllVehicleAdmin(){
+    
+}
+
