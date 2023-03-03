@@ -4,6 +4,19 @@ var driverId = "D005";
 var driverIds= [];
 
 getAllAvailableDriver();
+getRentId();
+function  getRentId(){
+    $.ajax({
+        url: baseUrl+"Rent?a"+"a",
+        dataType:"Json",
+        method: "get",
+        success: function (resp) {
+            console.log("43"+resp)
+           alert(resp.data.rentId);
+        }
+
+    });
+}
 
 function getRentDetail(rentId) {
     let rows = $("#tblAddToCart").children().length;
@@ -40,7 +53,7 @@ function getRentDetail(rentId) {
 
 
 $("#btnRentSubmit").click(function (){
-    let rentId = "R002"
+    let rentId = "R00-0001"
     let lossDamageWaiver = $("#lblLossDamage").text();
     let duration = $("#txtDuration").val();
     let pickUpDate = $("#DatPickDate").val();

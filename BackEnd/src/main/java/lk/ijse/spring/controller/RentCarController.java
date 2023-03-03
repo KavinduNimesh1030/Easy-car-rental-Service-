@@ -46,8 +46,9 @@ public class RentCarController {
         return new ResponseUtil("200","done",all);
 
     }
-    @GetMapping(path = "/generateRentalId", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(params = "a", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil generateRentalId() {
+        System.out.println("rent id"+rentCarService.generateRentalId());
         return new ResponseUtil("200", "Ok", rentCarService.generateRentalId());
     }
 }

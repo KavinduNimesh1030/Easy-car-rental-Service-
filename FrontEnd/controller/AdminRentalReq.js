@@ -4,6 +4,8 @@ let request;
 let rentalId;
 let cusId;
 function getAllRentalDetails(){
+    $("#tblCustomerReq").empty();
+    $("#tblDriver").empty();
     $.ajax({
         url: baseUrl+"Rent",
         method :"get",
@@ -94,6 +96,7 @@ $("#btnRequestAccept").click(function (){
 });
 $("#btnRequestReject").click(function (){
     request = "Reject";
+    rentalUpdate(request);
 });
 
 function rentalUpdate(request){
@@ -132,6 +135,7 @@ function rentalUpdate(request){
                     contentType: "application/json",
                     success: function (resp) {
                         alert(resp.message);
+                        getAllRentalDetails();
 
                     },
                     error: function (error) {

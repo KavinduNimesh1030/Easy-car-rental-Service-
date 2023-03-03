@@ -63,6 +63,7 @@ public class RentCarServiceImpl implements RentCarService {
     @Override
     public String generateRentalId() {
         String lastId = rentCarRepo.generateRentalId();
+        System.out.println("last"+lastId);
         String id = "";
         if (lastId != null) {
             int tempId = Integer.parseInt(lastId.split("-")[1]);
@@ -79,7 +80,9 @@ public class RentCarServiceImpl implements RentCarService {
         } else {
             id = "R00-0001";
         }
+        System.out.println("rent id"+id);
         return id;
-    
+
+
     }
 }
