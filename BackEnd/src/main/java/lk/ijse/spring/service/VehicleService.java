@@ -11,4 +11,5 @@ public interface VehicleService {
     void SaveVehicle(VehicleDTO vehicleDTO);
     ArrayList<VehicleDTO>getAllVehicle();
     void updateVehicle(VehicleDTO vehicleDTO);
+    void deleteVehicle(String vid);
 }
