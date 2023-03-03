@@ -18,3 +18,14 @@ function getVehicleDetail(id){
 
     });
 }
+$("#txtDuration").keypress(function (){
+
+    var start =new Date($('#DatPickDate').val());
+    var end =  new Date($('#DatReturnDate').val());
+
+    var diff = new Date(end - start);
+
+    var days = diff/1000/60/60/24;
+
+    alert(days);
+})
