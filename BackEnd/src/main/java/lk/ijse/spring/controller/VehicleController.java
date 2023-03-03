@@ -35,8 +35,8 @@ public class VehicleController {
     }
     @PutMapping
     public  ResponseUtil updateVehicle(VehicleDTO dto){
-        vehicleService.updateVehicle(dto);
-        return new ResponseUtil("200","done","updated");
+        vehicleService.SaveVehicle(dto);
+        return new ResponseUtil("200","updated","null");
     }
 
 }

@@ -148,6 +148,7 @@ $("#btnVhSearch").click(function (){
 });
 getAllVehicleAdmin();
 function getAllVehicleAdmin(){
+    $("#tblAllVehicle").empty();
     $.ajax({
         url: baseUrl+"Vehicle",
         dataType:"Json",
@@ -164,7 +165,7 @@ function getAllVehicleAdmin(){
 }
 
 $("#updateVehicleDetail").click(function (){
-    let vid = $("#txtCarRegId").val();
+    let vid = $("#txtVHSearch").val();
     let brand = $("#txtCarBrand").val();
     let color = $("#txtCarColor").val();
     let dailyPrice = $("#txtCarDailyPrice").val();
@@ -206,6 +207,7 @@ $("#updateVehicleDetail").click(function (){
     }
 
 
+
     let vehicle ={
         vid : vid,
         brand : brand,
@@ -228,11 +230,12 @@ $("#updateVehicleDetail").click(function (){
 
     $.ajax({
         url: baseUrl+"Vehicle",
-        method :"put",
+        method :"post",
         data : JSON.stringify(vehicle),
         contentType: "application/json",
         success: function (resp) {
-            alert(resp.message);
+            alert("updated..!");
+            getAllVehicleAdmin();
 
         },
         error: function(error) {
@@ -244,3 +247,22 @@ $("#updateVehicleDetail").click(function (){
     });
 
 });
+$("#deleteVehicleDetail").click(function (){
+    let vid = $("#txtCarRegId").val();
+
+    $.ajax({
+        url: baseUrl+"Vehicle?vid="+vid,
+        method :"DELETE",
+        success: function (resp) {
+            console.log(resp);
+            alert(resp.message);
+
+        },
+        error: function(error) {
+            let prase = JSON.parse(error.responseText);
+            alert(prase.message);
+
+        }
+
+    });
+})
