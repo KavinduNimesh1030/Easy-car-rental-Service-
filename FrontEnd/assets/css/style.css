@@ -1336,6 +1336,70 @@ option {
 #adminNavbarNav{
     margin-left: -87px;
 }
+#adminNav{
+    background: linear-gradient(160deg, #e7280f 50%, #ffb939);
+}
+
+/*--------------------------------Admin Refactor---------------------*/
+
+/*comment this style to get back to previous style in admin Car manage form*/
+.carDetailsSecCon{
+    width: 94%;
+    margin-left: 76px;
+}
+.carManageImgSecAdmin{
+    width: 93.2vw;
+    height: 50vh;
+    transform: translateX(0px);
+    margin-top: 0px;
+    background: linear-gradient(160deg, #e7280f 50%, #ffb939);
+}
+.carManageImgSecAdmin>img{
+    transform: translate(100px, 48px);
+}
+.carManageImgSecAdmin>h1{
+    position: absolute;
+    color: white;
+    font-size: 140px;
+    transform: translate(147px, -8px);
+    font-weight: bolder;
+}
+#txtVHSearch{
+    width: 200px;
+    transform: translate(932px, -65px);
+}
+#btnVhSearch{
+    transform: translate(1141px, -124px);
+    background: #5d00ff;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    width: 81px;
+    height: 32px;
+}
+.carManageImgSec{
+    width: 97%;
+    height: 50vh;
+    transform: translateX(17px);
+    margin-top: -24px;
+}
+
+/*Admin Rental Req refactor-------------------------------------*/
+.AdminRentalOutCon {
+    width: 90.7vw;
+    height: 102vh;
+    display: flex;
+    flex-direction: row;
+    /* row-gap: 16px; */
+    /* margin-top: 185px; */
+    transform: translate(93px, 47px);
+}
+.btnAccept {
+    transform: translate(113px, 127px);
+    width: 190px;
+}
+
 
 
 
