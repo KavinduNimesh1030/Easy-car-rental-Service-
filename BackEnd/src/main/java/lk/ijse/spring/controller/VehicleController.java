@@ -38,5 +38,8 @@ public class VehicleController {
         vehicleService.SaveVehicle(dto);
         return new ResponseUtil("200","updated","null");
     }
-
+    @DeleteMapping
+    public ResponseUtil deleteVehicle(String vid){
+        
+    }
 }
