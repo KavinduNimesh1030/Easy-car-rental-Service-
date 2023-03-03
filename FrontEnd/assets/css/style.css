@@ -1399,6 +1399,20 @@ option {
     transform: translate(113px, 127px);
     width: 190px;
 }
+/*---------------------Driver Admin Refactored -----------*/
+.driverDetailsSecCon {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    width: 96vw;
+    margin-left: 54px;
+}
+.title {
+    font-size: 20px;
+    margin-top: 31px;
+    margin-left: 100px;
+}
 
 
 

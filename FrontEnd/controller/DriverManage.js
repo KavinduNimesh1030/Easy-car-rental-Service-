@@ -1,4 +1,4 @@
-let baseUrl = "http://localhost:8080/BackEnd_war/";
+/*let baseUrl = "http://localhost:8080/BackEnd_war/";*/
 $("#btnSaveDriver").click(function (){
     var formData = $("#driverRegForm").serialize();
     console.log(formData);
@@ -60,6 +60,7 @@ $("#btnSaveDriver").click(function (){
 getAllDrivers();
 
 function getAllDrivers(){
+    $("#tblDriverDetail").empty();
     $.ajax({
         url: baseUrl+"Driver",
         method :"get",
@@ -86,8 +87,8 @@ $('#btnDriSearch').click(function() {
         dataType:"Json",
         method: "get",
         success: function (resp) {
-            alert(resp.message);
-            alert(resp.data);
+          /*  alert(resp.message);
+            alert(resp.data);*/
             $("#txtDriId").val(resp.data.driverId);
             $("#txtDriName").val(resp.data.driverName);
             $("#txtdriNo").val(resp.data.driverContactNo);

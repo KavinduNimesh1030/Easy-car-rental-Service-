@@ -20,9 +20,19 @@ function getAllRentalDetails(){
 
                     //append driverId and vehicle id
                    /* $(".adminDriver").append("<h2 style='font-size: 16px;transform: translateX(32px);margin-bottom: 18px;'>"+rd.vid+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+rd.driverId+"</h2>")*/
-                    $("#tblDriver").append("<tr><td>"+r.rentId+"</td><td>"+rd.vid+"</td><td>"+rd.driverId+"</td><td><button class=\"Drivereditbtn\">edit</button></td></tr>");
+                    $("#tblDriver").append("<tr><td>"+r.rentId+"</td><td>"+rd.vid+"</td><td>"+rd.driverId+"</td><td><button class=\"Drivereditbtn\" style='    border: 0;\n" +
+                        "    border-radius: 5px;\n" +
+                        "    font-size: 13px;\n" +
+                        "    width: 53px;\n" +
+                        "    background-color: #5d00ff;\n" +
+                        "    color: white;'>edit</button></td></tr>");
                 }
-                $("#tblCustomerReq").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.rentId+"</td><td>"+r.cusId+"</td><td>"+r.pickUpDate+"</td><td>"+r.returnDate+"</td><td>"+r.pickUpVenue+"</td><td>"+r.returnVenue+"</td><td>"+r.statusOfReq+"</td><td>"+r.total+"</td><td><button class=\"editbtn\" name="+r.cusId+" id="+r.slipImgPath+" value="+r.rentId+">view</button></td></td></tr>");
+                $("#tblCustomerReq").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.rentId+"</td><td>"+r.cusId+"</td><td>"+r.pickUpDate+"</td><td>"+r.returnDate+"</td><td>"+r.pickUpVenue+"</td><td>"+r.returnVenue+"</td><td>"+r.statusOfReq+"</td><td>"+r.total+"</td><td><button class=\"editbtn\" style='    border: 0;\n" +
+                    "    border-radius: 5px;\n" +
+                    "    font-size: 13px;\n" +
+                    "    width: 53px;\n" +
+                    "    background-color: #5d00ff;\n" +
+                    "    color: white;' name="+r.cusId+" id="+r.slipImgPath+" value="+r.rentId+">view</button></td></td></tr>");
 
             }
 
@@ -158,8 +168,8 @@ function rentalUpdate(request){
                     dataType:"Json",
                     method: "get",
                     success: function (resp) {
-                        alert(resp.message);
-                        alert(resp.data);
+                      /*  alert(resp.message);
+                        alert(resp.data);*/
 
                         console.log("did"+resp.data.driverId);
                         let Driver = {
@@ -176,7 +186,7 @@ function rentalUpdate(request){
                             contentType: "application/json",
                             success: function (resp) {
 
-                                alert(resp.message);
+                                alert("Susses..!");
 
                             },
                             error: function (error) {
