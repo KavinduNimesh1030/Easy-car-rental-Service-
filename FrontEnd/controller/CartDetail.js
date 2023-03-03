@@ -1,4 +1,12 @@
 let carDailyPrice ;
+let amount =0;
+
+function setLossDamageP(lossDamage) {
+    amount = amount+lossDamage;
+    alert(amount);
+    $("#lblLossDamage").text(amount);
+}
+
 function getVehicleDetail(id){
     console.log(id);
     $.ajax({
@@ -11,6 +19,8 @@ function getVehicleDetail(id){
             carDailyPrice = resp.data.dailyPrice;
 
                 $("#tblAddToCart").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+resp.data.vid+"</td><td>"+resp.data.brand+"</td><td>"+resp.data.dailyPrice+"</td><td>"+resp.data.monthlyPrice+"</td><td>"+resp.data.priceForExtraKm+"</td><td>"+resp.data.freeKmForDay+"</td><td>"+resp.data.freeKmForMonth+"</td></tr>")
+                let lossDamage = resp.data.type== "Luxury"?1000:resp.data.type == "General"?2000:4000;
+                setLossDamageP(lossDamage);
         },
         error: function(error) {
             let prase = JSON.parse(error.responseText);
