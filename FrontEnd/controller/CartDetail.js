@@ -1,4 +1,4 @@
-let carDailyPrice ;
+let carDailyPrice =[] ;
 let amount =0;
 
 function setLossDamageP(lossDamage) {
@@ -16,7 +16,9 @@ function getVehicleDetail(id){
         success: function (resp) {
             console.log(resp);
             console.log(resp.data)
-            carDailyPrice = resp.data.dailyPrice;
+            carDailyPrice.push(resp.data.dailyPrice);
+            alert(resp.data.dailyPrice);
+
 
                 $("#tblAddToCart").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+resp.data.vid+"</td><td>"+resp.data.brand+"</td><td>"+resp.data.dailyPrice+"</td><td>"+resp.data.monthlyPrice+"</td><td>"+resp.data.priceForExtraKm+"</td><td>"+resp.data.freeKmForDay+"</td><td>"+resp.data.freeKmForMonth+"</td></tr>")
                 let lossDamage = resp.data.type== "Luxury"?1000:resp.data.type == "General"?2000:4000;
@@ -40,7 +42,13 @@ $("#txtDuration").keypress(function (){
     var days = diff/1000/60/60/24;
 
     alert(days);
-    var total = carDailyPrice*days;
+    var total = 0 ;
+    for (let i = 0; i < carDailyPrice.length; i++) {
+        alert(carDailyPrice[i]);
+        total = total+carDailyPrice[i];
+    }
+    total = total*days;
 
     $("#lblTotal").text(total);
 })
+
