@@ -59,4 +59,27 @@ public class RentCarServiceImpl implements RentCarService {
     public ArrayList<RentalDTO> getRentalByCusId(String cusId) {
         return  modelMapper.map(rentCarRepo.findAll(),new TypeToken<ArrayList<RentalDTO>>(){}.getType());
     }
+
+    @Override
+    public String generateRentalId() {
+        String lastId = rentCarRepo.generateRentalId();
+        String id = "";
+        if (lastId != null) {
+            int tempId = Integer.parseInt(lastId.split("-")[1]);
+            tempId = tempId + 1;
+            if (tempId <= 9) {
+                id = "R00-000" + tempId;
+            } else if (tempId <= 99) {
+                id = "R00-00" + tempId;
+            } else if (tempId <= 999) {
+                id = "R00-0" + tempId;
+            } else if (tempId <= 9999) {
+                id = "R00-" + tempId;
+            }
+        } else {
+            id = "R00-0001";
+        }
+        return id;
+    
+    }
 }

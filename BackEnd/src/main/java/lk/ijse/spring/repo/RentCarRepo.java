@@ -11,4 +11,6 @@ import java.util.ArrayList;
 public interface RentCarRepo extends JpaRepository<Rental,String> {
     Rental findRentalByRentId(String rentId);
     ArrayList<RentalDTO> findRentalByCusId(String cusId);
+    @Query(value = "SELECT rentId FROM Rental ORDER BY rentId DESC LIMIT 1", nativeQuery = true)
+    String generateRentalId();
 }

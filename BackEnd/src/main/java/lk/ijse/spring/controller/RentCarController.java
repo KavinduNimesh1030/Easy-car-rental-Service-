@@ -5,6 +5,7 @@ import lk.ijse.spring.dto.VehicleDTO;
 import lk.ijse.spring.service.RentCarService;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -44,5 +45,9 @@ public class RentCarController {
         ArrayList<RentalDTO> all = rentCarService.getRentalByCusId(cusId);
         return new ResponseUtil("200","done",all);
 
+    }
+    @GetMapping(path = "/generateRentalId", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil generateRentalId() {
+        return new ResponseUtil("200", "Ok", rentCarService.generateRentalId());
     }
 }
