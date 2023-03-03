@@ -25,7 +25,7 @@ public class VehicleController {
     @PostMapping
     public ResponseUtil saveVehicle(@RequestBody VehicleDTO vehicleDTO){
         vehicleService.SaveVehicle(vehicleDTO);
-        return new ResponseUtil("200","done","null");
+        return new ResponseUtil("200","done",null);
 
     }
     @GetMapping
@@ -36,10 +36,11 @@ public class VehicleController {
     @PutMapping
     public  ResponseUtil updateVehicle(VehicleDTO dto){
         vehicleService.SaveVehicle(dto);
-        return new ResponseUtil("200","updated","null");
+        return new ResponseUtil("200","updated",null);
     }
     @DeleteMapping(params = "vid")
     public ResponseUtil deleteVehicle(String vid){
-
+        vehicleService.deleteVehicle(vid);
+        return new ResponseUtil("200","deleted..!",null);
     }
 }

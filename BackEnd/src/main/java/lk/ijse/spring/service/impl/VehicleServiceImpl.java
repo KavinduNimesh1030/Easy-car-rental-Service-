@@ -45,6 +45,6 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public void deleteVehicle(String vid) {
-        
+        vehicleRepo.deleteById(vid);
     }
 }
