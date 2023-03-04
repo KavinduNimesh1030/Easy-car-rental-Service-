@@ -3,6 +3,7 @@ getAllRentalDetails();
 let request;
 let rentalId;
 let cusId;
+let tempTblDriverD;
 function getAllRentalDetails(){
     $("#tblCustomerReq").empty();
     $("#tblDriver").empty();
@@ -14,6 +15,7 @@ function getAllRentalDetails(){
             for (const r of resp.data) {
                 console.log(r.rentId);
                 console.log(r.cusId);
+                tempTblDriverD = r.rentDetail;
                 for (const rd of r.rentDetail) {
                     console.log("v"+rd.vid)
                     console.log("dr"+rd.driverId)
@@ -257,13 +259,34 @@ $('body').on('click', '.Drivereditbtn', function() {
     //get clicking row driver id;
     alert("id"+this.id);
     driverIdDup = this.id;
-    this.innerHTML = "update";
     btnId = this.id;
 
 });
 $("#driverSelect").change(function (){
+    let newDriverId = $("#driverSelect").val();
+    $("#tblDriver").empty();
+    for (let r of tempTblDriverD) {
+        if (driverIdDup == r.driverId) {
 
-   $("#"+btnId).innerHTML = "save";
+            $("#tblDriver").append("<tr><td>"+r.rentId+"</td><td>"+r.vid+"</td><td>"+newDriverId+"</td><td><button class=\"Drivereditbtn\" id="+r.driverId+" style='    border: 0;\n" +
+                "    border-radius: 5px;\n" +
+                "    font-size: 13px;\n" +
+                "    width: 53px;\n" +
+                "    background-color: #5d00ff;\n" +
+                "    color: white;'>edit</button></td></tr>");
+
+
+        }else {
+            $("#tblDriver").append("<tr><td>"+r.rentId+"</td><td>"+r.vid+"</td><td>"+r.driverId+"</td><td><button class=\"Drivereditbtn\" id="+r.driverId+" style='    border: 0;\n" +
+                "    border-radius: 5px;\n" +
+                "    font-size: 13px;\n" +
+                "    width: 53px;\n" +
+                "    background-color: #5d00ff;\n" +
+                "    color: white;'>edit</button></td></tr>");
+
+
+        }
+    }
 });
 
 function changeDriver(){
