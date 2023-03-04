@@ -1431,6 +1431,11 @@ option {
     height: 60%;
     border: 2px solid black;
 }
+#cusTblOut{
+    width: 65%;
+    height: 100%;
+    border: 2px solid red;
+}
 
 
 
