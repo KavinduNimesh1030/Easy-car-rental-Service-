@@ -20,7 +20,7 @@ function getAllRentalDetails(){
 
                     //append driverId and vehicle id
                    /* $(".adminDriver").append("<h2 style='font-size: 16px;transform: translateX(32px);margin-bottom: 18px;'>"+rd.vid+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+rd.driverId+"</h2>")*/
-                    $("#tblDriver").append("<tr><td>"+r.rentId+"</td><td>"+rd.vid+"</td><td>"+rd.driverId+"</td><td><button class=\"Drivereditbtn\" style='    border: 0;\n" +
+                    $("#tblDriver").append("<tr><td>"+r.rentId+"</td><td>"+rd.vid+"</td><td>"+rd.driverId+"</td><td><button class=\"Drivereditbtn\" id="+rd.driverId+" style='    border: 0;\n" +
                         "    border-radius: 5px;\n" +
                         "    font-size: 13px;\n" +
                         "    width: 53px;\n" +
@@ -109,6 +109,8 @@ $("#btnRequestReject").click(function (){
     rentalUpdate(request);
 });
 
+let rentDetailDup;
+
 function rentalUpdate(request){
     console.log(rentalId);
     console.log(request);
@@ -121,6 +123,8 @@ function rentalUpdate(request){
         success: function (resp) {
             alert(resp.message);
             alert(resp.data);
+            rentDetailDup = resp.data.rentDetail;
+            changeDriver();
                 let rent ={
                     rentId : resp.data.rentId,
                     pickUpDate : resp.data.pickUpDate,
@@ -229,7 +233,6 @@ function getAllDriversAdmin(){
         success: function (resp) {
             for (const r of resp.data) {
                 if(r.availability == "Available") {
-                    alert(r.driverId);
                     console.log("av"+r.driverId);
                     $("#driverSelect").append("<option>" + r.driverId + "</option>");
                 }
@@ -240,5 +243,28 @@ function getAllDriversAdmin(){
 
 
     });
+}
+let driverIdDup ;
+$("#driverSelect").prop('disabled', true);
+$('body').on('click', '.Drivereditbtn', function() {
+    $("#driverSelect").prop('disabled', false);
+
+    //get clicking row driver id;
+    alert("id"+this.id);
+    driverIdDup = this.id;
+
+});
+function changeDriver(){
+    for (let r of rentDetailDup) {
+        //change clicking row driver id
+        if(driverIdDup == r.driverId){
+            console.log("old driver detail id"+r.driverId)
+           let newDriverId = $("#driverSelect").val();
+            console.log("new  select driver id "+newDriverId);
+            r.driverId = newDriverId;
+            console.log("new diver detail id "+r.driverId)
+        }
+
+    }
 }
 
