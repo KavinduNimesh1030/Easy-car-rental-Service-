@@ -49,7 +49,7 @@ public class VehicleServiceImpl implements VehicleService {
     }
 
     @Override
-    public ArrayList<VehicleDTO> getSelectedVehicleDetail(String brand, String fuelType, String noOfPassenger, String transitionType, String type, String lowPrice, String maxPrice) {
+    public ArrayList<VehicleDTO> getSelectedVehicleDetail(String brand, String fuelType, String noOfPassenger, String transitionType, String type, double lowPrice, double maxPrice) {
         return null;
     }
 }

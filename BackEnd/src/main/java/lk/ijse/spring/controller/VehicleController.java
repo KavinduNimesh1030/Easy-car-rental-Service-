@@ -44,7 +44,8 @@ public class VehicleController {
         return new ResponseUtil("200","deleted..!",null);
     }
     @GetMapping(params = "brand,fuelType,noOfPassenger,transitionType,type,lowPrice,maxPrice")
-    public ResponseUtil getSelectedVehicleDetail(String brand,String fuelType,String noOfPassenger,String transitionType,String type,String lowPrice,String maxPrice){
+    public ResponseUtil getSelectedVehicleDetail(String brand,String fuelType,String noOfPassenger,String transitionType,String type,double lowPrice, double maxPrice){
+        ArrayList<VehicleDTO> vehicle = vehicleService.getSelectedVehicleDetail(brand, fuelType, noOfPassenger, transitionType, type, lowPrice, maxPrice);
         return new ResponseUtil("200","Get",null);
     }
 }

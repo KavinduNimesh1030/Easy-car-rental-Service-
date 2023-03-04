@@ -12,5 +12,5 @@ public interface VehicleService {
     ArrayList<VehicleDTO>getAllVehicle();
     void updateVehicle(VehicleDTO vehicleDTO);
     void deleteVehicle(String vid);
-    ArrayList<VehicleDTO>getSelectedVehicleDetail(String brand,String fuelType,String noOfPassenger,String transitionType,String type,String lowPrice,String maxPrice);
+    ArrayList<VehicleDTO>getSelectedVehicleDetail(String brand,String fuelType,String noOfPassenger,String transitionType,String type,double lowPrice, double maxPrice);
 }
