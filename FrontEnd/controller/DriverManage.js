@@ -11,6 +11,7 @@ $("#btnSaveDriver").click(function (){
             success: function (resp) {
                 console.log(resp);
                 alert(resp.message);
+                getAllDrivers();
 
             },
             error: function(error) {
