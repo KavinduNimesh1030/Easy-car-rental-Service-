@@ -87,3 +87,13 @@ $('body').on('click', '.rentNow', function() {
     boxShadowRemove();
 
 });
+$(".btnCategoriesFind").click(function (){
+    let brand = $("#brand").val();
+    let fuelType =$("#fuelType").val();
+    let noOfPassenger =$("#noOfPassenger").val();
+    let transitionType =$("#transitionType").val();
+    let type =$("#type").val();
+    let lowPrice =$("#txtLowPrice").val();
+    let maxPrice =$("#txtMaxPrice").val();
+
+});
