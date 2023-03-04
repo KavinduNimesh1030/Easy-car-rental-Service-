@@ -162,8 +162,12 @@ function rentalUpdate(request){
 
 
                 //get Driver Id nd Update Driver-----------------------------------
-
             for (const re of resp.data.rentDetail) {
+                alert("dr" + re.driverId)
+                updateDriverAvailability(re.driverId,"unAvailable")
+            }
+
+          /*  for (const re of resp.data.rentDetail) {
 
                 alert("dr"+re.driverId)
 
@@ -172,8 +176,8 @@ function rentalUpdate(request){
                     dataType:"Json",
                     method: "get",
                     success: function (resp) {
-                      /*  alert(resp.message);
-                        alert(resp.data);*/
+                      /!*  alert(resp.message);
+                        alert(resp.data);*!/
 
                         console.log("did"+resp.data.driverId);
                         let Driver = {
@@ -209,8 +213,8 @@ function rentalUpdate(request){
                     }
 
                 });
-
-            }
+*/
+            //}
 
 
 
@@ -258,6 +262,7 @@ function changeDriver(){
     for (let r of rentDetailDup) {
         //change clicking row driver id
         if(driverIdDup == r.driverId){
+            updateDriverAvailability(r.driverId,"Available")
             console.log("old driver detail id"+r.driverId)
            let newDriverId = $("#driverSelect").val();
             console.log("new  select driver id "+newDriverId);
@@ -267,4 +272,56 @@ function changeDriver(){
 
     }
 }
+
+function updateDriverAvailability(id,ava) {
+  /*  for (const re of rentDetailDup) {
+
+        alert("dr" + re.driverId)*/
+
+        $.ajax({
+            url: baseUrl + "Driver?driverId=" + id,
+            dataType: "Json",
+            method: "get",
+            success: function (resp) {
+                /*  alert(resp.message);
+                  alert(resp.data);*/
+
+                console.log("did" + resp.data.driverId);
+                let Driver = {
+                    driverId: resp.data.driverId,
+                    driverName: resp.data.driverName,
+                    driverContactNo: resp.data.driverContactNo,
+                    availability: ava
+
+                }
+                $.ajax({
+                    url: baseUrl + "Driver",
+                    method: "put",
+                    data: JSON.stringify(Driver),
+                    contentType: "application/json",
+                    success: function (resp) {
+
+                        alert("Susses..!");
+
+                    },
+                    error: function (error) {
+                        let prase = JSON.parse(error.responseText);
+                        alert(prase.message);
+
+                    }
+
+                });
+
+            },
+            error: function (error) {
+                let prase = JSON.parse(error.responseText);
+                alert(prase.message);
+
+            }
+
+        });
+
+
+}
+
 
