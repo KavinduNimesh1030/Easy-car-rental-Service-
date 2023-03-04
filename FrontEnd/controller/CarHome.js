@@ -88,6 +88,7 @@ $('body').on('click', '.rentNow', function() {
 
 });
 $(".btnCategoriesFind").click(function (){
+    alert("aa");
     let brand = $("#brand").val();
     let fuelType =$("#fuelType").val();
     let noOfPassenger =$("#noOfPassenger").val();
@@ -95,5 +96,16 @@ $(".btnCategoriesFind").click(function (){
     let type =$("#type").val();
     let lowPrice =$("#txtLowPrice").val();
     let maxPrice =$("#txtMaxPrice").val();
+
+    $.ajax({
+        url: baseUrl + "Vehicle?brand?fuelType?noOfPassenger?transitionType?type?lowPrice?maxPrice"+brand,fuelType,noOfPassenger,transitionType,type,lowPrice,maxPrice,
+        dataType: "Json",
+        method: "get",
+        success: function (resp) {
+            console.log(resp)
+            for (const r of resp.data) {
+            }
+        }
+    });
 
 });
