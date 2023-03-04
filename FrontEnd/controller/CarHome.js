@@ -98,7 +98,7 @@ $(".btnCategoriesFind").click(function (){
     let maxPrice =$("#txtMaxPrice").val();
 
     $.ajax({
-        url: baseUrl + "Vehicle?brand=?fuelType=?noOfPassenger=?transitionType=?type=?lowPrice=?maxPrice=?"+brand,fuelType,noOfPassenger,transitionType,type,lowPrice,maxPrice,
+        url: baseUrl + "Vehicle?brand="+brand+"fuelType="+fuelType+"noOfPassenger="+noOfPassenger+"transitionType="+transitionType+"type="+type+"lowPrice="+lowPrice+"maxPrice="+maxPrice,
         dataType: "Json",
         method: "get",
         success: function (resp) {

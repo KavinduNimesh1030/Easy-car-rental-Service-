@@ -47,6 +47,6 @@ public class VehicleController {
     public ResponseUtil getSelectedVehicleDetail(String brand,String fuelType,String noOfPassenger,String transitionType,String type,double lowPrice, double maxPrice){
         ArrayList<VehicleDTO> vehicle = vehicleService.getSelectedVehicleDetail(brand, fuelType, noOfPassenger, transitionType, type, lowPrice, maxPrice);
         System.out.println("se "+vehicle.toString());
-        return new ResponseUtil("200","Get",null);
+        return new ResponseUtil("200","Get",vehicle);
     }
 }
