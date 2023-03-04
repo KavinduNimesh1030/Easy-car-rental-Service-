@@ -1414,7 +1414,7 @@ option {
     margin-left: 100px;
 }
 #viewCusMainCon{
-    width: 94.3vw;
+    width: 94.2vw;
     height: 100vh;
     border: 2px solid black;
     margin-left: 78px;
@@ -1430,12 +1430,33 @@ option {
     width: 100%;
     height: 60%;
     border: 2px solid black;
+    display: flex;
+    flex-direction: row;
 }
 #cusTblOut{
     width: 65%;
     height: 100%;
+
+
+}
+#cusNicImgCon{
+    width: 35%;
+    height: 100%;
     border: 2px solid red;
 }
+#cusNicImgOut{
+    width: 65%;
+    height: 70%;
+    border: 2px solid black;
+    transform: translate(63px, 14px);
+}
+#cusNicImgCon>h2{
+    font-size: 17px;
+    transform: translate(103px, 3px);
+    font-weight: 700;
+    width: 200px;
+}
+
 
 
 

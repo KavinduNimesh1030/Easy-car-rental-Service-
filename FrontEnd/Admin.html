@@ -522,6 +522,10 @@
                        </tbody>
                    </table>
                </div>
+                <div id="cusNicImgCon">
+                    <h2>Customer Nic Image</h2>
+                    <div id="cusNicImgOut"></div>
+                </div>
             </div>
         </section>
     </main>
@@ -542,16 +546,19 @@
         $("#adminRentalReq").show();
         $("#adminVehicle").hide();
         $("#AddDriver").hide();
+        $("#viewCustomer").hide();
     });
     $("#vehicleManage").click(function (){
         $("#AddDriver").hide()
         $("#adminRentalReq").hide();
         $("#adminVehicle").show();
+        $("#viewCustomer").hide();
     });
     $("#driverMange").click(function (){
         $("#AddDriver").show()
         $("#adminRentalReq").hide();
         $("#adminVehicle").hide();
+        $("#viewCustomer").hide();
     });
     $("#userPage").click(function (){
         $("#AddDriver").hide()

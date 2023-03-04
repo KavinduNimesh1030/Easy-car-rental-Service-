@@ -25,5 +25,14 @@ function loadAllCustomerAdmin(){
 }
 $('body').on('click', '.viewbtn', function() {
    alert(this.id);
+   setCustomerNicImgAdmin(this.id);
 
 });
+function setCustomerNicImgAdmin(path){
+    $("#cusNicImgOut").css({
+        "background": `url(${"assets/img/fileSave/uploads/"+path})`,
+        "background-size": "cover",
+        "background-position":"center",
+
+    });
+}
