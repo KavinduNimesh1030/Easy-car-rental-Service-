@@ -33,7 +33,7 @@
             </li>
             <li>
                 <a href="#">
-                    <i class='bx bx-user'></i>
+                    <i class='bx bx-user' id="userPage"></i>
                     <span class="links_name">User</span>
                 </a>
                 <span class="tooltip">User</span>
@@ -502,7 +502,10 @@
     </body>
     </main>
     <main id="viewCustomer">
-
+        <section id="viewCusMainCon">
+            <div id="cusImgCon"></div>
+            <div id="cusTblCon"></div>
+        </section>
     </main>
 </main>
 
@@ -514,6 +517,7 @@
     $("#adminVehicle").hide();
     $("#adminRentalReq").hide();
     $("#AddDriver").hide();
+    $("#viewCustomer").hide();
 
     $("#adminReq").click(function (){
         $("#adminRentalReq").show();
@@ -529,6 +533,12 @@
         $("#AddDriver").show()
         $("#adminRentalReq").hide();
         $("#adminVehicle").hide();
+    });
+    $("#userPage").click(function (){
+        $("#AddDriver").hide()
+        $("#adminRentalReq").hide();
+        $("#adminVehicle").hide();
+        $("#viewCustomer").show();
     });
 </script>
 </body>
