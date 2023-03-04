@@ -249,6 +249,7 @@ function getAllDriversAdmin(){
     });
 }
 let driverIdDup ;
+let btnId;
 $("#driverSelect").prop('disabled', true);
 $('body').on('click', '.Drivereditbtn', function() {
     $("#driverSelect").prop('disabled', false);
@@ -256,28 +257,32 @@ $('body').on('click', '.Drivereditbtn', function() {
     //get clicking row driver id;
     alert("id"+this.id);
     driverIdDup = this.id;
+    this.innerHTML = "update";
+    btnId = this.id;
 
 });
+$("#driverSelect").change(function (){
+
+   $("#"+btnId).innerHTML = "save";
+});
+
 function changeDriver(){
     for (let r of rentDetailDup) {
         //change clicking row driver id
         if(driverIdDup == r.driverId){
-            updateDriverAvailability(r.driverId,"Available")
-            console.log("old driver detail id"+r.driverId)
+            updateDriverAvailability(r.driverId,"Available")//update release diver availability
+            console.log("old driver detail driver id"+r.driverId)
+
+            //assign new selected diver id to rent detail driver id
            let newDriverId = $("#driverSelect").val();
-            console.log("new  select driver id "+newDriverId);
             r.driverId = newDriverId;
-            console.log("new diver detail id "+r.driverId)
+            console.log("new diver detail driver id "+r.driverId)
         }
 
     }
 }
 
 function updateDriverAvailability(id,ava) {
-  /*  for (const re of rentDetailDup) {
-
-        alert("dr" + re.driverId)*/
-
         $.ajax({
             url: baseUrl + "Driver?driverId=" + id,
             dataType: "Json",
