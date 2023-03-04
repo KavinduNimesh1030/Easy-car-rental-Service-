@@ -43,4 +43,9 @@ public class VehicleController {
         vehicleService.deleteVehicle(vid);
         return new ResponseUtil("200","deleted..!",null);
     }
+    @GetMapping(params = "brand,fuelType,noOfPassenger,transitionType,type,lowPrice,maxPrice")
+    public ResponseUtil getVehicleDetail(String brand,String fuelType,String noOfPassenger,String transitionType,String type,String lowPrice,String maxPrice){
+
+        return new ResponseUtil("200","Get",null);
+    }
 }
