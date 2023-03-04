@@ -50,6 +50,7 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public ArrayList<VehicleDTO> getSelectedVehicleDetail(String brand, String fuelType, String noOfPassenger, String transitionType, String type, double lowPrice, double maxPrice) {
-        return null;
+        ArrayList<Vehicle> vehicle = vehicleRepo.getSelectedVehicle(brand,fuelType, noOfPassenger, transitionType, type, lowPrice, maxPrice);
+        return  modelMapper.map(vehicle,new TypeToken<ArrayList<VehicleDTO>>(){}.getType());
     }
 }

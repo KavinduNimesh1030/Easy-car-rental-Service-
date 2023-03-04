@@ -89,20 +89,21 @@ $('body').on('click', '.rentNow', function() {
 });
 $(".btnCategoriesFind").click(function (){
     alert("aa");
-    let brand = $("#brand").val();
+    let brand = "Toyota Prius";
     let fuelType =$("#fuelType").val();
     let noOfPassenger =$("#noOfPassenger").val();
-    let transitionType =$("#transitionType").val();
-    let type =$("#type").val();
+    let transitionType = "Auto";
+    let type ="General";
     let lowPrice =$("#txtLowPrice").val();
     let maxPrice =$("#txtMaxPrice").val();
 
     $.ajax({
-        url: baseUrl + "Vehicle?brand?fuelType?noOfPassenger?transitionType?type?lowPrice?maxPrice"+brand,fuelType,noOfPassenger,transitionType,type,lowPrice,maxPrice,
+        url: baseUrl + "Vehicle?brand=?fuelType=?noOfPassenger=?transitionType=?type=?lowPrice=?maxPrice=?"+brand,fuelType,noOfPassenger,transitionType,type,lowPrice,maxPrice,
         dataType: "Json",
         method: "get",
         success: function (resp) {
-            console.log(resp)
+            console.log(resp.data);
+            alert("res "+resp.data);
             for (const r of resp.data) {
             }
         }
