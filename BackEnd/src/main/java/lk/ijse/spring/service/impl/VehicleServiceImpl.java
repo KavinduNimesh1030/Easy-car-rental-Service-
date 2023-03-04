@@ -47,4 +47,9 @@ public class VehicleServiceImpl implements VehicleService {
     public void deleteVehicle(String vid) {
         vehicleRepo.deleteById(vid);
     }
+
+    @Override
+    public ArrayList<VehicleDTO> getSelectedVehicleDetail(String brand, String fuelType, String noOfPassenger, String transitionType, String type, String lowPrice, String maxPrice) {
+        return null;
+    }
 }
