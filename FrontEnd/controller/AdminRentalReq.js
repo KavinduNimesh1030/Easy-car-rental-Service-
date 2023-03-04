@@ -219,7 +219,26 @@ function rentalUpdate(request){
 
     });
 
+}
+getAllDriversAdmin();
+function getAllDriversAdmin(){
+    $.ajax({
+        url: baseUrl+"Driver",
+        method :"get",
+        dataType:"json",
+        success: function (resp) {
+            for (const r of resp.data) {
+                if(r.availability == "Available") {
+                    alert(r.driverId);
+                    console.log("av"+r.driverId);
+                    $("#driverSelect").append("<option>" + r.driverId + "</option>");
+                }
+            }
 
 
+        }
+
+
+    });
 }
 
