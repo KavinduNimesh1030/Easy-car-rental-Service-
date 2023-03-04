@@ -13,6 +13,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="adminNav">
+        <div class="container-fluid">
+            <img src="assets/img/logo.png" alt="logo" width="35" height="30" style="transform: translateX(70px);">
+            <a class="navbar-brand fw-bolder" href="#" style="transform: translateX(-889px);">Easy Car</a>
+
+            <!--   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>-->
+            <!--  <div class="collapse navbar-collapse" id="adminNavbarNav">
+                  <ul class="navbar-nav justify-content-center">
+                      <li class="nav-item">
+                          <a class="nav-link active" id="NavDashBoard" aria-current="page" href="AdminDashBoard.html">Dash Board</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active"  id="NavRentalReq"aria-current="page" href="AdminRentalReq.html">Rental Request</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active"  id="NavCustomer"aria-current="page" href="CustomerDetail.html">Customer</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" id="NavVehicle" href="AdminVehicleManage.html">Vehicle</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" id="navDriver" href="AddDriver.html">Driver</a>
+                      </li>
+                  </ul>
+              </div>-->
+        </div>
+        <div class="navUserNameCon" id="userNameNav">
+            <img src="assets/img/user.jpg" alt="user" style="width: 27px">
+            <h1 style="font-size: 13px" id="lblNavEmail">easycar@gmail.com</h1>
+            <h2 style="font-size: 10px" id="lblNavUserName">Admin</h2>
+        </div>
+
+    </nav>
+</header>
 <main>
 <main id="dash">
     <div class="sidebar">
@@ -26,7 +63,7 @@
 
             <li>
                 <a href="#">
-                    <i class='bx bx-grid-alt'></i>
+                    <i class='bx bx-grid-alt' id="dashBoardIcon"></i>
                     <span class="links_name" >Dashboard</span>
                 </a>
                 <span class="tooltip">Dashboard</span>
@@ -296,41 +333,7 @@
     <main id="adminRentalReq">
         <body>
         <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary" id="adminNav">
-                <div class="container-fluid">
-                    <img src="assets/img/logo.png" alt="logo" width="35" height="30">
-                    <a class="navbar-brand fw-bolder" href="#">Easy Car</a>
 
-                    <!--   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                           <span class="navbar-toggler-icon"></span>
-                       </button>-->
-                    <div class="collapse navbar-collapse" id="adminNavbarNav">
-                        <ul class="navbar-nav justify-content-center">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="NavDashBoard" aria-current="page" href="AdminDashBoard.html">Dash Board</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active"  id="NavRentalReq"aria-current="page" href="AdminRentalReq.html">Rental Request</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active"  id="NavCustomer"aria-current="page" href="CustomerDetail.html">Customer</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" id="NavVehicle" href="AdminVehicleManage.html">Vehicle</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" id="navDriver" href="AddDriver.html">Driver</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="navUserNameCon" id="userNameNav">
-                    <img src="assets/img/user.jpg" alt="user" style="width: 27px">
-                    <h1 style="font-size: 13px" id="lblNavEmail">easycar@gmail.com</h1>
-                    <h2 style="font-size: 10px" id="lblNavUserName">Admin</h2>
-                </div>
-
-            </nav>
         </header>
 
         <section class="AdminRentalOutCon">
@@ -529,6 +532,68 @@
             </div>
         </section>
     </main>
+    <main id="DashBoard">
+        <div class="DashBoardDetail">
+            <div class="shortCutCon">
+                <div class="dashBoardCard">
+                    <div class="cardDetail">
+                        <div class="cardImg">
+                            <img src="assets/img/Admin%20user.png" alt="admin">
+                        </div>
+                        <div class="cardText">
+                            <h2>Registered Users</h2>
+                            <h1>100</h1>
+                        </div>
+                    </div>
+                    <div class="cardLink">
+                        <h4 class="btnViewDash">View More</h4>
+                    </div>
+                </div>
+                <div class="dashBoardCard">
+                    <div class="cardDetail">
+                        <div class="cardImg">
+                            <img src="assets/img/carIcon2.jpg" alt="admin">
+                        </div>
+                        <div class="cardText">
+                            <h2>Available Vehicle</h2>
+                            <h1>30</h1>
+                        </div>
+                    </div>
+                    <div class="cardLink">
+                        <h4 class="btnViewDash">View More</h4>
+                    </div>
+                </div>
+                <div class="dashBoardCard">
+                    <div class="cardDetail">
+                        <div class="cardImg">
+                            <img src="assets/img/icon_career.webp" alt="admin">
+                        </div>
+                        <div class="cardText">
+                            <h2>Available Drivers</h2>
+                            <h1>30</h1>
+                        </div>
+                    </div>
+                    <div class="cardLink">
+                        <h4 class="btnViewDash">View More</h4>
+                    </div>
+                </div>
+                <div class="dashBoardCard">
+                    <div class="cardDetail">
+                        <div class="cardImg">
+                            <img src="assets/img/message.png" alt="message">
+                        </div>
+                        <div class="cardText">
+                            <h2>customers request</h2>
+                            <h1>100</h1>
+                        </div>
+                    </div>
+                    <div class="cardLink">
+                        <h4 class="btnViewDash">View More</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </main>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
@@ -541,30 +606,42 @@
     $("#adminRentalReq").hide();
     $("#AddDriver").hide();
     $("#viewCustomer").hide();
+    $("#DashBoard").show();
 
     $("#adminReq").click(function (){
         $("#adminRentalReq").show();
         $("#adminVehicle").hide();
         $("#AddDriver").hide();
         $("#viewCustomer").hide();
+        $("#DashBoard").hide();
     });
     $("#vehicleManage").click(function (){
         $("#AddDriver").hide()
         $("#adminRentalReq").hide();
         $("#adminVehicle").show();
         $("#viewCustomer").hide();
+        $("#DashBoard").hide();
     });
     $("#driverMange").click(function (){
         $("#AddDriver").show()
         $("#adminRentalReq").hide();
         $("#adminVehicle").hide();
         $("#viewCustomer").hide();
+        $("#DashBoard").hide();
     });
     $("#userPage").click(function (){
         $("#AddDriver").hide()
         $("#adminRentalReq").hide();
         $("#adminVehicle").hide();
         $("#viewCustomer").show();
+        $("#DashBoard").hide();
+    });
+    $("#dashBoardIcon").click(function (){
+        $("#AddDriver").hide()
+        $("#adminRentalReq").hide();
+        $("#adminVehicle").hide();
+        $("#viewCustomer").hide();
+        $("#DashBoard").show();
     });
 </script>
 </body>

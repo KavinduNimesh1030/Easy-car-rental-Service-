@@ -12,7 +12,7 @@ function  getRentId(){
         method: "get",
         success: function (resp) {
             console.log("43"+resp)
-           alert(resp.data.rentId);
+          /* alert(resp.data.rentId);*/
         }
 
     });
@@ -53,7 +53,7 @@ function getRentDetail(rentId) {
 
 
 $("#btnRentSubmit").click(function (){
-    let rentId = "R00-0001"
+    let rentId = "R00-0002"
     let lossDamageWaiver = $("#lblLossDamage").text();
     let duration = $("#txtDuration").val();
     let pickUpDate = $("#DatPickDate").val();
