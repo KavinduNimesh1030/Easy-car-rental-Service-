@@ -1524,7 +1524,25 @@ option {
     height: 60%;
     border: 2px solid black;
 }
+.incomeCardCon{
+    width: 16%;
+    height: 281px;
+    border: 2px solid black;
+    border-radius: 17px;
+}
 
+.cardImgCon{
+    width: 100%;
+    height: 60%;
+    border: 2px solid black;
+    border-radius: 17px;
+}
+.cardDetailCon{
+    width: 100%;
+    height: 40%;
+    border: 2px solid black;
+    border-radius: 17px;
+}
 
 
 
