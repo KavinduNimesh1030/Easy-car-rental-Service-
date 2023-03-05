@@ -88,6 +88,7 @@ $('body').on('click', '.rentNow', function() {
 
 });
 $(".btnCategoriesFind").click(function (){
+    $(".carOutSec").empty();
     alert("aa");
     let brand = "Toyota Prius";
     let fuelType =$("#fuelType").val();
@@ -103,9 +104,10 @@ $(".btnCategoriesFind").click(function (){
         method: "get",
         success: function (resp) {
             console.log(resp.data);
-            alert("res "+resp.data);
+            if (resp.data == ""){
+                alert("There is a no Matching Vehicle..!")
+            }
             for (const r of resp.data) {
-                $(".carOutSec div").empty();
                 $(".carOutSec").append("<div class=\"carCardInRent\">\n" +
                     "            <div class=\"carImg\">\n" +
                     "\n" +
