@@ -1527,21 +1527,33 @@ option {
 .incomeCardCon{
     width: 16%;
     height: 281px;
-    border: 2px solid black;
     border-radius: 17px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 5);
 }
 
 .cardImgCon{
     width: 100%;
     height: 60%;
-    border: 2px solid black;
     border-radius: 17px;
 }
 .cardDetailCon{
     width: 100%;
     height: 40%;
-    border: 2px solid black;
+
     border-radius: 17px;
+    background: linear-gradient(160deg, #e7280f 50%, #ffb939) ;
+}
+.cardImgCon>h1{
+    font-size: 21px;
+    font-weight: 600;
+    /* margin-top: 24px; */
+    transform: translate(33px, 14px);
+}
+.cardImgCon>h2{
+    font-size: 14px;
+    transform: translate(29px, 146px);
+    color: white;
 }
 
 
