@@ -89,7 +89,6 @@ $('body').on('click', '.rentNow', function() {
 });
 $(".btnCategoriesFind").click(function (){
     $(".carOutSec").empty();
-    alert("aa");
     let brand = "Toyota Prius";
     let fuelType =$("#fuelType").val();
     let noOfPassenger =$("#noOfPassenger").val();

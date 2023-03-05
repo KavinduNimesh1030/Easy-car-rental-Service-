@@ -1,4 +1,4 @@
-/*let baseUrl = "http://localhost:8080/BackEnd_war/";*/
+baseUrl = "http://localhost:8080/BackEnd_war/";
 $("#btnSaveDriver").click(function (){
     var formData = $("#driverRegForm").serialize();
     console.log(formData);
