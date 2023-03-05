@@ -43,8 +43,11 @@ public class VehicleController {
         vehicleService.deleteVehicle(vid);
         return new ResponseUtil("200","deleted..!",null);
     }
-    @GetMapping(params = "brand,fuelType,noOfPassenger,transitionType,type,lowPrice,maxPrice")
-    public ResponseUtil getSelectedVehicleDetail(String brand,String fuelType,String noOfPassenger,String transitionType,String type,double lowPrice, double maxPrice){
+  /*  @GetMapping(params = "brand,fuelType,noOfPassenger,transitionType,type,lowPrice,maxPrice")*/
+ /* @RequestMapping(path = "/mno/objectKey/{id}/{name}", method = RequestMethod.GET)*/
+    @GetMapping(path = "/{brand}/{fuelType}/{noOfPassenger}/{transitionType}/{type}/{lowPrice}/{maxPrice}")
+    public ResponseUtil getSelectedVehicleDetail(@PathVariable String brand, @PathVariable String fuelType, @PathVariable String noOfPassenger,@PathVariable String transitionType,@PathVariable String type,@PathVariable double lowPrice,@PathVariable double maxPrice){
+        System.out.println( "brnad"+brand);
         ArrayList<VehicleDTO> vehicle = vehicleService.getSelectedVehicleDetail(brand, fuelType, noOfPassenger, transitionType, type, lowPrice, maxPrice);
         System.out.println("se "+vehicle.toString());
         return new ResponseUtil("200","Get",vehicle);
