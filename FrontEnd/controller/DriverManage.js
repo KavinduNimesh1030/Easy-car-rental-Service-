@@ -110,8 +110,7 @@ function driverSchedule(){
         dataType:"Json",
         method: "get",
         success: function (resp) {
-             alert(resp.data.pickUpDate);
-             console.log("data"+resp.data)
+            $("#tblDriverSchedule").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+resp.data.vid+"</td><td>"+resp.data.pickDate+"</td><td>"+resp.data.pickTime+"</td><td>"+resp.data.returnDate+"</td><td></tr>");
         }
 
     });
