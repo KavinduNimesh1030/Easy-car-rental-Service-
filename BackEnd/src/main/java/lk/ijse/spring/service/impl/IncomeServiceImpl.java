@@ -19,7 +19,8 @@ public class IncomeServiceImpl implements IncomeService {
 
     @Override
     public double getDailyIncome() {
-        return rentCarRepo.getDailyTotal();
+            return rentCarRepo.getDailyTotal();
+
     }
 
     @Override

@@ -53,7 +53,7 @@ function getRentDetail(rentId) {
 
 
 $("#btnRentSubmit").click(function (){
-    let rentId = "R00-0003"
+    let rentId = "R00-0004"
     let lossDamageWaiver = $("#lblLossDamage").text();
     let duration = $("#txtDuration").val();
     let pickUpDate = $("#DatPickDate").val();

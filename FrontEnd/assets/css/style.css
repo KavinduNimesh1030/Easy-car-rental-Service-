@@ -1580,6 +1580,25 @@ option {
     width: 157px;
     transform: translate(24px, 11px);
 }
+.totalCardCon{
+    width: 19%;
+    height: 281px;
+    border-radius: 17px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 5);
+    transform: translate(41px, 42px);
+}
+.totCardImgCon{
+    width: 100%;
+    height: 60%;
+    border-radius: 17px;
+    background: linear-gradient(160deg, #e7280f 50%, #ffb939);
+}
+.totDetailCon{
+    width: 100%;
+    height: 40%;
+    border-radius: 17px;
+}
 
 
 
