@@ -14,4 +14,7 @@ public interface RentCarRepo extends JpaRepository<Rental,String> {
 
     @Query(value = "SELECT rentId FROM rental ORDER BY rentId DESC LIMIT 1", nativeQuery = true)
     String generateRentalId();
+
+    @Query(value = "SELECT SUM(total) FROM rental where pickUpDate > now() - INTERVAL 1 month",nativeQuery = true)
+    double getMonthTotal();
 }

@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class IncomeManageController {
     @GetMapping(params = "monthly")
     public ResponseUtil getMonthlyIncome(String monthly){
-
+        return new ResponseUtil();
     }
 }
