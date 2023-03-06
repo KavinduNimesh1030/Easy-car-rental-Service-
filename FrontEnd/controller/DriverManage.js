@@ -103,7 +103,16 @@ $('#btnDriSearch').click(function() {
     });
 
 });
+driverSchedule();
+function driverSchedule(){
+    $.ajax({
+        url: baseUrl+"Driver/"+"D002",
+        dataType:"Json",
+        method: "get",
+        success: function (resp) {
+             alert(resp.data.pickUpDate);
+             console.log("data"+resp.data)
+        }
 
-function DriverSchedule(){
-
+    });
 }

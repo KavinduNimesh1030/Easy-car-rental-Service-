@@ -1,5 +1,6 @@
 package lk.ijse.spring.controller;
 
+import lk.ijse.spring.dto.RentDetailDTO;
 import lk.ijse.spring.dto.RentalDTO;
 import lk.ijse.spring.dto.VehicleDTO;
 import lk.ijse.spring.service.RentCarService;
@@ -51,8 +52,5 @@ public class RentCarController {
         System.out.println("rent id"+rentCarService.generateRentalId());
         return new ResponseUtil("200", "Ok", rentCarService.generateRentalId());
     }
-    @GetMapping(params = "driverId")
-    public ResponseUtil getRentByDriverId(String driverId){
-        return new ResponseUtil();
-    }
+
 }
