@@ -15,10 +15,18 @@ public class IncomeManageController {
 
     @Autowired
     IncomeService incomeService;
+    private String daily;
 
     @GetMapping(params = "monthly")
     public ResponseUtil getMonthlyIncome(String monthly){
        double monthlyIncome = incomeService.getMonthlyIncome();
         return new ResponseUtil("200","done",monthlyIncome);
     }
+
+    @GetMapping(params = "daily")
+    public ResponseUtil getDailyIncome(String daily){
+        double dailyIncome = incomeService.getMonthlyIncome();
+        return new ResponseUtil("200","done",dailyIncome);
+    }
+
 }
