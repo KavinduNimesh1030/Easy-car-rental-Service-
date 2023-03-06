@@ -657,8 +657,14 @@
                 </div>
 
                 <div class="totalCardCon">
-                    <div class="totCardImgCon"></div>
-                    <div class="totDetailCon"></div>
+                    <div class="totCardImgCon">
+                        <h1>Total Income</h1>
+                        <img src="assets/img/tot1.png" alt="total">
+                    </div>
+                    <div class="totDetailCon">
+                        <h3>Rs</h3>
+                        <h1 id="lblTotIncome">00.00</h1>
+                    </div>
                 </div>
             </div>
         </section>
@@ -686,6 +692,7 @@
         $("#AddDriver").hide();
         $("#viewCustomer").hide();
         $("#DashBoard").hide();
+        $("#income").hide();
     });
     $("#vehicleManage").click(function (){
         $("#AddDriver").hide()
@@ -693,6 +700,7 @@
         $("#adminVehicle").show();
         $("#viewCustomer").hide();
         $("#DashBoard").hide();
+        $("#income").hide();
     });
     $("#driverMange").click(function (){
         $("#AddDriver").show()
@@ -700,6 +708,7 @@
         $("#adminVehicle").hide();
         $("#viewCustomer").hide();
         $("#DashBoard").hide();
+        $("#income").hide();
     });
     $("#userPage").click(function (){
         $("#AddDriver").hide()
@@ -707,6 +716,7 @@
         $("#adminVehicle").hide();
         $("#viewCustomer").show();
         $("#DashBoard").hide();
+        $("#income").hide();
     });
     $("#dashBoardIcon").click(function (){
         $("#AddDriver").hide()
@@ -714,6 +724,7 @@
         $("#adminVehicle").hide();
         $("#viewCustomer").hide();
         $("#DashBoard").show();
+        $("#income").hide();
     });
     $("#incomePage").click(function (){
         $("#AddDriver").hide()
