@@ -16,4 +16,19 @@ public class IncomeServiceImpl implements IncomeService {
     public double getMonthlyIncome() {
         return rentCarRepo.getMonthTotal();
     }
+
+    @Override
+    public double getDailyIncome() {
+        return rentCarRepo.getDailyTotal();
+    }
+
+    @Override
+    public double getAnnuallyIncome() {
+        return rentCarRepo.getAnnuallyTotal();
+    }
+
+    @Override
+    public double getWeeklyIncome() {
+        return rentCarRepo.getWeeklyTotal();
+    }
 }

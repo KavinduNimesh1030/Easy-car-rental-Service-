@@ -17,4 +17,14 @@ public interface RentCarRepo extends JpaRepository<Rental,String> {
 
     @Query(value = "SELECT SUM(total) FROM rental where pickUpDate > now() - INTERVAL 1 month",nativeQuery = true)
     double getMonthTotal();
+
+
+    @Query(value = "SELECT SUM(total) FROM rental where pickUpDate > now() - INTERVAL 1 day",nativeQuery = true)
+    double getDailyTotal();
+
+    @Query(value = "SELECT SUM(total) FROM rental where pickUpDate > now() - INTERVAL 7 day",nativeQuery = true)
+    double getWeeklyTotal();
+
+    @Query(value = "SELECT SUM(total) FROM rental where pickUpDate > now() - INTERVAL 1 year",nativeQuery = true)
+    double getAnnuallyTotal();
 }

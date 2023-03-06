@@ -25,7 +25,7 @@ public class IncomeManageController {
 
     @GetMapping(params = "daily")
     public ResponseUtil getDailyIncome(String daily){
-        double dailyIncome = incomeService.getMonthlyIncome();
+        double dailyIncome = incomeService.getDailyIncome();
         return new ResponseUtil("200","done",dailyIncome);
     }
 
