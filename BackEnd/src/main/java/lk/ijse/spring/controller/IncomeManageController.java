@@ -28,5 +28,15 @@ public class IncomeManageController {
         double dailyIncome = incomeService.getDailyIncome();
         return new ResponseUtil("200","done",dailyIncome);
     }
+    @GetMapping(params = "weekly")
+    public ResponseUtil getWeeklyIncome(String weekly){
+        double weeklyIncome = incomeService.getWeeklyIncome();
+        return new ResponseUtil("200","done",weeklyIncome);
+    }
+    @GetMapping(params = "annually")
+    public ResponseUtil getAnnuallyIncome(String annually){
+        double annuallyIncome = incomeService.getAnnuallyIncome();
+        return new ResponseUtil("200","done",annuallyIncome);
+    }
 
 }
