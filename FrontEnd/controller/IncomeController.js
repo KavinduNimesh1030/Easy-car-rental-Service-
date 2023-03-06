@@ -53,7 +53,7 @@ function totalIncome(){
         dataType:"Json",
         method: "get",
         success: function (resp) {
-            $("#lblWeekly").text(resp.data);
+            $("#lblTotIncome").text(resp.data);
         }
 
     });
