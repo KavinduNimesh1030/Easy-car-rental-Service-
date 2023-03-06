@@ -51,4 +51,8 @@ public class RentCarController {
         System.out.println("rent id"+rentCarService.generateRentalId());
         return new ResponseUtil("200", "Ok", rentCarService.generateRentalId());
     }
+    @GetMapping(params = "driverId")
+    public ResponseUtil getRentByDriverId(String driverId){
+        return new ResponseUtil();
+    }
 }
