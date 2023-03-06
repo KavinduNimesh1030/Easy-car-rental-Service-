@@ -8,4 +8,5 @@ public interface IncomeService {
     double getDailyIncome();
     double getAnnuallyIncome();
     double getWeeklyIncome();
+    double getTotalIncome();
 }

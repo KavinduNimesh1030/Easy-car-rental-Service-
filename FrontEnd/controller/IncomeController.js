@@ -2,6 +2,7 @@ monthlyIncome();
 annuallyIncome();
 weeklyIncome();
 dailyIncome();
+totalIncome();
 function monthlyIncome(){
     $.ajax({
         url: baseUrl+"Income?monthly="+"100",
@@ -38,6 +39,17 @@ function dailyIncome(){
 function weeklyIncome(){
     $.ajax({
         url: baseUrl+"Income?weekly="+"100",
+        dataType:"Json",
+        method: "get",
+        success: function (resp) {
+            $("#lblWeekly").text(resp.data);
+        }
+
+    });
+}
+function totalIncome(){
+    $.ajax({
+        url: baseUrl+"Income?tot="+"100",
         dataType:"Json",
         method: "get",
         success: function (resp) {

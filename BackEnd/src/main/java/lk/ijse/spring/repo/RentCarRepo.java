@@ -27,4 +27,7 @@ public interface RentCarRepo extends JpaRepository<Rental,String> {
 
     @Query(value = "SELECT SUM(total) FROM rental where pickUpDate > now() - INTERVAL 1 year",nativeQuery = true)
     double getAnnuallyTotal();
+
+    @Query(value = "SELECT SUM(total) FROM rental",nativeQuery = true)
+    double getTotalIncome();
 }

@@ -38,5 +38,11 @@ public class IncomeManageController {
         double annuallyIncome = incomeService.getAnnuallyIncome();
         return new ResponseUtil("200","done",annuallyIncome);
     }
+    @GetMapping(params = "tot")
+    public ResponseUtil getTotalIncome(String tot){
+        double totalIncome = incomeService.getTotalIncome();
+        return new ResponseUtil("200","done",totalIncome);
+    }
+
 
 }

@@ -32,4 +32,9 @@ public class IncomeServiceImpl implements IncomeService {
     public double getWeeklyIncome() {
         return rentCarRepo.getWeeklyTotal();
     }
+
+    @Override
+    public double getTotalIncome() {
+        return rentCarRepo.getTotalIncome();
+    }
 }
