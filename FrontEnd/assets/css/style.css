@@ -1553,7 +1553,8 @@ option {
     font-size: 21px;
     font-weight: 600;
     /* margin-top: 24px; */
-    transform: translate(33px, 14px);
+    text-align: center;
+    transform: translateY(10px);
 }
 .cardDetailCon>h2{
     font-size: 14px;
