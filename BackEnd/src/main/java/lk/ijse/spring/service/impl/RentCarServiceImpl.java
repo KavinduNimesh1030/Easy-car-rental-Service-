@@ -1,6 +1,7 @@
 package lk.ijse.spring.service.impl;
 
 import lk.ijse.spring.dto.CustomerDTO;
+import lk.ijse.spring.dto.RentDetailDTO;
 import lk.ijse.spring.dto.RentalDTO;
 import lk.ijse.spring.dto.VehicleDTO;
 import lk.ijse.spring.entity.Customer;
@@ -84,5 +85,10 @@ public class RentCarServiceImpl implements RentCarService {
         return id;
 
 
+    }
+
+    @Override
+    public RentDetailDTO getRentByDriverId(String driverId) {
+        return modelMapper.map(rentDetailRepo.getRentDetailByDriverId(driverId),RentDetailDTO.class);
     }
 }
