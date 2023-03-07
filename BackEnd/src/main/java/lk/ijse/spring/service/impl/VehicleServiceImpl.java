@@ -53,4 +53,9 @@ public class VehicleServiceImpl implements VehicleService {
         ArrayList<Vehicle> vehicle = vehicleRepo.getSelectedVehicle(brand,fuelType, noOfPassenger, transitionType, type, lowPrice, maxPrice);
         return  modelMapper.map(vehicle,new TypeToken<ArrayList<VehicleDTO>>(){}.getType());
     }
+
+    @Override
+    public void updateVehicleAva(String ava,String vid) {
+        vehicleRepo.updateVehicleAva(ava,vid);
+    }
 }

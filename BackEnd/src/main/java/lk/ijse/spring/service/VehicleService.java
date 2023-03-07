@@ -13,4 +13,5 @@ public interface VehicleService {
     void updateVehicle(VehicleDTO vehicleDTO);
     void deleteVehicle(String vid);
     ArrayList<VehicleDTO>getSelectedVehicleDetail(String brand,String fuelType,String noOfPassenger,String transitionType,String type,double lowPrice, double maxPrice);
+    void updateVehicleAva(String ava ,String vid);
 }
