@@ -2,6 +2,7 @@ let customerId = null;
 var driverId = "D005";
 // var Driver ={};
 var driverIds= [];
+var vehicleIds =[];
 
 getAllAvailableDriver();
 getRentId();
@@ -16,6 +17,10 @@ function  getRentId(){
         }
 
     });
+}
+
+function updateVehicleAva(vid) {
+    
 }
 
 function getRentDetail(rentId) {
@@ -35,6 +40,8 @@ function getRentDetail(rentId) {
             let vid = $("#tblAddToCart").children().eq(i).children(":eq(0)").text();
             array.push({rentId:rentId,vid:vid,pickDate:pickUpDate,pickTime:pickUpTime,returnDate:returnDate,driverId:driverIds[i]});
             a(driverIds[i]);
+            updateVehicleAva(vid);
+
 
         }
 
