@@ -163,15 +163,15 @@ function getAllVehicleAdmin(){
                 }
                 $("#tblAllVehicle").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.vid+"</td><td>"+r.brand+"</td><td>"+r.color+"</td><td>"+r.dailyPrice+"</td><td>"+r.monthlyPrice+"</td><td>"+r.freeKmForDay+"</td><td>"+r.freeKmForMonth+"</td><td>"+r.fuelType+"</td><td>"+r.isAvailable+"</td><td>"+r.noOfPassenger+"</td><td>"+r.transmissionType+"</td><td>"+r.type+"</td><td>"+r.priceForExtraKm+"</td></tr>")
             }
-            avaVehicleCountM();
+            avaVehicleCountM(avaVehicleCount);
 
         }
 
     });
 }
-//set available vehicle count in dash board
- function avaVehicleCountM() {
-     $("#lblAvaVehicleC").text(avaVehicleCount);
+ //set available vehicle count in dash board
+ function avaVehicleCountM(ava) {
+     $("#lblAvaVehicleC").text(ava);
  }
 
 $("#updateVehicleDetail").click(function (){
