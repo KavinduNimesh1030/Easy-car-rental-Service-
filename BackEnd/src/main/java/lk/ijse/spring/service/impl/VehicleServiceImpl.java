@@ -56,6 +56,7 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public void updateVehicleAva(String ava,String vid) {
+        System.out.println("impl "+ava+vid);
         vehicleRepo.updateVehicleAva(ava,vid);
     }
 }

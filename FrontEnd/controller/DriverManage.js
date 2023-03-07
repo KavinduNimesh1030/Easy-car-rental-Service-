@@ -68,8 +68,10 @@ function getAllDrivers(){
         dataType:"json",
         success: function (resp) {
             for (const r of resp.data) {
+                if(r.driverId !== "with out Driver"){
+                    $("#tblDriverDetail").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.driverId+"</td><td>"+r.driverName+"</td><td>"+r.driverContactNo+"</td><td>"+r.availability+"</td><td></tr>");
+                }
 
-                $("#tblDriverDetail").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.driverId+"</td><td>"+r.driverName+"</td><td>"+r.driverContactNo+"</td><td>"+r.availability+"</td><td></tr>");
 
             }
 
