@@ -74,17 +74,42 @@ function getAllVehicle(){
 
 $('body').on('click', '.rentNow', function() {
 
-    $("#rentCar").hide();
-    $("#loginPage").hide();
-    $("#CustomerReg").hide();
-    $("#cusDetail").hide();
-    $("#HomePage").hide();
-    $("#rentCar").hide();
-    alert(this.id);
-    getVehicleDetail(this.id);
-    $("#addToCarPage").show();
+    //check car availability
+    let vid = this.id;
+    $.ajax({
+        url: baseUrl+"Vehicle?vid="+this.id,
+        method :"get",
+        dataType:"json",
+        success: function (resp) {
+            console.log(resp);
+            alert(resp.message);
+            if(resp.data.isAvailable === "Available"){
 
-    boxShadowRemove();
+                $("#rentCar").hide();
+                $("#loginPage").hide();
+                $("#CustomerReg").hide();
+                $("#cusDetail").hide();
+                $("#HomePage").hide();
+                $("#rentCar").hide();
+                alert(this.id);
+                getVehicleDetail(this.id);
+                $("#addToCarPage").show();
+
+                boxShadowRemove();
+            }else {
+                alert("This car not Available right now..!");
+            }
+
+
+        },
+        error: function(error) {
+            let prase = JSON.parse(error.responseText);
+            alert(prase.message);
+
+        }
+
+    });
+
 
 });
 $(".btnCategoriesFind").click(function (){
