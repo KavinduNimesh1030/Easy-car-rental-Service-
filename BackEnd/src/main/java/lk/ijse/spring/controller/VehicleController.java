@@ -52,6 +52,7 @@ public class VehicleController {
     }
     @PutMapping(path = "/{ava}/{vid}")
     public ResponseUtil updateVehicleAva(@PathVariable  String ava, @PathVariable String vid){
+        System.out.println("ava"+ava+vid);
         vehicleService.updateVehicleAva(ava,vid);
         return new ResponseUtil("200","updated..!",null);
     }
