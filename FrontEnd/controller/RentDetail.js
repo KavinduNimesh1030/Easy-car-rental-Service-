@@ -21,14 +21,47 @@ function  getRentId(){
 
 function updateVehicleAva(vid) {
     $.ajax({
-        url: baseUrl + "Vehicle/"+"unAvailable"+"/"+vid,
-        method: "put",
+        url: baseUrl+"Vehicle?vid="+vid,
+        dataType:"Json",
+        method: "get",
         success: function (resp) {
-            alert(resp.message);
-        },
-        error: function (error) {
-            let prase = JSON.parse(error.responseText);
-            alert(prase.message);
+            let vehicle ={
+                vid : vid,
+                brand : resp.data.brand,
+                color : resp.data.color,
+                dailyPrice : resp.data.dailyPrice,
+                freeKmForDay : resp.data.freeKmForDay,
+                freeKmForMonth : resp.data.freeKmForMonth,
+                fuelType : resp.data.fuelType,
+                isAvailable : "unAvailable",
+                monthlyPrice : resp.data.monthlyPrice,
+                noOfPassenger : resp.data.noOfPassenger,
+                priceForExtraKm : resp.data.priceForExtraKm,
+                transmissionType : resp.data.transmissionType,
+                type : resp.data.type,
+                frontImgPath : resp.data.frontImgPath,
+                backImgPath : resp.data.backImgPath,
+                sideImgPath : resp.data.sideImgPath,
+                interiorImgPath : resp.data.interiorImgPath,
+            }
+
+            $.ajax({
+                url: baseUrl+"Vehicle",
+                method :"post",
+                data : JSON.stringify(vehicle),
+                contentType: "application/json",
+                success: function (resp) {
+                    alert("updated..!");
+                    getAllVehicleAdmin();
+
+                },
+                error: function(error) {
+                    let prase = JSON.parse(error.responseText);
+                    alert(prase.message);
+
+                }
+
+            });
 
         }
 
@@ -62,7 +95,7 @@ function getRentDetail(rentId) {
         for (let i = 0; i < rows; i++) {
             let vid = $("#tblAddToCart").children().eq(i).children(":eq(0)").text();
             array.push({rentId:rentId,vid:vid,pickDate:pickUpDate,pickTime:pickUpTime,returnDate:returnDate,driverId:driverId});
-
+            updateVehicleAva(vid);
         }
     }
 
