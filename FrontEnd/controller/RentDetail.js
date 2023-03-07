@@ -20,7 +20,19 @@ function  getRentId(){
 }
 
 function updateVehicleAva(vid) {
-    
+    $.ajax({
+        url: baseUrl + "Vehicle/"+"unAvailable"+"/"+vid,
+        method: "put",
+        success: function (resp) {
+            alert(resp.message);
+        },
+        error: function (error) {
+            let prase = JSON.parse(error.responseText);
+            alert(prase.message);
+
+        }
+
+    });
 }
 
 function getRentDetail(rentId) {
