@@ -52,4 +52,9 @@ public class VehicleController {
         System.out.println("se "+vehicle.toString());
         return new ResponseUtil("200","Get",vehicle);
     }
+    @PutMapping(path = "/{ava}/{vid}")
+    public ResponseUtil updateVehicleAva(@PathVariable  String ava, @PathVariable String vid){
+        return new ResponseUtil();
+    }
+
 }
