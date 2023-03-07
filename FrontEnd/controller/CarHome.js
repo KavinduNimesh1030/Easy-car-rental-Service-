@@ -81,8 +81,6 @@ $('body').on('click', '.rentNow', function() {
         method :"get",
         dataType:"json",
         success: function (resp) {
-            console.log(resp);
-            alert(resp.message);
             if(resp.data.isAvailable === "Available"){
 
                 $("#rentCar").hide();
@@ -90,9 +88,9 @@ $('body').on('click', '.rentNow', function() {
                 $("#CustomerReg").hide();
                 $("#cusDetail").hide();
                 $("#HomePage").hide();
-                $("#rentCar").hide();
-                alert(this.id);
-                getVehicleDetail(this.id);
+
+                alert(vid);
+                getVehicleDetail(vid);
                 $("#addToCarPage").show();
 
                 boxShadowRemove();
@@ -117,7 +115,7 @@ $(".btnCategoriesFind").click(function (){
     let brand = "Toyota Prius";
     let fuelType =$("#fuelType").val();
     let noOfPassenger =$("#noOfPassenger").val();
-    let transitionType = "Auto";
+    let transitionType = $("#transitionType").val();
     let type ="General";
     let lowPrice =$("#txtLowPrice").val();
     let maxPrice =$("#txtMaxPrice").val();
