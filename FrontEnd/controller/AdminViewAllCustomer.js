@@ -1,3 +1,4 @@
+let cusCount =0;//getCustomerCount
 loadAllCustomerAdmin();
 function loadAllCustomerAdmin(){
     $("#tblViewAllCus").empty();
@@ -15,7 +16,11 @@ function loadAllCustomerAdmin(){
                     "    background-color: #5d00ff;\n" +
                     "    color: white;' name="+r.cusId+" id="+r.imgPath+">view</button></td></td></tr>");
 
+                cusCount++;
             }
+
+            setDashBoardCusCount();
+
 
 
         }
@@ -23,7 +28,14 @@ function loadAllCustomerAdmin(){
 
     });
 }
+function setDashBoardCusCount(){
+    $("#lblRegUsers").text(cusCount);
+
+}
+
+
 $('body').on('click', '.viewbtn', function() {
+    alert("cus"+cusCount);
    alert(this.id);
    setCustomerNicImgAdmin(this.id);
 

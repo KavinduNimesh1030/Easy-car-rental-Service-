@@ -1,15 +1,16 @@
 
 getAllVehicle();
-function getAllVehicle(){
+function getAllVehicle() {
     $.ajax({
-        url: baseUrl+"Vehicle",
-        dataType:"Json",
+        url: baseUrl + "Vehicle",
+        dataType: "Json",
         method: "get",
         success: function (resp) {
             console.log(resp)
             for (const r of resp.data) {
 
-                $("#brand").append("<option>"+r.brand+"</option>");
+
+                $("#brand").append("<option>" + r.brand + "</option>");
 
                 $(".carOutSec").append("<div class=\"carCardInRent\">\n" +
                     "            <div class=\"carImg\">\n" +
@@ -17,16 +18,16 @@ function getAllVehicle(){
                     "                <div id=\"carouselExample5\" class=\"carousel slide\" data-bs-ride=\"carousel\">\n" +
                     "                    <div class=\"carousel-inner\">\n" +
                     "                        <div class=\"carousel-item active\" >\n" +
-                    "                            <img src=assets/img/fileSave/uploads/"+r.frontImgPath+" class=\"d-block w-100\" alt=\"fontView\">\n" +
+                    "                            <img src=assets/img/fileSave/uploads/" + r.frontImgPath + " class=\"d-block w-100\" alt=\"fontView\">\n" +
                     "                        </div>\n" +
                     "                        <div class=\"carousel-item\">\n" +
-                    "                            <img src=assets/img/fileSave/uploads/"+r.backImgPath+" class=\"d-block w-100\" alt=\"sideView\">\n" +
+                    "                            <img src=assets/img/fileSave/uploads/" + r.backImgPath + " class=\"d-block w-100\" alt=\"sideView\">\n" +
                     "                        </div>\n" +
                     "                        <div class=\"carousel-item\">\n" +
-                    "                            <img src=assets/img/fileSave/uploads/"+r.sideImgPath+" class=\"d-block w-100\" alt=\"BackView\">\n" +
+                    "                            <img src=assets/img/fileSave/uploads/" + r.sideImgPath + " class=\"d-block w-100\" alt=\"BackView\">\n" +
                     "                        </div>\n" +
                     "                        <div class=\"carousel-item\">\n" +
-                    "                            <img src=assets/img/fileSave/uploads/"+r.interiorImgPath+" class=\"d-block w-100\" alt=\"BackView\">\n" +
+                    "                            <img src=assets/img/fileSave/uploads/" + r.interiorImgPath + " class=\"d-block w-100\" alt=\"BackView\">\n" +
                     "                        </div>\n" +
                     "                    </div>\n" +
                     "                    <button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselExample\" data-bs-slide=\"prev\">\n" +
@@ -42,14 +43,14 @@ function getAllVehicle(){
                     "            </div>\n" +
                     "            <div class=\"detailCon\">\n" +
                     "                <div>\n" +
-                    "                    <h1>"+r.brand+"</h1>\n" +
-                    "                    <h2 class=\"dailyPrice\">"+r.dailyPrice+"LKR</h2>\n" +
-                    "                    <h2 class=\"monthlyPrice\">"+r.monthlyPrice+"/month</h2>\n" +
+                    "                    <h1>" + r.brand + "</h1>\n" +
+                    "                    <h2 class=\"dailyPrice\">" + r.dailyPrice + "LKR</h2>\n" +
+                    "                    <h2 class=\"monthlyPrice\">" + r.monthlyPrice + "/month</h2>\n" +
                     "                </div>\n" +
                     "                <div class=\"typeCon\">\n" +
                     "                    <div>\n" +
                     "                        <img src=\"assets/img/steering-wheel.png\" alt=\"logo\" width=\"20\" height=\"20\">\n" +
-                    "                        <h1>"+r.transmissionType+"</h1>\n" +
+                    "                        <h1>" + r.transmissionType + "</h1>\n" +
                     "                    </div>\n" +
                     "                    <div>\n" +
                     "                        <img src=\"assets/img/car-seat.png\" alt=\"logo\" width=\"20\" height=\"20\">\n" +
@@ -57,15 +58,17 @@ function getAllVehicle(){
                     "                    </div>\n" +
                     "                    <div>\n" +
                     "                        <img src=\"assets/img/petrol-pump.png\" alt=\"logo\" width=\"20\" height=\"20\">\n" +
-                    "                        <h1>"+r.fuelType+"</h1>\n" +
+                    "                        <h1>" + r.fuelType + "</h1>\n" +
                     "                    </div>\n" +
                     "                </div>\n" +
                     "                <div>\n" +
-                    "                    <button class=\"rentNow\" id="+r.vid+">Add to cart</button>\n" +
+                    "                    <button class=\"rentNow\" id=" + r.vid + ">Add to cart</button>\n" +
                     "                </div>\n" +
                     "            </div>\n" +
                     "        </div>")
             }
+
+
 
         }
 
@@ -73,6 +76,8 @@ function getAllVehicle(){
 
 
 }
+
+
 
 $('body').on('click', '.rentNow', function() {
 

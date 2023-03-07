@@ -3,6 +3,8 @@ let fImg = "";
 let sImg = "";
 let bImg = "";
 let iImg = "";
+
+let avaVehicleCount = 0;
 $("#submitVehicleDetail").click(function (){
     let vid = $("#txtCarRegId").val();
     let brand = $("#txtCarBrand").val();
@@ -156,13 +158,21 @@ function getAllVehicleAdmin(){
         success: function (resp) {
             console.log(resp)
             for (const r of resp.data) {
+                if (r.isAvailable === "Available") {
+                    avaVehicleCount++;
+                }
                 $("#tblAllVehicle").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.vid+"</td><td>"+r.brand+"</td><td>"+r.color+"</td><td>"+r.dailyPrice+"</td><td>"+r.monthlyPrice+"</td><td>"+r.freeKmForDay+"</td><td>"+r.freeKmForMonth+"</td><td>"+r.fuelType+"</td><td>"+r.isAvailable+"</td><td>"+r.noOfPassenger+"</td><td>"+r.transmissionType+"</td><td>"+r.type+"</td><td>"+r.priceForExtraKm+"</td></tr>")
             }
+            avaVehicleCountM();
 
         }
 
     });
 }
+//set available vehicle count in dash board
+ function avaVehicleCountM() {
+     $("#lblAvaVehicleC").text(avaVehicleCount);
+ }
 
 $("#updateVehicleDetail").click(function (){
     let vid = $("#txtVHSearch").val();
