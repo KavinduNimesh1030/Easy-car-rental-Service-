@@ -103,10 +103,11 @@ $('#btnDriSearch').click(function() {
     });
 
 });
-driverSchedule();
-function driverSchedule(){
+
+
+function driverSchedule(id){
     $.ajax({
-        url: baseUrl+"Driver/"+"D002",
+        url: baseUrl+"Driver/"+id,
         dataType:"Json",
         method: "get",
         success: function (resp) {
@@ -115,3 +116,4 @@ function driverSchedule(){
 
     });
 }
+

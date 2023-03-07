@@ -1316,7 +1316,6 @@ option {
 
 /*----------------------------------cus reg-----------------------------------------*/
 #rentCon{
-    height: 220px;
     margin-top: -84px;
     width: 80%;
     margin-left: 96px;
@@ -1662,7 +1661,7 @@ option {
     display: flex;
     flex-direction: row;
     gap: 29px;
-    /* justify-content: center; */
+    /* justify-content: center; *//**/
 }
 
 

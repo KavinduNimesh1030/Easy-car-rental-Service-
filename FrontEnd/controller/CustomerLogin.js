@@ -1,3 +1,4 @@
+
 function setUserNameAndEmail(name,email) {
     console.log("name"+name);
     $("#lblNavUserName").text(name);
@@ -5,18 +6,33 @@ function setUserNameAndEmail(name,email) {
 }
 
 function checkDriver(email, password) {
+
     $.ajax({
-        url: baseUrl+"Driver/"+email,
+        url: baseUrl+"Driver?driverId="+password,
         method :"get",
         dataType:"json",
         success: function (resp) {
-            for (const r of resp.data) {
-                if(r.driverName == email){
-                    alert("success");
-                    return ;
-                }
-            }
+           if (resp.data.driverName == email){
+               setUserNameAndEmail(password,email);
+               driverSchedule(password);
+               $("#loginPage").hide();
+               $("#CustomerReg").hide();
+               $("#cusDetail").hide();
+               $("#HomePage").hide();
+               $("#adminDashBoard").hide();
+               $("#DriverSchedule").show();
+               alert("Driver Login Success..!");
+               return false;
+               // window.location.href = "DriverSchedule.html";
 
+           } else {
+               alert("Invalid Detail,Try Again..!");
+
+           }
+
+
+        }, error: function (error){
+            alert("Invalid Detail,Try Again..!1");
 
         }
 
@@ -25,26 +41,21 @@ function checkDriver(email, password) {
 }
 
 $("#btnLogin").click(function (){
-    let massage = 0;
     let email= $("#txtLoginEmail").val();
     let password = $("#txtCusLoginPassword").val();
-   /* let c = checkDriver(email,password);*/
     console.log("email"+email)
     let a ="easycar@gmail.com";
 
-
-
-
      if(email == a) {
            alert("Admin Login Success !!");
-           $("#loginPage").hide();
+      /*     $("#loginPage").hide();
            $("#CustomerReg").hide();
            $("#cusDetail").hide();
            $("#HomePage").hide();
-           $("#adminDashBoard").show();
+           $("#Admin").show();*/
+         window.location.href = "Admin.html";
 
        }else {
-           alert("mas "+massage);
            $.ajax({
                url: baseUrl + "Customer?email=" + email,
                method: "get",
@@ -66,12 +77,13 @@ $("#btnLogin").click(function (){
                        $("#HomePage").show();
 
                    } else {
-                       alert("invalid email or password")
+                       /*alert("invalid email or password")*/
+                       checkDriver(email,password);
                    }
                },
                error: function (error) {
                    let prase = JSON.parse(error.responseText);
-                   alert("invalid email or password");
+                   checkDriver(email,password);
 
                }
 

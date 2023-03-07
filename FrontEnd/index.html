@@ -1084,6 +1084,660 @@
     </section>
     </body>
 </main>
+<main id="DriverSchedule">
+    <body>
+    <section>
+        <section id="driverScOutCon">
+            <div class="incomeImgCon">
+                <h2>Driver Schedule</h2>
+                <hr style="width: 60%;text-align:left;margin-left: 34px;margin-top: 66px;color: white">
+                <h4>View your schedule for next drive</h4>
+                <img src="assets/img/rangeRover.png" alt="">
+            </div>
+            <div id="DriverScDetailCon">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Vehicle Reg No</th>
+                        <th scope="col">Pick Up Date</th>
+                        <th scope="col">Pick Time</th>
+                        <th scope="col">Return Date</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tblDriverSchedule">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </section>
+    </body>
+</main>
+<main id="Admin">
+    <main id="dash">
+        <div class="sidebar">
+            <div class="logo_content">
+                <div class="logo">
+                    <div class="logo_name">Easy Car</div>
+                </div>
+                <i class='bx bx-menu' id="btn"></i>
+            </div>
+            <ul class="nav_list">
+
+                <li>
+                    <a href="#">
+                        <i class='bx bx-grid-alt' id="dashBoardIcon"></i>
+                        <span class="links_name" >Dashboard</span>
+                    </a>
+                    <span class="tooltip">Dashboard</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-user' id="userPage"></i>
+                        <span class="links_name">User</span>
+                    </a>
+                    <span class="tooltip">User</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-chat' id="adminReq"></i>
+                        <span class="links_name">Messages</span>
+                    </a>
+                    <span class="tooltip">Messages</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-pie-chart-alt-2' id="incomePage"></i>
+                        <span class="links_name">Analytics</span>
+                    </a>
+                    <span class="tooltip">Analytics</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-folder' id="vehicleManage"></i>
+                        <span class="links_name">File Manager</span>
+                    </a>
+                    <span class="tooltip">File Manager</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-cart-alt' id="driverMange"></i>
+                        <span class="links_name">Order</span>
+                    </a>
+                    <span class="tooltip">Order</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-heart'></i>
+                        <span class="links_name">Saved</span>
+                    </a>
+                    <span class="tooltip">Saved</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-cog'></i>
+                        <span class="links_name">Setting</span>
+                    </a>
+                    <span class="tooltip">Setting</span>
+                </li>
+            </ul>
+            <div class="content">
+                <div class="user">
+                    <div class="user_details">
+                        <img src="assets/img/user.jpg" alt="">
+                        <div class="name_job">
+                            <div class="name">Admin</div>
+                            <div class="job">Easy car Rental</div>
+                        </div>
+                    </div>
+                    <i class='bx bx-log-out' id="log_out"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main id="adminVehicle">
+        <header>
+            <!--   <nav class="navbar navbar-expand-lg bg-body-tertiary" id="adminNav">
+                   <div class="container-fluid">
+                       <img src="assets/img/logo.png" alt="logo" width="35" height="30">
+                       <a class="navbar-brand fw-bolder" href="#">Easy Car</a>
+
+                       &lt;!&ndash;   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                          </button>&ndash;&gt;
+                       <div class="collapse navbar-collapse" id="adminNavbarNav">
+                           <ul class="navbar-nav justify-content-center">
+                               <li class="nav-item">
+                                   <a class="nav-link active" id="NavDashBoard" aria-current="page" href="AdminDashBoard.html">Dash Board</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link active"  id="NavRentalReq"aria-current="page" href="AdminRentalReq.html">Rental Request</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link active"  id="NavCustomer"aria-current="page" href="CustomerDetail.html">Customer</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link active" id="NavVehicle" href="AdminVehicleManage.html">Vehicle</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link active" id="navDriver" href="AddDriver.html">Driver</a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="navUserNameCon" id="userNameNav">
+                       <img src="assets/img/user.jpg" alt="user" style="width: 27px">
+                       <h1 style="font-size: 13px" id="lblNavEmail">easycar@gmail.com</h1>
+                       <h2 style="font-size: 10px" id="lblNavUserName">Admin</h2>
+                   </div>
+
+               </nav>-->
+        </header>
+        <body>
+        <!--  <h1 class="title">Vehicle Manage</h1>
+          <hr style="width:93%;text-align:left;margin-left:43px">-->
+        <div class="carDetailsSecCon">
+            <section class="carManageImgSecAdmin">
+                <h1>Car Manage</h1>
+                <img src="assets/img/carsManage.png" alt="rotation">
+            </section>
+
+            <h1 class="vhTitle">Driver Registration Form</h1>
+
+            <input type="text" class="form-control-sm" id="txtVHSearch" placeholder="Search Vehicle">
+            <button id="btnVhSearch">Search</button>
+
+            <hr style="width:97%;text-align:left;margin-left:14px;margin-top: -148px;">
+            <section class="carManageSec">
+
+                <form class="row g-3" id="CarManageForm">
+
+                    <div class="col-md-4">
+                        <label for="txtCarRegId" class="form-label">Registration Number</label>
+                        <input type="text" class="form-control" id="txtCarRegId" placeholder="KN-9090" name="vid">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="txtCarBrand" class="form-label">Brand</label>
+                        <input type="email" class="form-control" id="txtCarBrand" placeholder="Toyota"name="brand">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="txtCarType" class="form-label">Type</label>
+                        <input type="email" class="form-control" id="txtCarType" placeholder="General"name="type">
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <label for="txtCarColor" class="form-label">color</label>
+                        <input type="text" class="form-control" id="txtCarColor" placeholder="Red" name="color">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="txtCarFuelType" class="form-label">FuelType</label>
+                        <input type="text" class="form-control" id="txtCarFuelType" placeholder="Petrol" name="fuelType">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="txtCarTranType" class="form-label">Transmission Type</label>
+                        <select id="txtCarTranType" class="form-select">
+                            <option selected>Auto</option>
+                            <option>Manual</option>
+
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="txtCarNoOfPassenger" class="form-label">Passengers</label>
+                        <select id="txtCarNoOfPassenger" class="form-select">
+                            <option>2</option>
+                            <option>4</option>
+                            <option>6</option>
+
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="txtFreeKmForDay" class="form-label">Free KM For Day</label>
+                        <input type="text" class="form-control" id="txtFreeKmForDay" placeholder="10km" name="freeKmForDay">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="txtFreeKmForMonth" class="form-label">Free KM For Month</label>
+                        <input type="text" class="form-control" id="txtFreeKmForMonth" placeholder="10km" name="freeKmForMonth">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="txtCarTranType" class="form-label"> Availability</label>
+                        <select id="txtCarIsAvailable" class="form-select">
+                            <option>Available</option>
+                            <option>Not Available</option>
+
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="txtCarMonthlyPrice" class="form-label">Monthly Price</label>
+                        <input type="text" class="form-control" id="txtCarMonthlyPrice" placeholder="" name="monthlyPrice">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="txtCarDailyPrice" class="form-label">Daily Price</label>
+                        <input type="text" class="form-control" id="txtCarDailyPrice" placeholder="" name="dailyPrice">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="txtPriceFormExKm" class="form-label">Price for extra Km</label>
+                        <input type="text" class="form-control" id="txtPriceFormExKm" placeholder="" name="priceForExtraKm">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="fileFront" class="form-label">Car Front Images</label>
+                        <input class="form-control" id="fileFront" name="myFileFront" type="file" >
+                    </div>
+                    <div class="col-md-4">
+                        <label for="fileBack" class="form-label">Car Back Images</label>
+                        <input class="form-control" id="fileBack" name="myFileBack" type="file" >
+                    </div>
+                    <div class="col-md-4">
+                        <label for="fileSide" class="form-label">Car Side Images</label>
+                        <input class="form-control" id="fileSide" name="myFileSide" type="file" >
+                    </div>
+                    <div class="col-md-4">
+                        <label for="fileInterior" class="form-label">Car Interior Images</label>
+                        <input class="form-control" id="fileInterior" name="myFileInterior" type="file" >
+                    </div>
+
+                    <div class="col-12">
+                        <button type="button" class="btn btn-primary"  id="submitVehicleDetail">Submit</button>
+                        <button type="button" class="btn btn-success"  id="updateVehicleDetail">Update</button>
+                        <button type="button" class="btn btn-danger"  id="deleteVehicleDetail">Delete</button>
+
+                    </div>
+                </form>
+            </section>
+
+            <h2 id="lblAllVehicle">All Vehicle</h2>
+            <hr style="width:97%;text-align:left;margin-top: 206px;margin-left: 13px;">
+
+
+            <section class="allVehicleCon">
+                <table class="table table-sm">
+                    <thead id="vhThead">
+                    <tr>
+                        <th scope="col">Vehicle Reg No</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">DailyPrice</th>
+                        <th scope="col">MonthlyPrice</th>
+                        <th scope="col">FreeKmForDay</th>
+                        <th scope="col">freeKmForMonth</th>
+                        <th scope="col">FuelType</th>
+                        <th scope="col">IsAvailable</th>
+                        <th scope="col">NoOfPassenger</th>
+                        <th scope="col">TransmissionType</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">PriceForExtraKm</th>
+
+
+                    </tr>
+                    </thead>
+                    <tbody id="tblAllVehicle">
+                    </tbody>
+                </table>
+            </section>
+
+        </div>
+
+        <script src="assets/js/jquery-3.6.1.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="controller/VehicleManage.js"></script>
+        </body>
+
+    </main>
+    <main id="adminRentalReq">
+        <body>
+        <header>
+
+        </header>
+
+        <section class="AdminRentalOutCon">
+            <div class="adminMainSec">
+                <div class="adminRentalTableSec">
+                    <h2>Car cart</h2>
+                    <hr style="width:97%;text-align:left;margin-left:8px;margin-top: 19px;">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Rental Id</th>
+                            <th scope="col">Customer Id</th>
+                            <th scope="col">Pick Up Date</th>
+                            <th scope="col">Return Date</th>
+                            <th scope="col">pick Up Venue</th>
+                            <th scope="col">Return Venue</th>
+                            <th scope="col">Status of request</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Option</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblCustomerReq">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="adminDriver">
+                    <h2 id="lblCar">Car and Driver Details</h2>
+                    <div class="row-cols-md-6">
+                        <select id="driverSelect" class="form-select-sm" style="">
+                        </select>
+                    </div>
+                    <hr style="width:97%;text-align:left;margin-left:8px;margin-top: -23px;">
+                    <table class="table table-sm">
+                        <thead>
+                        <tr>
+                            <th scope="col">Rent Id</th>
+                            <th scope="col">Vehicle Reg No</th>
+                            <th scope="col">Driver Id</th>
+                            <th scope="col">option</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblDriver">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="adminRentalSec">
+                <h2>Details</h2>
+                <hr style="width:97%;text-align:left;margin-left:8px;margin-top: 19px;">
+                <h3>Customer Nic</h3>
+
+                <div class="nicImg">
+
+                </div>
+
+                <h3 id="lblLossDamagePayment">loss damage payment slip</h3>
+                <div class="slipImg">
+
+                </div>
+
+                <div class="btnAccept">
+                    <button id="btnRequestAccept">Accept</button>
+                    <button id="btnRequestReject">Reject</button>
+                </div>
+            </div>
+        </section>
+
+        </body>
+    </main>
+    <main id="AddDriver">
+        <body>
+        <header>
+            <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary" id="adminNav">
+                 <div class="container-fluid">
+                     <img src="assets/img/logo.png" alt="logo" width="35" height="30">
+                     <a class="navbar-brand fw-bolder" href="#">Easy Car</a>
+
+                     &lt;!&ndash;   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>&ndash;&gt;
+                     <div class="collapse navbar-collapse" id="adminNavbarNav">
+                         <ul class="navbar-nav justify-content-center">
+                             <li class="nav-item">
+                                 <a class="nav-link active" id="NavDashBoard" aria-current="page" href="AdminDashBoard.html">Dash Board</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link active"  id="NavRentalReq"aria-current="page" href="AdminRentalReq.html">Rental Request</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link active"  id="NavCustomer"aria-current="page" href="CustomerDetail.html">Customer</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link active" id="NavVehicle" href="AdminVehicleManage.html">Vehicle</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link active" id="navDriver" href="AddDriver.html">Driver</a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="navUserNameCon" id="userNameNav">
+                     <img src="assets/img/user.jpg" alt="user" style="width: 27px">
+                     <h1 style="font-size: 13px" id="lblNavEmail">easycar@gmail.com</h1>
+                     <h2 style="font-size: 10px" id="lblNavUserName">Admin</h2>
+                 </div>
+
+             </nav>-->
+        </header>
+        <h1 class="title">Driver Registration Form</h1>
+
+        <input type="text" class="form-control-sm" id="txtDrSearch" placeholder="Search Driver">
+        <button id="btnDriSearch">Search</button>
+
+        <hr style="width: 90%;text-align:left;margin-left: 100px;margin-top: -35px;">
+        <div class="driverDetailsSecCon">
+            <section class="driverDetailsSec">
+
+                <form class="row g-3" id="driverRegForm">
+                    <div class="col-md-12">
+                        <label for="txtDriId" class="form-label">Driver Nic</label>
+                        <input type="text" class="form-control" id="txtDriId" placeholder="199078892827" name="driverId">
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="txtDriName" class="form-label">Driver Name</label>
+                        <input type="text" class="form-control" id="txtDriName" placeholder="Driver Name" name="driverName">
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="txtDriAva" class="form-label"> Availability</label>
+                        <select id="txtDriAva" class="form-select" name="availability">
+                            <option id="txtDrOp">Available</option>
+                            <option>Not Available</option>
+
+                        </select>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="txtdriNo" class="form-label">Contact no</label>
+                        <input type="text" class="form-control" id="txtdriNo" placeholder="+94778789178" name="driverContactNo">
+                    </div>
+
+                    <div class="col-12">
+                        <button type="button" id="btnSaveDriver" class="btn btn-primary">Submit</button>
+                    </div>
+
+                </form>
+
+
+            </section>
+            <section class="driverDetailImgSec">
+                <!--        <img src="assets/img/lambogini.png" alt="rotation">-->
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Driver Id</th>
+                        <th scope="col">Driver Name</th>
+                        <th scope="col">Availability</th>
+                        <th scope="col">Driver contactNo</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tblDriverDetail">
+
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <script src="assets/js/jquery-3.6.1.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="controller/DriverManage.js"></script>
+
+        </body>
+    </main>
+    <main id="viewCustomer">
+        <section id="viewCusMainCon">
+            <div id="cusImgCon">
+                <h2>Manage Customers</h2>
+                <hr style="width: 60%;text-align:left;margin-left: 34px;margin-top: 66px;color: white">
+                <h4>Don't forget to control customer activities that exist</h4>
+                <img src="assets/img/audi.png" alt="">
+            </div>
+            <div id="cusTblCon">
+                <div id="cusTblOut">
+                    <table class="table table-sm">
+                        <thead>
+                        <tr>
+                            <th scope="col">Cus NIC No</th>
+                            <th scope="col">Customer Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Contact No</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Option</th>
+
+                        </tr>
+                        </thead>
+                        <tbody id="tblViewAllCus">
+                        </tbody>
+                    </table>
+                </div>
+                <div id="cusNicImgCon">
+                    <h2>Customer Nic Image</h2>
+                    <div id="cusNicImgOut"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <main id="DashBoard">
+        <div class="DashBoardDetail">
+            <div class="shortCutCon">
+                <div class="dashBoardCard">
+                    <div class="cardDetail">
+                        <div class="cardImg">
+                            <img src="assets/img/Admin%20user.png" alt="admin">
+                        </div>
+                        <div class="cardText">
+                            <h2>Registered Users</h2>
+                            <h1>100</h1>
+                        </div>
+                    </div>
+                    <div class="cardLink">
+                        <h4 class="btnViewDash">View More</h4>
+                    </div>
+                </div>
+                <div class="dashBoardCard">
+                    <div class="cardDetail">
+                        <div class="cardImg">
+                            <img src="assets/img/carIcon2.jpg" alt="admin">
+                        </div>
+                        <div class="cardText">
+                            <h2>Available Vehicle</h2>
+                            <h1>30</h1>
+                        </div>
+                    </div>
+                    <div class="cardLink">
+                        <h4 class="btnViewDash">View More</h4>
+                    </div>
+                </div>
+                <div class="dashBoardCard">
+                    <div class="cardDetail">
+                        <div class="cardImg">
+                            <img src="assets/img/icon_career.webp" alt="admin">
+                        </div>
+                        <div class="cardText">
+                            <h2>Available Drivers</h2>
+                            <h1>30</h1>
+                        </div>
+                    </div>
+                    <div class="cardLink">
+                        <h4 class="btnViewDash">View More</h4>
+                    </div>
+                </div>
+                <div class="dashBoardCard">
+                    <div class="cardDetail">
+                        <div class="cardImg">
+                            <img src="assets/img/message.png" alt="message">
+                        </div>
+                        <div class="cardText">
+                            <h2>customers request</h2>
+                            <h1>100</h1>
+                        </div>
+                    </div>
+                    <div class="cardLink">
+                        <h4 class="btnViewDash">View More</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main id="income">
+        <section id="incomeMainOutCon">
+            <div id="incomeImgCon">
+                <h2>Manage Income</h2>
+                <hr style="width: 60%;text-align:left;margin-left: 34px;margin-top: 66px;color: white">
+                <h4>View income daily,monthly,weekly,annually and Manage it</h4>
+                <img src="assets/img/rangeRover.png" alt="">
+            </div>
+            <div id="incomeDetailCon">
+                <div class="incomeCardCon">
+                    <div class="cardImgCon">
+                        <h1>Daily Income</h1>
+                        <img src="assets/img/income.jpg" alt="income">
+
+                    </div>
+                    <div class="cardDetailCon">
+                        <h2>last 24 hours income</h2>
+                        <h3>Rs</h3>
+                        <h1 id="lblDaily">00.00</h1>
+                    </div>
+                </div>
+                <div class="incomeCardCon">
+                    <div class="cardImgCon">
+                        <h1>Weekly Income</h1>
+                        <img src="assets/img/income.jpg" alt="income">
+
+                    </div>
+                    <div class="cardDetailCon">
+                        <h2>last 7 days income</h2>
+                        <h3>Rs</h3>
+                        <h1 id="lblWeekly">00.00</h1>
+                    </div>
+                </div>
+                <div class="incomeCardCon">
+                    <div class="cardImgCon">
+                        <h1>Monthly Income</h1>
+                        <img src="assets/img/income.jpg" alt="income">
+
+                    </div>
+                    <div class="cardDetailCon">
+                        <h2>last  30 days income</h2>
+                        <h3>Rs</h3>
+                        <h1 id="lblMonthly">00.00</h1>
+                    </div>
+                </div>
+                <div class="incomeCardCon">
+                    <div class="cardImgCon">
+                        <h1>Annual Income</h1>
+                        <img src="assets/img/income.jpg" alt="income">
+
+                    </div>
+                    <div class="cardDetailCon">
+                        <h2>last 12 Months income</h2>
+                        <h3>Rs</h3>
+                        <h1 id="lblAnnually">00.00</h1>
+                    </div>
+                </div>
+                <div class="totalCardCon">
+                    <div class="totCardImgCon">
+                        <h1>Total Income</h1>
+                        <img src="assets/img/tot1.png" alt="total">
+                    </div>
+                    <div class="totDetailCon">
+                        <h3>Rs</h3>
+                        <h1 id="lblTotIncome">00.00</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</main>
+
 
 
 
@@ -1095,6 +1749,9 @@
 <script src="controller/DriverManage.js"></script>
 <script src="controller/VehicleManage.js"></script>
 <script src="controller/CarHome.js"></script>
+<script src="controller/AdminRentalReq.js"></script>
+<script src="controller/AdminViewAllCustomer.js"></script>
+<script src="controller/IncomeController.js"></script>
 
 
 <script>
@@ -1106,6 +1763,8 @@
     $("#userNameNav").hide();
     $("#addToCarPage").hide();
     $("#adminDashBoard").hide();
+    $("#DriverSchedule").hide();
+    $("#Admin").hide();
 
 
     $("#btnSignIn").click(function (){
@@ -1116,6 +1775,7 @@
         $("#cusDetail").hide();
         $("#HomePage").hide();
         $(".AdminRentalOutCon").hide();
+        $("#DriverSchedule").hide();
 
     });
   $("#btnSignUp").click(function (){
@@ -1126,6 +1786,7 @@
       $("#CustomerReg").show();
       $("#cusDetail").hide();
       $("#HomePage").hide();
+      $("#DriverSchedule").hide();
 
   });
 /*  $("#btnLogin").click(function (){
@@ -1142,6 +1803,7 @@
         $("#cusDetail").hide();
         $("#HomePage").hide();
         $("#rentCar").show();
+        $("#DriverSchedule").hide();
     });
     $("#NavHome").click(function (){
         $("#loginPage").hide();
@@ -1150,6 +1812,7 @@
         $("#HomePage").show();
         $("#addToCarPage").hide();
         $("#rentCar").hide();
+        $("#DriverSchedule").hide();
         boxShadowRemove();
     });
     $("#NavRentCar").click(function (){
@@ -1158,6 +1821,7 @@
         $("#cusDetail").hide();
         $("#HomePage").hide();
         $("#rentCar").show();
+        $("#DriverSchedule").hide();
         boxShadowRemove();
     });
     $("#NavRentCar").click(function (){
@@ -1167,6 +1831,7 @@
         $("#HomePage").hide();
         $("#addToCarPage").hide();
         $("#rentCar").show();
+        $("#DriverSchedule").hide();
         boxShadowRemove();
     });
     $(".rentNow").click(function (){
@@ -1175,6 +1840,7 @@
         $("#cusDetail").hide();
         $("#HomePage").hide();
         $("#rentCar").hide();
+        $("#DriverSchedule").hide();
        alert(this.id);
        getVehicleDetail(this.id);
         $("#addToCarPage").show();

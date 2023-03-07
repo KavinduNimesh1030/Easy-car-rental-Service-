@@ -52,11 +52,7 @@ public class DriverController {
         RentDetailDTO rentDetailDTO = rentCarService.getRentByDriverId(driverId);
         return new ResponseUtil("200","done",rentDetailDTO);
     }
-    @GetMapping(path = "/{driverName}")
-    public ResponseUtil getRentByName(@PathVariable String driverName){
-        RentDetailDTO rentDetailDTO = rentCarService.getRentByDriverId(driverName);
-        return new ResponseUtil("200","done",rentDetailDTO);
-    }
+
 
 
 }
