@@ -9,6 +9,8 @@ function getAllVehicle(){
             console.log(resp)
             for (const r of resp.data) {
 
+                $("#brand").append("<option>"+r.brand+"</option>");
+
                 $(".carOutSec").append("<div class=\"carCardInRent\">\n" +
                     "            <div class=\"carImg\">\n" +
                     "\n" +
@@ -112,11 +114,11 @@ $('body').on('click', '.rentNow', function() {
 });
 $(".btnCategoriesFind").click(function (){
     $(".carOutSec").empty();
-    let brand = "Toyota Prius";
+    let brand = $("#brand").val();
     let fuelType =$("#fuelType").val();
     let noOfPassenger =$("#noOfPassenger").val();
     let transitionType = $("#transitionType").val();
-    let type ="General";
+    let type =$("#type").val();
     let lowPrice =$("#txtLowPrice").val();
     let maxPrice =$("#txtMaxPrice").val();
 
@@ -127,7 +129,8 @@ $(".btnCategoriesFind").click(function (){
         success: function (resp) {
             console.log(resp.data);
             if (resp.data == ""){
-                alert("There is a no Matching Vehicle..!")
+                alert("There is a no Matching Vehicle..!");
+                getAllVehicle();
             }
             for (const r of resp.data) {
                 $(".carOutSec").append("<div class=\"carCardInRent\">\n" +
