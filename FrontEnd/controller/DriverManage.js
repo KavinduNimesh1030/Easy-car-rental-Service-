@@ -132,7 +132,7 @@ function deleteDriver(){
     let id = $("#txtDrSearch").val();
 
     $.ajax({
-        url: baseUrl+"Driver?driverId="+id,
+        url: baseUrl+"Driver?dId="+id,
         method :"DELETE",
         success: function (resp) {
             alert(resp.message);

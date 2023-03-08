@@ -14,5 +14,6 @@ public interface DriverService {
     DriverDTO getDriverById(String driverId);
     void addDriver(DriverDTO driverDTO);
     ArrayList<DriverDTO>getAllDrivers();
+    void deleteDriver(String dId);
 
 }
