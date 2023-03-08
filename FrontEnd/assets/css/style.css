@@ -1431,7 +1431,7 @@ option {
 .title {
     font-size: 20px;
     margin-top: 31px;
-    margin-left: 100px;
+    margin-left: 41px;
 }
 #viewCusMainCon{
     width: 93vw;
@@ -1663,6 +1663,37 @@ option {
     gap: 29px;
     /* justify-content: center; *//**/
 }
+#driverImgCon{
+    width: 90%;
+    height: 35%;
+    transform: translateX(63px);
+    margin-top: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(160deg, #e7280f 50%, #ffb939) ;
+}
+#driverImgCon>img{
+    width: 437px;
+    transform: translate(742px, -151px);
+
+}
+#driverImgCon>h4{
+    transform: translate(32px, -12px);
+    font-size: 15px;
+    color: white;
+}
+#driverImgCon>h2{
+    transform: translate(32px, 67px);
+    color: white;
+    font-size: 44px;
+    font-weight: 600;
+}
+.driverTitle{
+    font-size: 20px;
+    margin-top: 31px;
+    margin-left: 98px;
+}
+/*---------------------------Validation textfeild*/
 label.error.fail-alert {
     border: 2px solid red;
     border-radius: 4px;

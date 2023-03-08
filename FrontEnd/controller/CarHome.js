@@ -89,7 +89,6 @@ $('body').on('click', '.rentNow', function() {
         dataType:"json",
         success: function (resp) {
             if(resp.data.isAvailable === "Available"){
-
                 $("#rentCar").hide();
                 $("#loginPage").hide();
                 $("#CustomerReg").hide();

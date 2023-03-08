@@ -75,7 +75,7 @@ function getCustomerImgName(cusId){
             console.log(resp)
             for (const r of resp.data) {
                 if(r.id == cusId){
-                    alert("matching"+r.imgPath);
+                  /*  alert("matching"+r.imgPath);*/
                     loadCustomerImg(r.imgPath);
                 }
             }
@@ -133,8 +133,8 @@ function rentalUpdate(request){
         dataType:"Json",
         method: "get",
         success: function (resp) {
-            alert(resp.message);
-            alert(resp.data);
+         /*   alert(resp.message);
+            alert(resp.data);*/
             rentDetailDup = resp.data.rentDetail;
             changeDriver();
                 let rent ={
@@ -162,6 +162,7 @@ function rentalUpdate(request){
                     success: function (resp) {
                         alert(resp.message);
                         getAllRentalDetails();
+                        getAllDriversAdmin();
 
                     },
                     error: function (error) {
@@ -175,7 +176,7 @@ function rentalUpdate(request){
 
                 //get Driver Id nd Update Driver-----------------------------------
             for (const re of resp.data.rentDetail) {
-                alert("dr" + re.driverId)
+               /* alert("dr" + re.driverId)*/
                 updateDriverAvailability(re.driverId,"unAvailable")
             }
 
@@ -242,6 +243,7 @@ function rentalUpdate(request){
 }
 getAllDriversAdmin();
 function getAllDriversAdmin(){
+    $("#driverSelect").empty();
     $.ajax({
         url: baseUrl+"Driver",
         method :"get",

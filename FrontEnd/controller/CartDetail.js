@@ -3,7 +3,7 @@ let amount =0;
 
 function setLossDamageP(lossDamage) {
     amount = amount+lossDamage;
-    alert(amount);
+/*    alert(amount);*/
     $("#lblLossDamage").text(amount);
 }
 
@@ -56,7 +56,7 @@ $('#DatReturnDate').change(function(){
 
     var days = diff/1000/60/60/24;
 
-    alert(days);
+   /* alert(days);*/
 
     for (let i = 0; i < carDailyPrice.length; i++) {
         alert(carDailyPrice[i]);
