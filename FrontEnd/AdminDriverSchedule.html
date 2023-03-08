@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Driver Schedule</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="adminNav">
+        <div class="container-fluid">
+            <img src="assets/img/logo.png" alt="logo" width="35" height="30" style="transform: translateX(70px);">
+            <a class="navbar-brand fw-bolder" href="#" style="transform: translateX(-889px);">Easy Car</a>
+
+            <!--   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>-->
+            <!--  <div class="collapse navbar-collapse" id="adminNavbarNav">
+                  <ul class="navbar-nav justify-content-center">
+                      <li class="nav-item">
+                          <a class="nav-link active" id="NavDashBoard" aria-current="page" href="AdminDashBoard.html">Dash Board</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active"  id="NavRentalReq"aria-current="page" href="AdminRentalReq.html">Rental Request</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active"  id="NavCustomer"aria-current="page" href="CustomerDetail.html">Customer</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" id="NavVehicle" href="AdminVehicleManage.html">Vehicle</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" id="navDriver" href="AddDriver.html">Driver</a>
+                      </li>
+                  </ul>
+              </div>-->
+        </div>
+        <div class="navUserNameCon" id="userNameNav">
+            <img src="assets/img/user.jpg" alt="user" style="width: 27px">
+            <h1 style="font-size: 13px" id="lblNavEmail" class="lblDriE">easycar@gmail.com</h1>
+            <h2 style="font-size: 10px" id="lblNavUserName" class="lblDriU">Admin</h2>
+        </div>
+
+    </nav>
+</header>
+</header>
+<section>
+    <section id="driverScOutCon">
+        <div id="incomeImgCon">
+            <h2>Driver Schedule</h2>
+            <hr style="width: 60%;text-align:left;margin-left: 34px;margin-top: 66px;color: white">
+            <h4>View your schedule for next drive</h4>
+            <img src="assets/img/rangeRover.png" alt="">
+        </div>
+        <div id="DriverScDetailCon">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Vehicle Reg No</th>
+                    <th scope="col">Pick Up Date</th>
+                    <th scope="col">Pick Time</th>
+                    <th scope="col">Return Date</th>
+                </tr>
+                </thead>
+                <tbody id="tblAdminDriverSchedule">
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</section>
+
+<script src="controller/RentDetail.js"></script>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

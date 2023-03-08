@@ -6,6 +6,7 @@ var vehicleIds =[];
 let aRentId = "";
 getAllAvailableDriver();
 getRentId();
+getAllRent();
 function  getRentId(){
 
 
@@ -260,5 +261,20 @@ function getAllAvailableDriver(){
         });
 
 
+
+}
+
+function getAllRent(){
+    $.ajax({
+        url: baseUrl+"Rent",
+        dataType:"Json",
+        method: "get",
+        success: function (resp) {
+            for (let datum of resp.data) {
+                $("#tblAdminDriverSchedule").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+resp.data.vid+"</td><td>"+resp.data.pickDate+"</td><td>"+resp.data.pickTime+"</td><td>"+resp.data.returnDate+"</td><td></tr>");
+            }
+        }
+
+    });
 
 }
