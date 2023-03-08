@@ -191,33 +191,33 @@
 
                     <div class="col-md-4">
                         <label for="txtCarRegId" class="form-label">Registration Number</label>
-                        <input type="text" class="form-control" id="txtCarRegId" placeholder="KN-9090" name="vid">
+                        <input type="text" class="form-control" id="txtCarRegId" placeholder="KN-9090" name="vid" minlength="7">
                     </div>
 
                     <div class="col-md-4">
                         <label for="txtCarBrand" class="form-label">Brand</label>
-                        <input type="email" class="form-control" id="txtCarBrand" placeholder="Toyota"name="brand">
+                        <input type="text" class="form-control" id="txtCarBrand" placeholder="Toyota"name="brand" minlength="5">
                     </div>
 
                     <div class="col-md-4">
                         <label for="txtCarType" class="form-label">Type</label>
-                        <input type="email" class="form-control" id="txtCarType" placeholder="General"name="type">
+                        <input type="text" class="form-control" id="txtCarType" placeholder="General"name="type" minlength="5">
                     </div>
 
 
                     <div class="col-md-4">
                         <label for="txtCarColor" class="form-label">color</label>
-                        <input type="text" class="form-control" id="txtCarColor" placeholder="Red" name="color">
+                        <input type="text" class="form-control" id="txtCarColor" placeholder="Red" name="color" minlength="3">
                     </div>
 
                     <div class="col-md-4">
                         <label for="txtCarFuelType" class="form-label">FuelType</label>
-                        <input type="text" class="form-control" id="txtCarFuelType" placeholder="Petrol" name="fuelType">
+                        <input type="text" class="form-control" id="txtCarFuelType" placeholder="Petrol" name="fuelType" minlength="5">
                     </div>
 
                     <div class="col-md-4">
                         <label for="txtCarTranType" class="form-label">Transmission Type</label>
-                        <select id="txtCarTranType" class="form-select">
+                        <select id="txtCarTranType" class="form-select" required>
                             <option selected>Auto</option>
                             <option>Manual</option>
 
@@ -226,7 +226,7 @@
 
                     <div class="col-md-4">
                         <label for="txtCarNoOfPassenger" class="form-label">Passengers</label>
-                        <select id="txtCarNoOfPassenger" class="form-select">
+                        <select id="txtCarNoOfPassenger" class="form-select" required>
                             <option>2</option>
                             <option>4</option>
                             <option>6</option>
@@ -235,11 +235,11 @@
                     </div>
                     <div class="col-md-4">
                         <label for="txtFreeKmForDay" class="form-label">Free KM For Day</label>
-                        <input type="text" class="form-control" id="txtFreeKmForDay" placeholder="10km" name="freeKmForDay">
+                        <input type="text" class="form-control" id="txtFreeKmForDay" placeholder="10km" name="freeKmForDay" required>
                     </div>
                     <div class="col-md-4">
                         <label for="txtFreeKmForMonth" class="form-label">Free KM For Month</label>
-                        <input type="text" class="form-control" id="txtFreeKmForMonth" placeholder="10km" name="freeKmForMonth">
+                        <input type="text" class="form-control" id="txtFreeKmForMonth" placeholder="10km" name="freeKmForMonth" required>
                     </div>
 
                     <div class="col-md-4">
@@ -268,7 +268,7 @@
 
                     <div class="col-md-4">
                         <label for="fileFront" class="form-label">Car Front Images</label>
-                        <input class="form-control" id="fileFront" name="myFileFront" type="file" >
+                        <input class="form-control" id="fileFront" name="myFileFront" type="file">
                     </div>
                     <div class="col-md-4">
                         <label for="fileBack" class="form-label">Car Back Images</label>
@@ -680,6 +680,10 @@
 <script src="controller/AdminRentalReq.js"></script>
 <script src="controller/AdminViewAllCustomer.js"></script>
 <script src="controller/IncomeController.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 <script>
 
@@ -737,6 +741,49 @@
         $("#viewCustomer").hide();
         $("#DashBoard").hide();
         $("#income").show();
+    });
+
+    $(document).ready(function() {
+        $("#CarManageForm").validate({
+            rules: {
+                monthlyPrice: {
+                    required: true,
+                    number: true,
+                    min: 18
+                },
+                dailyPrice: {
+                    required: true,
+                    number: true,
+                    min: 18
+                },
+                priceForExtraKm: {
+                    required: true,
+                    number: true,
+                    min: 18
+                }
+            },
+            errorClass: "error fail-alert",
+            validClass: "valid success-alert",
+            messages : {
+                vid: {
+                    minlength: "The Reg Id should be in the format: AB-1020"
+                },
+                monthlyPrice: {
+                    required: "People with age over 50 have to enter their weight",
+                    number: "Please enter monthly price as a numerical value"
+                },
+                dailyPrice: {
+                    required: "People with age over 50 have to enter their weight",
+                    number: "Please enter daily price as a numerical value"
+                },
+                priceForExtraKm: {
+                    required: "People with age over 50 have to enter their weight",
+                    number: "Please enter price as a numerical value"
+                }
+
+
+            }
+        });
     });
 </script>
 </body>
