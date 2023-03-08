@@ -68,3 +68,10 @@ $('#DatReturnDate').change(function(){
     dupTotal = total;
     total =0;
 });
+
+function setQuickDetail(pDate,rDate,loc){
+   /* $('#DatReturnDate').val(rDate);*/
+    $('#DatPickDate').val(rDate);
+    $('#txtPickUpLocation').val(loc);
+
+}

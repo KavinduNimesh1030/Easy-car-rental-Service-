@@ -92,7 +92,7 @@
 
             </div>
             <div>
-                <button>search</button>
+                <button id="btnQuickSearch">search</button>
             </div>
         </div>
     </section>
@@ -1534,9 +1534,21 @@
 
         });
 
+    });
 
-
-
+    $("#btnQuickSearch").click(function (){
+        let pDate = $("#txtPickDate").val();
+        let rDate = $("#txtReturnDate").val();
+        let location = $("#txtLocation").val();
+        setQuickDetail(pDate,rDate,location);
+        $("#loginPage").hide();
+        $("#CustomerReg").hide();
+        $("#cusDetail").hide();
+        $("#HomePage").hide();
+        $("#addToCarPage").hide();
+        $("#rentCar").show();
+        $("#DriverSchedule").hide();
+        boxShadowRemove();
     });
 
 
