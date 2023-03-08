@@ -47,7 +47,6 @@ $('#driverOpSelector').change(function() {
 
 });
 
-
 $('#DatReturnDate').change(function(){
     var start =new Date($('#DatPickDate').val());
     var end =  new Date($('#DatReturnDate').val());
@@ -70,7 +69,7 @@ $('#DatReturnDate').change(function(){
 });
 
 function setQuickDetail(pDate,rDate,loc){
-   /* $('#DatReturnDate').val(rDate);*/
+    $('#DatReturnDate').val(rDate);
     $('#DatPickDate').val(rDate);
     $('#txtPickUpLocation').val(loc);
 
