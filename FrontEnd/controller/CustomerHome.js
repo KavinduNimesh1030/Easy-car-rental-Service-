@@ -41,6 +41,13 @@ function navigationBefore(){
     $("#cusDetail").hide();
     $("#HomePage").hide();
 
+    $("#rentCar").hide();
+    $("#addToCarPage").hide();
+    $("#adminDashBoard").hide();
+    $("#DriverSchedule").hide();
+    $("#Admin").hide();
+
+
 }
 /*function navigationAfter(){
     $("#loginPage").hide();

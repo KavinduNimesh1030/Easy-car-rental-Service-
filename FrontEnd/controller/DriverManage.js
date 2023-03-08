@@ -128,4 +128,23 @@ function driverSchedule(id){
 
     });
 }
+function deleteDriver(){
+    let id = $("#txtDrSearch").val();
+
+    $.ajax({
+        url: baseUrl+"Driver?driverId="+id,
+        method :"DELETE",
+        success: function (resp) {
+            alert(resp.message);
+            getAllDrivers();
+
+        },
+        error: function(error) {
+            let prase = JSON.parse(error.responseText);
+            alert(prase.message);
+
+        }
+
+    });
+}
 

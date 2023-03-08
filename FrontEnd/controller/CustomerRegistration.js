@@ -94,8 +94,8 @@ function sendImagePath() {
         processData: false,
         data: data,
         success: function (resp) {
-            alert(resp);
-            alert("Successfully Uploaded");
+            /*alert(resp);
+            alert("Successfully Uploaded");*/
            /* loadTheLastUploadedImage();*/
         },
         error: function (err) {
@@ -147,8 +147,5 @@ function viewCustomerRental(){
     });
 }
 
-(document).ready(function() {
-
-});
 
 
