@@ -105,7 +105,7 @@ function sendImagePath() {
 }
 
 function viewCustomerRental(){
-
+    $("#tblRentDetail").empty();
     let navEmail= $("#lblNavEmail").text();
     $.ajax({
         url: baseUrl+"Customer?email="+navEmail,
@@ -113,27 +113,28 @@ function viewCustomerRental(){
         dataType:"json",
         success: function (resp) {
             console.log(resp);
+           if(resp.data.email === navEmail){
+               $.ajax({
+                   url: baseUrl+"Rent?cusId="+resp.data.id,
+                   method :"get",
+                   dataType:"json",
+                   success: function (resp) {
+                       console.log(resp);
+                       for (let r of resp.data) {
+                           $("#tblRentDetail").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.rentId+"</td><td>"+r.pickUpDate+"</td><td>"+r.returnDate+"</td><td>"+r.pickUpVenue+"</td><td>"+r.returnVenue+"</td><td>"+r.pickUpTime+"</td><td>"+r.statusOfReq+"</td></tr>");
+                       }
 
-            $.ajax({
-                url: baseUrl+"Rent?cusId="+resp.data.id,
-                method :"get",
-                dataType:"json",
-                success: function (resp) {
-                    console.log(resp);
-                    for (let r of resp.data) {
-                        $("#tblRentDetail").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.rentId+"</td><td>"+r.pickUpDate+"</td><td>"+r.returnDate+"</td><td>"+r.pickUpVenue+"</td><td>"+r.returnVenue+"</td><td>"+r.pickUpTime+"</td><td>"+r.statusOfReq+"</td></tr>");
-                    }
 
+                   },
+                   error: function(error) {
+                       let prase = JSON.parse(error.responseText);
+                       console.log(prase.message);
 
-                },
-                error: function(error) {
-                    let prase = JSON.parse(error.responseText);
-                    console.log(prase.message);
+                   }
 
-                }
+               });
 
-            });
-
+           }
 
 
         },
