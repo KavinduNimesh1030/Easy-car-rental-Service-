@@ -8,11 +8,12 @@ getAllAvailableDriver();
 getRentId();
 function  getRentId(){
     $.ajax({
-        url: baseUrl+"Rent?a"+"a",
+        url: baseUrl+"Rent/"+"id",
         dataType:"Json",
         method: "get",
         success: function (resp) {
             console.log("43"+resp)
+            alert(resp.data);
           /* alert(resp.data.rentId);*/
         }
 

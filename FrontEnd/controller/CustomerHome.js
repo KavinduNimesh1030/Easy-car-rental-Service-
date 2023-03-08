@@ -115,7 +115,7 @@ function getAllVehicleForHome() {
                         "                </div>\n" +
                         "            </div>\n" +
                         "        </div>")
-                
+
                     if(a === 4){
                         return false;
                     }

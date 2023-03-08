@@ -47,10 +47,15 @@ public class RentCarController {
         return new ResponseUtil("200","done",all);
 
     }
-    @GetMapping(params = "a", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil generateRentalId() {
+    @GetMapping(path = "/{id}")
+    public ResponseUtil generateRentalId(@PathVariable String id) {
+        System.out.println("id"+id);
         System.out.println("rent id"+rentCarService.generateRentalId());
         return new ResponseUtil("200", "Ok", rentCarService.generateRentalId());
     }
-
+ /*   @GetMapping(params = "driverId")
+    public ResponseUtil getRentByDriverId(String driverId){
+        RentDetailDTO rentDetailDTO = rentCarService.getRentByDriverId(driverId);
+        return new ResponseUtil("200","done",rentDetailDTO);
+    }*/
 }
