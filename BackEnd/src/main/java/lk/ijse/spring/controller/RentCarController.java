@@ -42,8 +42,9 @@ public class RentCarController {
         return new ResponseUtil("200","done",rentalDTO);
     }
     @GetMapping(params = "CusId")
-    public ResponseUtil getRentalByCusId(String cusId){
-        ArrayList<RentalDTO> all = rentCarService.getRentalByCusId(cusId);
+    public ResponseUtil getRentalByCusId(String CusId){
+        System.out.println("----------------"+CusId);
+        ArrayList<RentalDTO> all = rentCarService.getRentalByCusId(CusId);
         return new ResponseUtil("200","done",all);
 
     }

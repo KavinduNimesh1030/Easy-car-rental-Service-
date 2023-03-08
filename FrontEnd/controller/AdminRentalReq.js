@@ -269,7 +269,7 @@ $('body').on('click', '.Drivereditbtn', function() {
     $("#driverSelect").prop('disabled', false);
 
     //get clicking row driver id;
-    alert("id"+this.id);
+    /*alert("id"+this.id);*/
     driverIdDup = this.id;
     btnId = this.id;
 
@@ -341,7 +341,7 @@ function updateDriverAvailability(id,ava) {
                     contentType: "application/json",
                     success: function (resp) {
 
-                        alert("Susses..!");
+                       /* alert("Susses..!");*/
 
                     },
                     error: function (error) {

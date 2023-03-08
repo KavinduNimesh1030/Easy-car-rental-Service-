@@ -95,7 +95,7 @@ $('body').on('click', '.rentNow', function() {
                 $("#cusDetail").hide();
                 $("#HomePage").hide();
 
-                alert(vid);
+               /* alert(vid);*/
                 getVehicleDetail(vid);
                 $("#addToCarPage").show();
                 boxShadowRemove();

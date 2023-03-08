@@ -17,7 +17,7 @@ function getVehicleDetail(id){
             console.log(resp);
             console.log(resp.data)
             carDailyPrice.push(resp.data.dailyPrice);
-            alert(resp.data.dailyPrice);
+           /* alert(resp.data.dailyPrice);*/
 
 
                 $("#tblAddToCart").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+resp.data.vid+"</td><td>"+resp.data.brand+"</td><td>"+resp.data.dailyPrice+"</td><td>"+resp.data.monthlyPrice+"</td><td>"+resp.data.priceForExtraKm+"</td><td>"+resp.data.freeKmForDay+"</td><td>"+resp.data.freeKmForMonth+"</td></tr>")
@@ -58,7 +58,7 @@ $('#DatReturnDate').change(function(){
    /* alert(days);*/
 
     for (let i = 0; i < carDailyPrice.length; i++) {
-        alert(carDailyPrice[i]);
+        /*alert(carDailyPrice[i]);*/
         total = total+carDailyPrice[i];
     }
     total = total*days;

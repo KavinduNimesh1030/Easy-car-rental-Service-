@@ -107,21 +107,27 @@ function sendImagePath() {
 function viewCustomerRental(){
     $("#tblRentDetail").empty();
     let navEmail= $("#lblNavEmail").text();
+    console.log("navE"+navEmail)
     $.ajax({
         url: baseUrl+"Customer?email="+navEmail,
         method :"get",
         dataType:"json",
         success: function (resp) {
             console.log(resp);
-           if(resp.data.email === navEmail){
+           console.log("name "+resp.data.id);
+           let cusId = resp.data.id;
                $.ajax({
-                   url: baseUrl+"Rent?cusId="+resp.data.id,
+                   url: baseUrl+"Rent?CusId="+resp.data.id,
                    method :"get",
                    dataType:"json",
                    success: function (resp) {
-                       console.log(resp);
+                       console.log(resp.data);
                        for (let r of resp.data) {
-                           $("#tblRentDetail").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.rentId+"</td><td>"+r.pickUpDate+"</td><td>"+r.returnDate+"</td><td>"+r.pickUpVenue+"</td><td>"+r.returnVenue+"</td><td>"+r.pickUpTime+"</td><td>"+r.statusOfReq+"</td></tr>");
+                           console.log("customerId "+r.cusId);
+                           if(r.cusId ===cusId ){
+                               $("#tblRentDetail").append("<tr style='height: 71px;column-gap: 10px;gap: 10px;box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);border-radius: 10px;'><td>"+r.rentId+"</td><td>"+r.pickUpDate+"</td><td>"+r.returnDate+"</td><td>"+r.pickUpVenue+"</td><td>"+r.returnVenue+"</td><td>"+r.pickUpTime+"</td><td>"+r.statusOfReq+"</td></tr>");
+                           }
+
                        }
 
 
@@ -134,7 +140,7 @@ function viewCustomerRental(){
 
                });
 
-           }
+
 
 
         },

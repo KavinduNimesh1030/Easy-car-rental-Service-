@@ -55,7 +55,7 @@ function updateVehicleAva(vid) {
                 data : JSON.stringify(vehicle),
                 contentType: "application/json",
                 success: function (resp) {
-                    alert("updated..!");
+                   /* alert("updated..!");*/
                     getAllVehicleAdmin();
 
                 },
@@ -110,7 +110,6 @@ function getRentDetail(rentId) {
 
 $("#btnRentSubmit").click(function (){
     let rentId = aRentId;
-    alert(rentId);
     let lossDamageWaiver = $("#lblLossDamage").text();
     let duration = $("#txtDuration").val();
     let pickUpDate = $("#DatPickDate").val();
@@ -178,8 +177,8 @@ function sendRentImagePath() {
         processData: false,
         data: data,
         success: function (resp) {
-            alert(resp);
-            alert("Successfully Uploaded");
+          /*  alert(resp);*/
+           /* alert("Successfully Uploaded");*/
             /* loadTheLastUploadedImage();*/
         },
         error: function (err) {
@@ -189,14 +188,14 @@ function sendRentImagePath() {
 }
 //get added driver ids and updated driver availability
 function a(id){
-    alert(id);
+   /* alert(id);*/
     $.ajax({
         url: baseUrl + "Driver?driverId="+id,
         dataType:"Json",
         method: "get",
         success: function (resp) {
-            alert(resp.message);
-            alert(resp.data);
+            /*alert(resp.message);
+            alert(resp.data);*/
 
                 console.log("did"+resp.data.driverId);
                 let Driver = {
@@ -214,7 +213,7 @@ function a(id){
                 contentType: "application/json",
                 success: function (resp) {
 
-                    alert(resp.message);
+                   /* alert(resp.message);*/
 
                 },
                 error: function (error) {

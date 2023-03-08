@@ -1693,7 +1693,7 @@ option {
     margin-top: 31px;
     margin-left: 98px;
 }
-/*---------------------------Validation textfeild*/
+/*---------------------------Validation textfeild------------------*/
 label.error.fail-alert {
     border: 2px solid red;
     border-radius: 4px;
