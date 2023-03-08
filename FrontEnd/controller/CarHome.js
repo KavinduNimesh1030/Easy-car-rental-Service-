@@ -99,12 +99,11 @@ $('body').on('click', '.rentNow', function() {
                 alert(vid);
                 getVehicleDetail(vid);
                 $("#addToCarPage").show();
-
                 boxShadowRemove();
+
             }else {
                 alert("This car not Available right now..!");
             }
-
 
         },
         error: function(error) {

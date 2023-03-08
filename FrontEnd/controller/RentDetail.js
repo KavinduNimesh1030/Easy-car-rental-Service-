@@ -3,21 +3,24 @@ var driverId = "D005";
 // var Driver ={};
 var driverIds= [];
 var vehicleIds =[];
-
+let aRentId = "";
 getAllAvailableDriver();
 getRentId();
 function  getRentId(){
+
+
     $.ajax({
         url: baseUrl+"Rent/"+"id",
         dataType:"Json",
         method: "get",
         success: function (resp) {
             console.log("43"+resp)
-            alert(resp.data);
+            aRentId = resp.data;
           /* alert(resp.data.rentId);*/
         }
 
     });
+
 }
 
 function updateVehicleAva(vid) {
@@ -106,7 +109,8 @@ function getRentDetail(rentId) {
 
 
 $("#btnRentSubmit").click(function (){
-    let rentId = "R00-0004"
+    let rentId = aRentId;
+    alert(rentId);
     let lossDamageWaiver = $("#lblLossDamage").text();
     let duration = $("#txtDuration").val();
     let pickUpDate = $("#DatPickDate").val();

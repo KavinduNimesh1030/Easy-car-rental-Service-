@@ -9,7 +9,9 @@
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-  <!--  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>-->
+
+
+    <!--  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>-->
 </head>
 <body>
 <header>
@@ -376,12 +378,12 @@
         </div>
         <div class="LoginDetailCon">
             <div class="loginFormOutCon">
-                <form>
+                <form id="basic-form">
                     <h1 class="loginTextInLoginForm">Login</h1>
                     <!-- Email input -->
                     <div class="form-outline mb-4">
-                        <input id="txtLoginEmail" class="form-control" name="email" />
-                        <label class="form-label" for="txtLoginEmail">Email address</label>
+                        <input id="txtLoginEmail" class="form-control" name="email" minlength="5" required/>
+                        <label class="form-label" for="txtLoginEmail">Email address </label>
                     </div>
 
                     <!-- Password input -->
@@ -438,42 +440,42 @@
 
                 <div class="col-md-6">
                     <label for="txtCusRegId" class="form-label">Customer NIC</label>
-                    <input type="text" class="form-control" id="txtCusRegId" placeholder="190039483728" name="id">
+                    <input type="text" class="form-control" id="txtCusRegId" placeholder="190039483728" name="id" minlength="12" required>
                 </div>
 
                 <div class="col-md-6">
                     <label for="txtCusEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="txtCusEmail" placeholder="name@gmail.com"name="email">
+                    <input type="email" class="form-control" id="txtCusEmail" placeholder="name@gmail.com"name="email" required>
                 </div>
 
                 <div class="col-md-6">
                     <label for="txtPassword" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="txtPassword" name="password">
+                    <input type="password" class="form-control" id="txtPassword" name="password" required>
                 </div>
 
                 <div class="col-md-6">
                     <label for="txtName" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="txtName" placeholder="your Name" name="name">
+                    <input type="text" class="form-control" id="txtName" placeholder="your Name" name="name" minlength="3" required>
                 </div>
 
                 <div class="col-md-6">
                     <label for="txtAddress" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="txtAddress" placeholder="1234 Main St" name="address">
+                    <input type="text" class="form-control" id="txtAddress" placeholder="1234 Main St" name="address" minlength="10" required>
                 </div>
 
                 <div class="col-md-6">
                     <label for="txtContactNo" class="form-label">Contact No</label>
-                    <input type="text" class="form-control" id="txtContactNo" placeholder="+9477055332" name="contactNo">
+                    <input type="text" class="form-control" id="txtContactNo" placeholder="+9477055332" name="contactNo" minlength="11">
                 </div>
 
                 <div class="col-md-6">
                     <label for="txtDrivingLNo" class="form-label">Driving License No</label>
-                    <input type="text" class="form-control" id="txtDrivingLNo" placeholder="219040584738" name="dln">
+                    <input type="text" class="form-control" id="txtDrivingLNo" placeholder="219040584738" name="dln" minlength="12">
                 </div>
 
                 <div class="col-md-6">
                     <label for="file" class="form-label">Input Photo Of NIC or DLN</label>
-                    <input class="form-control" id="file" name="myFile" type="file" >
+                    <input class="form-control" id="file" name="myFile" type="file" required>
                 </div>
 
 
@@ -1375,8 +1377,9 @@
 </main>
 
 
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="controller/CustomerRegistration.js"></script>
 <script src="controller/CustomerLogin.js"></script>
 <script src="controller/CustomerHome.js"></script>
@@ -1496,6 +1499,45 @@
     function boxShadowRemove(){
         $("#mainNav").css("box-shadow","none");
     }
+    $(document).ready(function() {
+        $("#basic-form").validate({
+            errorClass: "error fail-alert",
+            validClass: "valid success-alert",
+
+            messages : {
+                email: {
+                    email: "The email should be in the format: abc@domain.com"
+                },
+
+
+            }
+
+        });
+        $("#cusRegForm").validate({
+            errorClass: "error fail-alert",
+            validClass: "valid success-alert",
+
+            messages: {
+                name: {
+                    minlength: "Name should be at least 3 characters"
+                },
+                email: {
+                    required: "Please enter your email",
+                    email: "The email should be in the format: abc@domain.com"
+                },
+
+                contactNo:{
+                    minlength: "The Number should be in the format: +94110011110"
+                },
+
+            }
+
+        });
+
+
+
+
+    });
 
 
 

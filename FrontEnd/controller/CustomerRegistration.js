@@ -146,3 +146,8 @@ function viewCustomerRental(){
     });
 }
 
+(document).ready(function() {
+
+});
+
+
