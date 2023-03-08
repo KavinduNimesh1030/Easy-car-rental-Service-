@@ -52,6 +52,10 @@ public class DriverController {
         RentDetailDTO rentDetailDTO = rentCarService.getRentByDriverId(driverId);
         return new ResponseUtil("200","done",rentDetailDTO);
     }
+    @DeleteMapping(params = "dId")
+    public ResponseUtil deleteDriver(String dId){
+        System.out.println("did"+dId);
+    }
 
 
 
