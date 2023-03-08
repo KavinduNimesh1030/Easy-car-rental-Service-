@@ -3,8 +3,6 @@ let avaDriverCount =0;
 $("#btnSaveDriver").click(function (){
     var formData = $("#driverRegForm").serialize();
     console.log(formData);
-    let btn =$("#btnSaveDriver").html();
-    if(btn == "Submit"){
         $.ajax({
             url: baseUrl+"Driver",
             method :"post",
@@ -21,41 +19,6 @@ $("#btnSaveDriver").click(function (){
 
             }
         });
-    }else {
-
-        let driverId  = $("#txtDriId").val();
-       let driverName = $("#txtDriName").val();
-        let no = $("#txtdriNo").val();
-        let availability =$("#txtDrOp").val();
-
-        let Driver = {
-            driverId: driverId,
-            driverName:driverName,
-            driverContactNo:no,
-            availability: availability
-
-        }
-        $.ajax({
-            url: baseUrl + "Driver",
-            method: "put",
-            data: JSON.stringify(Driver),
-            contentType: "application/json",
-            success: function (resp) {
-
-                alert(resp.message);
-                $("#btnSaveDriver").html("Submit")
-                getAllDrivers();
-
-            },
-            error: function (error) {
-                let prase = JSON.parse(error.responseText);
-                alert(prase.message);
-
-            }
-
-        });
-
-    }
 
 
 });
@@ -94,7 +57,6 @@ function avaDriverCountM(ava) {
 
 $('#btnDriSearch').click(function() {
     let id = $("#txtDrSearch").val();
-    $("#btnSaveDriver").html("Update")
     $.ajax({
         url: baseUrl + "Driver?driverId="+id,
         dataType:"Json",
@@ -128,7 +90,7 @@ function driverSchedule(id){
 
     });
 }
-function deleteDriver(){
+$("#btnDeleteDriver").click(function (){
     let id = $("#txtDrSearch").val();
 
     $.ajax({
@@ -146,5 +108,42 @@ function deleteDriver(){
         }
 
     });
-}
+});
+$("#btnUpdateDriver").click(function (){
+    let driverId  = $("#txtDriId").val();
+    let driverName = $("#txtDriName").val();
+    let no = $("#txtdriNo").val();
+    let availability =$("#txtDrOp").val();
+
+    let Driver = {
+        driverId: driverId,
+        driverName:driverName,
+        driverContactNo:no,
+        availability: availability
+
+    }
+    $.ajax({
+        url: baseUrl + "Driver",
+        method: "put",
+        data: JSON.stringify(Driver),
+        contentType: "application/json",
+        success: function (resp) {
+
+            alert(resp.message);
+            $("#btnSaveDriver").html("Submit")
+            getAllDrivers();
+
+        },
+        error: function (error) {
+            let prase = JSON.parse(error.responseText);
+            alert(prase.message);
+
+        }
+
+    });
+
+});
+
+
+
 
